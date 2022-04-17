@@ -1,0 +1,229 @@
+*{
+
+    padding: 0px; /*principal, de todo o width*/
+    margin: 0px; /*principal, de todo o width*/
+    box-sizing: border-box;/*o tamanho levará em conta até a borda, ou seja, o width será a soma do conteúdo com a borda e o padding.*/
+}
+p { 
+    text-align: justify;
+    text-indent: 12px; /*estabelece parágrafo*/
+    margin-right: 10px; /*estabelece margem direita em todo p*/
+    margin-left:10px;
+    margin-bottom: 2px;
+}
+
+body{
+    background: url("_imagens/fundo.png") fixed;
+    /*configura o plano de fundo para uma imagem. O valor do atributo é a URL da imagem que você quer usar. Se a imagem é menor do que a janela do navegador, a imagem será repetida até preencher a janela inteira, caso não especifique com "no-repeat;", sem aspas,após chamar a imagem*/
+    background-size: 100%; /* definir qual será o tamanho da imagem de fundo de alguma tag, geralmente uma <div>. Para isso, ele recebe três possíveis valores: um número, a expressão “cover” ou a expressão “contain”. Cover ocupa o escpaço todo, mesmo que use cortes, contain nao ocupa e nao corta*/
+}/*Melhor método de definir imagem de fundo*/
+
+
+
+
+
+
+
+/*__________________Menu Principal-Princípio__________________*/
+#capa{
+    background-color: white;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+a{  /*estabelece os efeitos para todos os links do site*/
+    text-decoration: none;
+    color: rgba(255, 255, 255, .9);
+    display: block;
+    padding: 0px 27px;
+    font-size: 15px;
+    font-family: arial;
+  }
+  a:hover{/*efeito preenchimento de cor*/
+  background-color: rgba( 0, 0, 0, .6);
+  color: white;
+  transition: all 0.9s ease; /*tempo para o preenchimento*/
+  }
+nav{
+    background-color: rgba( 0, 12, 82, .9);
+    height: 27px;
+}
+ul#ul-primaria{
+    background-color: rgba( 0, 12, 82, .85);
+    width:97%;
+    margin: auto;
+}
+.li-primaria{
+    line-height: 27px;
+    float: left; 
+}
+.li-secundaria{
+    line-height: 27px;
+    float: left;
+}
+ul li ul li{
+    background-color: rgba( 0, 0, 0, .3);
+}
+.ul-secundaria-Artigos,   .ul-secundaria-Pesquisas,   .ul-secundaria-Habitos,   .ul-secundaria-Meditacao{
+    display: none;
+}
+.ul-terciaria-Neurociencia,  .ul-terciaria-Neurologia,  .ul-terciaria-Psicologia,  .ul-terciaria-Psiquiatria{
+    display: none;
+}
+/*__________________Menu Principal-Fim__________________*/
+
+
+
+
+
+
+
+/*_____________________divisões de layouts princípio_____________________*/
+/* div-principal, criado para limpar 
+  os flutuadores("fundos sobrepostos 
+ que deixam sobras")após as colunas */
+#div-principal:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.div-titulo{
+  background-color: rgba( 0, 0, 0, .6);
+  color:rgba(255, 255, 255, .9);
+}
+.div-texto {
+  background-color: rgba( 0, 0, 0, .3);
+}
+
+
+
+/*-------duas colunas principais desiguais flutuam lado a lado-------*/
+.esquerda-principal {   
+  float: left;
+  width: 80%;
+  background-color: rgba( 0, 0, 0, .3);
+  font-family: constantia;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .8);
+}
+.direita-principal {
+  float: left;
+  width: 20%;
+  background-color: rgba( 0, 0, 0, .3);
+  font-family: constantia;
+  font-size: 13px;
+  color: rgba(255, 255, 255, .8);
+}
+
+
+
+/*-----------------------------efeitos para layouts-----------------------------/
+/* Layout responsivo - se a tela tem menos de
+800 px de largura, empilha as duas colunas uma 
+em cima da outra, em vez de uma ao lado da outra*/
+@media screen and (max-width: 800px) {
+  .esquerda-principal, .direita-principal {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* Layout responsivo - se a tela tem menos de 400 px
+de largura, empilha os links de navegação uns sobre 
+os outros, em vez de próximos um do outror */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}   
+
+
+
+/*-------linhas e colunas dentro da coluna principal esquerda-------*/
+/* Adicione um efeito 
+de cartão para artigos */
+.esquerda-i1-j1{
+  background-color:rgba( 0, 0, 0, .3);
+  width: 100%;
+  padding-left: 38px;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 18px;
+  }
+  #img-habitos{
+   float: left;/*texto flutua à direita da imagem*/
+   color:rgba( 0, 0, 0, .025);
+   padding: 10px;
+}
+
+.esquerda-i2-j1{
+  background-color:rgba( 0, 0, 0, .3);
+  width: 50%;
+  float: left ;/*div "esquerda-i2-j2" flutua à direita da imagem*/
+  padding-left: 38px;
+  padding-top: 0px;
+  padding-right: 9px;
+  padding-bottom: 18px;
+  }
+  #img-atencaoplena{
+   float: left;/*texto flutua à direita da imagem*/
+   color:rgba( 0, 0, 0, .025);
+   padding: 10px;
+}
+.esquerda-i2-j2{
+  background-color:rgba( 0, 0, 0, .3);
+  width: 50%;
+  float: left ;/*possível div "esquerda-i3-j3" flutuará à direita da imagem*/
+  padding-left: 22px;
+  padding-top: 0px;
+  padding-right: 25px;
+  padding-bottom: 18px;
+  }
+  #img-calistenia{
+   float: left;/*texto flutua à direita da imagem*/
+   color:rgba( 0, 0, 0, .025);
+   padding: 10px;
+}
+
+
+
+/*-------linhas e colunas dentro da coluna principal direita-------*/
+.direita-i1-j1{
+  background-color: rgba( 0, 0, 0, .3);
+  width: 100%;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 7px;
+
+}
+
+.direita-i2-j1{
+  background-color: rgba( 0, 0, 0, .3);
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 7px;
+  padding-right: 60px;
+  padding-bottom: 2px;
+  }
+.direita-i3-j1{
+  background-color: rgba( 0, 0, 0, .3);
+  width: 100%;
+  padding-left: 40px;
+  padding-top: 7px;
+  padding-right: 60px;
+  padding-bottom: 21px;
+  }
+/*_____________________divisões de layouts fim_____________________*/
+
+
+
+/*_____________________layout rodapé princípio_____________________*/
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:rgba( 0, 0, 0, .4);
+  margin-top: 20px;
+}
+/*________________________layout rodapé fim________________________*/

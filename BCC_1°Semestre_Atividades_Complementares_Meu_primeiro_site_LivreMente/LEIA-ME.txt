@@ -1,0 +1,4 @@
+Abrir o arquivo index.html que contém a página Home 
+em escala 100% no seu navegador web para desktop, 
+para ajustar todos os layouts corretamente alinhados. 
+A versão mobile ajustará conforme sua escala padrão.
