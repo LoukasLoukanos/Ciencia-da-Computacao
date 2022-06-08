@@ -1,4 +1,4 @@
-## *Linguagens de operações da SQL*
+# **Linguagens de operações da SQL**
 
 ***DQL - Linguagem de Consulta de Dados***</br>
 Comando:
