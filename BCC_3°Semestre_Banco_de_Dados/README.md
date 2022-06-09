@@ -3,7 +3,7 @@
 ***DQL - Linguagem de Consulta de Dados***</br>
 Comando:
 
-- SELECT:</br>
+- SELECT:  Selecionar para visualizar linhas (com/sem condições — CLÁUSULA WHERE —, com/sem ordenanças — CLÁUSULA ORDER BY —, e com/sem distinções — CLÁUSULA DISTINCT —) e manipular as informações das tabelas (fazer cópias — CREATE TABLE AS SELECT —).</br>
 </br>
 
 ***DML - Linguagem de Manipulação de Dados***</br>
