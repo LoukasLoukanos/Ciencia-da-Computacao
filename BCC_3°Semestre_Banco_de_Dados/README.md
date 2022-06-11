@@ -3,9 +3,17 @@
 **DDL - LINGUAGEM DE DEFINIÇÃO DE DADOS**</br>
 *Comandos:*
 
-- CREATE: Criar tabelas (TABLE) definindo colunas, seus tipos de dados e restrições (CONSTRAINTS);</br>
-- ALTER: Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabelas com ADD (para incluir), DROP (para excluir), MODIFY (para modificar), DISABLE (para desabilitar);</br>
-- DROP: Excluir tabela (TABLE) — para alterar o nome utiliza-se RENAME —.</br>
+- CREATE:
+    - Criar tabelas (TABLE)
+        - Definir colunas, seus tipos de dados e restrições — CONSTRAINTS —</br>
+- ALTER:
+    - Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabelas
+        - Para incluir — ADD —
+        - Para excluir — DROP —
+        - Para modificar — MODIFY — 
+        - Para desabilitar — DISABLE — </br>
+- DROP:
+    - Excluir tabela (TABLE) — para alterar o nome utiliza-se RENAME —.</br>
 </br>
 
 **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS**</br>
@@ -19,7 +27,14 @@
 **DQL - LINGUAGEM DE CONSULTA DE DADOS**</br>
 *Comando:*
 
-- SELECT:  Selecionar para visualizar linhas (com/sem condições — CLÁUSULA WHERE —, com/sem ordenanças — CLÁUSULA ORDER BY —, e com/sem distinções — CLÁUSULA DISTINCT —) e manipular as informações das tabelas (fazer cópias — CREATE TABLE AS SELECT —).</br>
+- SELECT:  
+    - Visualizar linhas de SUBQUERY/INNERQUERY (sub pesquisa) e QUERYPRINCIPAL/OUTERQUERY (pesquisa principal):
+        - Com/sem condições — CLÁUSULA WHERE —
+        - Com/sem ordenanças — CLÁUSULA ORDER BY —
+        - Com/sem distinções — CLÁUSULA DISTINCT —
+    - Manipular informações:
+        - Fazer cópias de tabelas — CREATE TABLE AS SELECT —
+        - Gerar colunas de consultas — EXPRESSÃO DECODE e EXPRESSÃO CASE —).</br>
 </br>
 
 **DCL - LINGUAGEM DE CONTROLE DE DADOS**</br>

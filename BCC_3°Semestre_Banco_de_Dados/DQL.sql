@@ -64,6 +64,11 @@ Indica condição para um SELECT trabalhando com operadores.
         IN (lista)              Compara uma lista de valores 
         LIKE                    Verifica um parâmetro alfanumérico 
         IS NULL                 Verifica quais campos estão com valores nulos
+    Operadores de comparação para múltiplas linhas (para subqueries):
+        IN              Igual a qualquer membro da lista 
+        ANY             Compara o valor com cada valor retornado pela subquerie.
+        ALL             Compara o valor com todos os valores retornados pela subqueire.
+        EXISTS          Testa se um valor existe
 
 Obs: Parênteses podem ser usados para especificar a ordem na qual os operadores devem ser avaliados (prioridade).
      Sempre que haver dúvida sobre qual operador será avaliado primeiro, pode-se usar parênteses para definir a prioridade das expressões.
@@ -135,3 +140,123 @@ SELECT First_name, Last_name, Salary
 FROM Employees
 WHERE Salary BETWEEN 10000 AND 20000
 ORDER BY Salary DESC, Last_name;
+
+
+/* (SUBQUERY ou INNERQUERY (sub pesquisa) e QUERYPRINCIPAL ou OUTERQUERY (pesquisa principal))_________
+SUBQUERY é um comando SELECT dentro de um outro comando SELECT. Uma declaração SELECT-SUBQUERY 
+(ou INNERQUERY) é aninhada com uma declaração SELECT-QUERYPRINCIPAL (ou OUTERQUERY), a qual 
+retorna resultados a fim de satisfazer uma cláusula WHERE.
+
+
+Ex: Para selecionar os funcionários que possuem um salário maior que o de Abel:*/
+SELECT last_name, salary/*QUERYPRINCIPAL ou OUTERQUERY (pesquisa principal)*/
+FROM HR."EMPLOYEES"
+Where salary > (SELECT salary /*SUBQUERY ou INNERQUERY (sub pesquisa)*/
+                FROM HR."EMPLOYEES"
+                WHERE last_name = 'Abel')
+
+
+/*Ex: Para mostrar o sobrenome (last_name) e o cargo (job_id) dos funcionários 
+que possuem o mesmo cargo do funcionário de número 141:*/
+SELECT last_name, job_id
+FROM HR."EMPLOYEES"
+Where job_id = (SELECT job_id
+                FROM HR.”EMPLOYEES”
+                WHERE employee_id =141);
+
+
+/*Ex: Para encontrar todos os empregados do mesmo departamento do David Lee*/
+SELECT FIRST_NAME, LAST_NAME, JOB_ID, DEPARTMENT_ID
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID =  (SELECT DEPARTMENT_ID
+                        FROM EMPLOYEES
+                        WHERE FIRST_NAME = 'David' and LAST_NAME ='Lee')
+ORDER BY FIRST_NAME
+
+
+/*Ex: Para pesquisar os empregados que ganham acima da média salarial:*/
+SELECT FIRST_NAME, LAST_NAME, JOB_ID, DEPARTMENT_ID, SALARY
+FROM EMPLOYEES
+WHERE SALARY > (SELECT AVG(SALARY)
+                FROM EMPLOYEES)
+ORDER BY FIRST_NAME
+
+
+/*Ex: Para pesquisar os empregados que trabalham nos departamentos de Marketing e Administração*/
+SELECT FIRST_NAME, LAST_NAME, JOB_ID, DEPARTMENT_ID, SALARY
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID IN (SELECT DEPARTMENT_ID
+                        FROM DEPARTMENTS
+                        WHERE DEPARTMENT_NAME IN ('Marketing','Administration'))
+ORDER BY FIRST_NAME
+
+
+/*Ex: Para mostrar o primeiro e o último nome, cargo, código do departamento e salário 
+dos empregados cujo salário é maior que o maior salário no departamento ‘SALES’.*/
+SELECT FIRST_NAME, LAST_NAME, JOB_ID, DEPARTMENT_ID, SALARY
+FROM EMPLOYEES
+WHERE SALARY > (SELECT MAX(SALARY)
+                FROM EMPLOYEES
+                WHERE DEPARTMENT_ID  = (SELECT DEPARTMENT_ID
+                                        FROM DEPARTMENTS
+                                        WHERE DEPARTMENT_NAME = 'Sales'))
+ORDER BY FIRST_NAME
+
+
+/* (EXPRESSÃO DECODE e EXPRESSÃO CASE)_______________________________________________________________
+A EXPRESSÃO DECODE e a EXPRESSÃO CASE geram colunas para consultas SELECT. 
+• DECODE substitui um valor específico por outro valor específico ou valor padrão, 
+  dependendo do resultado de uma condição de igualdade.
+• CASE permite o processamento condicional que exija o tratamento de várias hipóteses.
+
+EXPRESSÃO DECODE - Sintaxe:  
+DECODE (COLUNA/EXPRESSÃO,                   → o nome da coluna ou expressão a ser avaliado
+        "PROCURADO1", 'RESULTADO1',         → valor para ser testado e valor para ser retornado
+        "PROCURADO2", 'RESULTADO2',         → valor para ser testado e valor para ser retornado
+                    ...                     → o processo de teste e retorno pode ser reperido
+        'SEM_RESULTADO'                     → valor retornado as pesquisas não forem satisfeitas
+        ) DECODE_COLUNA_GERADA              → coluna gerada para a consulta select
+obs:
+    - PROCURADO deve ser um dado do tipo coluna ou expressão.
+    - DECODE deve ter, no mínimo, 3 parâmetros ou argumentos
+      ("PROCURADO1", 'RESULTADO1' e 'SEM_RESULTADO')
+
+EXPRESSÃO CASE - Sintaxe:
+CASE
+    WHEN("quando")  COLUNA  OPERADOR(=, >...)  VALOR(int, 'string'...)  THEN("então")  'MENSAGEM'
+                                                . . .
+ELSE  'MENSAGEM'
+END  CASE_COLUNA_GERADA
+
+
+DECODE-Exemplo: Seleciona o Nome e profissão e gera uma coluna de nome DECODE_CARGO
+    relacionada a algumas profissões de acordo com o DECODE criado:*/
+SELECT FIRST_NAME, JOB_ID,
+DECODE (JOB_ID, 
+        "IT_PROG",'PROGRAMADOR',
+        "FI_ACCOUNT",'CONTADOR',
+        'INDEFINIDO'
+        ) DECODE_COLUNA_GERADA
+FROM EMPLOYEES;
+
+
+/*DECODE-Exemplo: Para retornar o salário incrementado de acordo com o tipo de cargo*/
+SELECT FIRST_NAME, JOB_ID, SALARY, 
+DECODE (JOB_ID,
+        "IT_PROG", SALARY * 1.1,
+        "FI_ACCOUNT", SALARY * 1.2, 
+        "AD_VP", SALARY * 0.95, 
+        SALARY
+        ) DECODE_COLUNA_GERADA
+FROM EMPLOYEES;
+
+
+/*CASE-Exemplo: Para avaliar duas expressões lógicas e ainda oferecer uma terceira 
+                possibilidade, quando as duas anteriores resultarem falsas:*/
+SELECT FIRST_NAME, JOB_ID, SALARY, 
+CASE
+    WHEN SALARY < 5000 THEN 'AUMENTO'
+    WHEN SALARY > 10000 THEN 'VERIFICAR'
+ELSE 'NÃO AUMENTAR'
+END CASE_COLUNA_GERADA
+FROM EMPLOYEES;
