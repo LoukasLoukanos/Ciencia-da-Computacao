@@ -29,12 +29,14 @@
 
 - SELECT:  
   - Visualizar linhas de SUBQUERY/INNERQUERY (sub pesquisa) e QUERYPRINCIPAL/OUTERQUERY (pesquisa principal):
-    - Com condições — CLÁUSULA WHERE —
-    - Com ordenanças — CLÁUSULA ORDER BY —
-    - Com distinções — CLÁUSULA DISTINCT —
+    - Com condições — CLÁUSULA WHERE —.
+    - Com ordenanças — CLÁUSULA ORDER BY —.
+    - Com distinções — CLÁUSULA DISTINCT .
   - Manipular informações:
-    - Fazer cópias de tabelas — CREATE TABLE AS SELECT —
-    - Gerar colunas de consultas — EXPRESSÃO DECODE e EXPRESSÃO CASE —.</br>
+    - Fazer cópias de tabelas — CREATE TABLE AS SELECT —.
+    - Gerar colunas de consultas — EXPRESSÃO DECODE e EXPRESSÃO CASE —.
+    - Produzir grupos de dados gerando sumários — CLÁUSULA GROUP BY —.
+    - Estabelecer condições para listar grupos de dados — CLÁUSULA HAVING —.</br>
 </br>
 
 **DCL - LINGUAGEM DE CONTROLE DE DADOS**</br>
