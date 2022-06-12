@@ -1,8 +1,7 @@
-/* Neste arquivo são apresentados exemplos de uso do comando SELECT da 
-   linguagem de operação DQL (Linguagem de Consulta de Dados) da SQL.*/
+/* Neste arquivo são apresentados exemplos de uso do comando SELECT da linguagem de operação DQL (Linguagem de Consulta de Dados) da SQL.*/
 
 
-/* (COMANDO SELECT)________________________________________________
+/* (COMANDO SELECT)_______________________________________________________________________________________________________
 Permite a seleção e a manipulação para visualização das informações 
 armazenadas no banco de dados.*/
 
@@ -46,7 +45,7 @@ SELECT FIRST_NAME, EMAIL, 'Salário: ' || salary "Salário", salary*12 "SalarioA
 FROM employees;
 
 
-/* (CLÁUSULA WHERE)_____________________________________________________
+/* (CLÁUSULA WHERE)_______________________________________________________________________________________________________
 Indica condição para um SELECT trabalhando com operadores.
 
     Operadores comuns:
@@ -122,7 +121,7 @@ FROM Employees
 WHERE Salary NOT BETWEEN 10000 AND 20000; 
 
 
-/* (CLÁUSULA ORDER BY)___________________________________________________________  
+/* (CLÁUSULA ORDER BY)____________________________________________________________________________________________________  
 A cláusula ORDER BY pode ser usada para ordenar as linhas. 
     
     A ordenação é ascendente(do menor para o maior) mas pode ser invertida para descendente:
@@ -142,7 +141,116 @@ WHERE Salary BETWEEN 10000 AND 20000
 ORDER BY Salary DESC, Last_name;
 
 
-/* (SUBQUERY ou INNERQUERY (sub pesquisa) e QUERYPRINCIPAL ou OUTERQUERY (pesquisa principal))_________
+/* (CLÁUSULA GROUP BY e CLAUSULA HAVING)__________________________________________________________________________________
+
+• A cláusula GROUP BY organiza dados em grupos, produzindo sumários.
+ (todos os campos no SELECT que não possuírem função de grupo devem aparecer na CLÁUSULA GROUP BY)
+ (campos existentes na cláusula GROUP BY não precisam aparecer no SELECT)
+
+• A cláusula HAVING estabelece condições para listar esses grupos 
+ (deve ser usada depois da cláusula GROUP BY).
+
+→ obs: A cláusula WHERE não pode ser usada para restringir itens de grupo.
+
+As funções de grupos:
+    SUM         Retorna a soma de N.
+    AVG         Retorna a média aritmética de N.
+    COUNT       Retorna o número de linhas da consulta.
+    MAX         Retorna o valor máximo de N.
+    MIN         Retorna o valor mínimo de N.
+
+Ordem das cláusulas na declaração SELECT.
+    SELECT coluna(s)
+    FROM tabela(s)
+    WHERE condição linha
+    GROUP BY coluna(s)
+    HAVING condição de grupo de linhas
+    ORDER BY coluna(s);
+
+
+Ex: Para calcular a média salarial dos empregados:*/
+SELECT AVG(Salary)
+FROM Employees;
+
+
+/*Ex: Para encontrar o menor salário, o maior salário e a soma dos salários dos funcionários do departamento 30,*/
+SELECT MIN(Salary), MAX(Salary), SUM(Salary)
+FROM Employees
+WHERE Department_ID = 30;
+
+
+/*Ex: Para encontrar o número de empregados do departamento 30*/
+SELECT Count(*)
+FROM Employees
+WHERE Department_ID = 30;
+
+
+/*Ex: Para demonstrar os dados agrupados por média salaria da tabela Employees para cada departamento:*/
+SELECT department_id, AVG(salary)
+FROM HR.”EMPLOYEES”
+GROUP BY department_id ;
+
+
+/*Ex: Lembrando que campos existentes na cláusula GROUP BY não precisam aparecer no SELECT:*/
+SELECT AVG(salary)
+FROM HR.”EMPLOYEES”
+GROUP BY department_id;
+
+
+/*Ex: Para calcular a média salarial de cada grupo de cargo:*/
+SELECT Department_ID, AVG(Salary)
+FROM Employees
+Group by Department_ID
+Order by Department_ID;
+
+/*Ex: Pesquisa agrupamento por departamento e salários:*/
+SELECT department_id dept_id, job_id, SUM(salary)
+FROM employees
+GROUP BY department_id, job_id ;
+
+
+/*Ex: Para mostrar a média salarial para cada cargo, excluindo os departamentos 10, 20 e 30:*/
+SELECT Department_ID, AVG(Salary)
+FROM Employees
+WHERE Department_ID Not in (10,20,30)
+GROUP BY Department_ID
+ORDER BY Department_ID;
+
+
+/*Ex: Para mostrar a média salarial e a soma dos salários por cada departamento e cargo:*/
+SELECT Department_ID, Job_ID, AVG(Salary), Sum(Salary)
+FROM Employees
+GROUP BY Department_ID, Job_ID
+ORDER BY Department_ID;
+
+
+/*Ex: Uso INcorreto de função de grupo com condicional, utilizando a CLAUSULA WHERE:*/
+SELECT department_id, AVG(salary)
+FROM employees
+WHERE AVG(salary) > 8000
+GROUP BY department_id;
+/*Uso correto de função de grupo com condicional, utilizando a CLAUSULA HAVING:*/
+SELECT Department_ID, AVG(Salary)
+FROM Employees
+GROUP BY Department_ID
+HAVING AVG(Salary) > 8000
+
+/*Ex: INcorretamente, com CLAUSULA WHERE*/
+SELECT Department_ID, Count(*)
+FROM Employees
+WHERE MAX(Salary) > 10000
+GROUP BY Department_ID
+ORDER BY Department_ID;
+/*Ex: Corretamente, com CLAUSULA HAVING:*/
+SELECT Department_ID, Count(*)
+FROM Employees
+WHERE Department_ID IN (10,20,30,40)
+GROUP BY Department_ID
+HAVING MAX(Salary) > 10000
+ORDER BY Department_ID;
+
+
+/* (SUBQUERY ou INNERQUERY (sub pesquisa) e QUERYPRINCIPAL ou OUTERQUERY (pesquisa principal))____________________________
 SUBQUERY é um comando SELECT dentro de um outro comando SELECT. Uma declaração SELECT-SUBQUERY 
 (ou INNERQUERY) é aninhada com uma declaração SELECT-QUERYPRINCIPAL (ou OUTERQUERY), a qual 
 retorna resultados a fim de satisfazer uma cláusula WHERE.
@@ -203,7 +311,7 @@ WHERE SALARY > (SELECT MAX(SALARY)
 ORDER BY FIRST_NAME
 
 
-/* (EXPRESSÃO DECODE e EXPRESSÃO CASE)_______________________________________________________________
+/* (EXPRESSÃO DECODE e EXPRESSÃO CASE)____________________________________________________________________________________
 A EXPRESSÃO DECODE e a EXPRESSÃO CASE geram colunas para consultas SELECT. 
 • DECODE substitui um valor específico por outro valor específico ou valor padrão, 
   dependendo do resultado de uma condição de igualdade.

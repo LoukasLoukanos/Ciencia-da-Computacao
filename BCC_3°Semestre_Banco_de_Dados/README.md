@@ -10,7 +10,7 @@
   - Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabelas
     - Para incluir — ADD —
     - Para excluir — DROP —
-    - Para modificar — MODIFY — 
+    - Para modificar — MODIFY —
     - Para desabilitar — DISABLE — </br>
 - DROP:
   - Excluir tabela (TABLE) — para alterar o nome utiliza-se RENAME —.</br>
