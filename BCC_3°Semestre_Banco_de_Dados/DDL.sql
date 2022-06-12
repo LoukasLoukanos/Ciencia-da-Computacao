@@ -1,23 +1,21 @@
-/* Neste arquivo são apresentados exemplos de uso dos comandos CREATE, ALTER 
-   e DROP do subconjunto DDL(Linguagem de Definição de Dados) da SQL.
+/* Neste arquivo são apresentados exemplos de uso dos comandos CREATE, ALTER e DROP do subconjunto DDL(Linguagem de Definição de Dados) da SQL.
 
 
-________________________________________________________________________________________
 Tipos de Dados:
 CHAR(n)        Campo fixo com tamanho máximo de 2000 bytes.
 DATE           Permite data entre 1 de janeiro de 4712 AC até 31 de dezembro de 4712 DC
 LONG           Caractere variável com tamanho de até 2 Gb
 VARCHAR2(n)    Campo do tipo caractere com tamanho variável e limitado a 4000 bytes.
 NUMBER(n,d)    Onde n é o número de dígitos e d o número de casas decimais.
-________________________________________________________________________________________
 
 
-_________________________________RESTRIÇÕES - CONSTRAINT____________________________________
+__(COMANDO CREATE)________________________________________________________________________________________________________
+
+RESTRIÇÕES - CONSTRAINT_:
 As restrições são regras básicas estabelecidas para o preenchimento de uma ou mais colunas
-da tabela e são definidas ao final da especificação de cada coluna ou ao final do comando.*/
+da tabela e são definidas ao final da especificação de cada coluna ou ao final do comando.
 
-/* (COMANDO CREATE)
-____CONSTRAINT PRIMARY KEY:_______________________________________________
+____CONSTRAINT PRIMARY KEY:________________________________________________________________________
 Especifica uma ou mais colunas que compõem a chave primária de uma tabela.*/
 CREATE TABLE Cliente
 (
@@ -36,8 +34,7 @@ constraint cliente_cd_cliente_pk primary key (cd_cliente)
 )
 
 
-/* (COMANDO CREATE)
-____CONSTRAINT PRIMARY KEY COMPOSTA:_____________________________
+/*____CONSTRAINT PRIMARY KEY COMPOSTA:_____________________________________________________________
 PK (Primary Key) composta por 2 atributos: cd_cliente e dt_compra*/
 CREATE TABLE Histórico
 (
@@ -49,8 +46,7 @@ CONSTRAINT Historico_PK PRIMARY KEY (cd_cliente, dt_Compra)
 )
 
 
-/* (COMANDO CREATE)
-____CONSTRAINT UNIQUE______________________________________________________________________
+/*____CONSTRAINT UNIQUE____________________________________________________________________________
 Define uma ou mais colunas que não podem ter valor repetido em mais de uma linha da tabela.*/
 CREATE TABLE Estado
 (
@@ -61,8 +57,7 @@ constraint Estado_nm_Estado_UN UNIQUE (nm_Estado)
 )
 
 
-/* (COMANDO CREATE)
-____CONSTRAINT FOREIGN KEY______________________________________________________________
+/*____CONSTRAINT FOREIGN KEY_______________________________________________________________________
 Referencia um atributo que é chave primária de outra tabela com o propósito de implementar 
 o relacionamento entre tabelas.
 
@@ -91,8 +86,7 @@ constraint cliente_sg_estado_fk foreign key (sg_estado) references Estado(sg_est
 )
 
 
-/* (COMANDO CREATE)
-____CONSTRAINT CHECK___________________________________________________________________________
+/*____CONSTRAINT CHECK_____________________________________________________________________________
 Define  um  conjunto  de  valores  permitidos  ou  condição  para  inserção  de  valores  em  uma  
 determinada coluna.*/
 
@@ -112,8 +106,7 @@ constraint cliente_ie_sexo_ck check(ie_sexo in ('F','M'))
 )
 
 
-/* (COMANDO CREATE)
-____CONSTRAINT NOT NULL__________________________________________________________________
+/*____CONSTRAINT NOT NULL_________________________________________________________________________
 Indica que é obrigatória a inserção de algum valor nessa coluna. Somente pode ser declarado 
 junto à coluna e não recebe nome da restrição.*/
 
@@ -131,11 +124,12 @@ ie_sexo  char(1)
 )
 
 
-/*________________________________________________________________________________
+/* (COMANDO ALTER e DROP + COMANDO RENAME)________________________________________________________________________________
 Alterações no tipo, na obrigatoriedade, no tamanho e nas restrições dos dados
 de tabelas são feitas com o comando ALTER da DDL-Linguagem de Definição de Dados.
 Para inserir, alterar e deletar dados em uma tabela usa-se os comandos INSERT, 
 UPDATE e DELETE da DML-Linguagem de Manipulação de Dados.
+
 
  (COMANDO ALTER) :
 Operações ADD (para incluir), DROP (para excluir), 
@@ -170,6 +164,7 @@ DISABLE CONSTRAINT  CLIENTE_IE_FISICA_JURIDICA_CK;
 ALTER TABLE CLIENTE
 DROP CONSTRAINT CLIENTE_IE_FISICA_JURIDICA_CK
 
+
 /* (COMANDO DROP)
 Exclusão de Tabela:
  Após a criação da estrutura de uma tabela ou alteração da 
@@ -177,6 +172,7 @@ sua estrutura, podemos excluí-la através do comando DROP.
  Ao excluir uma tabela, todas as constraints e os dados 
 inseridos são deletados fisicamente.*/
 DROP TABLE CLIENTE.
+
 
 /* (COMANDO RENAME) 
 Alteração de nome das tabelas:*/
