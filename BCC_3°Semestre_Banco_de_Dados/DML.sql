@@ -1,8 +1,7 @@
-/* Neste arquivo são apresentados exemplos de uso dos comandos INSERT, UPDATE e 
-   DELETE da linguagem de operação DML(Linguagem de Manipulação de Dados) da SQL.*/
+/* Neste arquivo são apresentados exemplos de uso dos comandos INSERT, UPDATE e DELETE da linguagem de operação DML(Linguagem de Manipulação de Dados) da SQL.*/
 
 
-/* (COMANDO INSERT)______________________________________
+/* (COMANDO INSERT)_______________________________________________________________________________________________________
 Usado para inserir dados nas tabelas.
 
 Sintaxe:*/
@@ -25,7 +24,7 @@ VALUES (4, 'Chile', 'Chilena');
 INSERT INTO pais (nm_pais, ds_nacionalidade, cd_pais)
 VALUES ('EUA', 'Americana' ,3);
 
-/* (COMANDO UPDATE)______________________________________
+/* (COMANDO UPDATE)_______________________________________________________________________________________________________
 Usado para modificar a(s) linha(s) existentes das tabelas
 
 Sintaxe:*/
@@ -44,7 +43,7 @@ SET Ds_nacionalidade='Portuguesa'
 UPDATE Cd_pais = 3;
 
 
-/* (COMANDO DELETE)______________________________________
+/* (COMANDO DELETE)_______________________________________________________________________________________________________
 Usado para remover a(s) linha(s) existente(s) de tabelas.
 
 Observações:
