@@ -39,17 +39,17 @@
     - Estabelecer condições para listar grupos de dados — CLÁUSULA HAVING —</br>
 </br>
 
+**DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**</br>
+*Comandos:*
+
+- BEGIN</br>
+- COMMIT</br>
+- ROLLBACK</br>
+</br>
+
 **DCL - LINGUAGEM DE CONTROLE DE DADOS**</br>
 *Comandos:*
 
 - GRANT:</br>
 - REVOKE:</br>
 - DENY</br>
-</br>
-
-**DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**</br>
-*Comandos:*
-
-- BEGIN:</br>
-- COMMIT:</br>
-- ROLLBACK:</br>
