@@ -44,6 +44,7 @@
 
 - GRANT:</br>
 - REVOKE:</br>
+- DENY</br>
 </br>
 
 **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**</br>
