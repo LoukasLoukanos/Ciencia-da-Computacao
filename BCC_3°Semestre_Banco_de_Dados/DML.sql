@@ -1,8 +1,9 @@
-/* Neste arquivo são apresentados exemplos de uso dos comandos INSERT, UPDATE e DELETE da linguagem de operação DML(Linguagem de Manipulação de Dados) da SQL.*/
+/* Neste arquivo são apresentados exemplos de uso dos comandos INSERT, UPDATE e DELETE da linguagem de operação DML(Linguagem de Manipulação de Dados) da SQL.
+   →(Utiliza-se os comandos da DML(MANIPULAÇÃO) e da DQL(CONSULTA) com os comandos da DTL(TRANSAÇÃO))←
+   
 
-
-/* (COMANDO INSERT)_______________________________________________________________________________________________________
-Usado para inserir dados nas tabelas.
+  (COMANDO INSERT)_______________________________________________________________________________________________________
+  Usado para inserir dados nas tabelas.
 
 Sintaxe:*/
 INSERT INTO nome_da_tabela (nome_da_coluna,nome_da_coluna)
@@ -25,7 +26,7 @@ INSERT INTO pais (nm_pais, ds_nacionalidade, cd_pais)
 VALUES ('EUA', 'Americana' ,3);
 
 /* (COMANDO UPDATE)_______________________________________________________________________________________________________
-Usado para modificar a(s) linha(s) existentes das tabelas
+  Usado para modificar a(s) linha(s) existentes das tabelas
 
 Sintaxe:*/
 UPDATE Tabela
@@ -44,14 +45,14 @@ UPDATE Cd_pais = 3;
 
 
 /* (COMANDO DELETE)_______________________________________________________________________________________________________
-Usado para remover a(s) linha(s) existente(s) de tabelas.
+  Usado para remover a(s) linha(s) existente(s) de tabelas.
 
-Observações:
-• Verifique os nomes das colunas com o comando DESCRIBE.
-• Confirme  a  operação  de  atualização  pela  visualização  
-  das  linhas  a  serem  atualizadas com o comando SELECT.
-• Nunca omita a cláusula WHERE. No caso da omissão, todos os 
-  registros da tabela serão eliminados.
+  Obs:
+  • Verifique os nomes das colunas com o comando DESCRIBE.
+  • Confirme  a  operação  de  atualização  pela  visualização  
+    das  linhas  a  serem  atualizadas com o comando SELECT.
+  • Nunca omita a cláusula WHERE. No caso da omissão, todos os 
+    registros da tabela serão eliminados.
 
 Sintaxe:*/
 DELETE FROM Tabela
