@@ -1,22 +1,22 @@
 /* Neste arquivo são apresentados exemplos de uso dos comandos CREATE, ALTER e DROP do subconjunto DDL(Linguagem de Definição de Dados) da SQL.
 
 
-Tipos de Dados:
-CHAR(n)        Campo fixo com tamanho máximo de 2000 bytes.
-DATE           Permite data entre 1 de janeiro de 4712 AC até 31 de dezembro de 4712 DC
-LONG           Caractere variável com tamanho de até 2 Gb
-VARCHAR2(n)    Campo do tipo caractere com tamanho variável e limitado a 4000 bytes.
-NUMBER(n,d)    Onde n é o número de dígitos e d o número de casas decimais.
+    Tipos de Dados:
+    CHAR(n)        Campo fixo com tamanho máximo de 2000 bytes.
+    DATE           Permite data entre 1 de janeiro de 4712 AC até 31 de dezembro de 4712 DC
+    LONG           Caractere variável com tamanho de até 2 Gb
+    VARCHAR2(n)    Campo do tipo caractere com tamanho variável e limitado a 4000 bytes.
+    NUMBER(n,d)    Onde n é o número de dígitos e d o número de casas decimais.
 
 
 __(COMANDO CREATE)________________________________________________________________________________________________________
 
-RESTRIÇÕES - CONSTRAINT_:
-As restrições são regras básicas estabelecidas para o preenchimento de uma ou mais colunas
-da tabela e são definidas ao final da especificação de cada coluna ou ao final do comando.
+    RESTRIÇÕES - CONSTRAINT_:
+    As restrições são regras básicas estabelecidas para o preenchimento de uma ou mais colunas
+    da tabela e são definidas ao final da especificação de cada coluna ou ao final do comando.
 
 ____CONSTRAINT PRIMARY KEY:________________________________________________________________________
-Especifica uma ou mais colunas que compõem a chave primária de uma tabela.*/
+    Especifica uma ou mais colunas que compõem a chave primária de uma tabela.*/
 CREATE TABLE Cliente
 (
 /*nome_coluna tipo_dado*/
@@ -35,7 +35,7 @@ constraint cliente_cd_cliente_pk primary key (cd_cliente)
 
 
 /*____CONSTRAINT PRIMARY KEY COMPOSTA:_____________________________________________________________
-PK (Primary Key) composta por 2 atributos: cd_cliente e dt_compra*/
+    PK (Primary Key) composta por 2 atributos: cd_cliente e dt_compra*/
 CREATE TABLE Histórico
 (
 cd_cliente number (4),
@@ -47,7 +47,7 @@ CONSTRAINT Historico_PK PRIMARY KEY (cd_cliente, dt_Compra)
 
 
 /*____CONSTRAINT UNIQUE____________________________________________________________________________
-Define uma ou mais colunas que não podem ter valor repetido em mais de uma linha da tabela.*/
+    Define uma ou mais colunas que não podem ter valor repetido em mais de uma linha da tabela.*/
 CREATE TABLE Estado
 (
 Sg_Estado char(2) primary key,
@@ -58,17 +58,17 @@ constraint Estado_nm_Estado_UN UNIQUE (nm_Estado)
 
 
 /*____CONSTRAINT FOREIGN KEY_______________________________________________________________________
-Referencia um atributo que é chave primária de outra tabela com o propósito de implementar 
-o relacionamento entre tabelas.
+    Referencia um atributo que é chave primária de outra tabela com o propósito de implementar 
+    o relacionamento entre tabelas.
 
-Regras:
-Caso o tipo de dados da coluna na tabela inicial e na tabela referenciada sejam diferentes, 
-será apresentado um erro;
-Caso a tabela referenciada não possua chave primária (a foreign key será estabelecida sobre 
-a chave primária da tabela referenciada);
-O uso de chaves estrangeiras garante que não existirão linhas órfãs nas tabelas-filhas (tabelas 
-que possuem dados que devem estar cadastrados previamente em outra tabela, denominada 
-tabela mãe)*/
+    Regras:
+    •Caso o tipo de dados da coluna na tabela inicial e na tabela referenciada sejam diferentes, 
+     será apresentado um erro;
+    •Caso a tabela referenciada não possua chave primária (a foreign key será estabelecida sobre 
+     a chave primária da tabela referenciada);
+    •O uso de chaves estrangeiras garante que não existirão linhas órfãs nas tabelas-filhas (tabelas 
+     que possuem dados que devem estar cadastrados previamente em outra tabela, denominada 
+     tabela mãe)*/
 
 CREATE TABLE Cliente
 (
@@ -87,8 +87,8 @@ constraint cliente_sg_estado_fk foreign key (sg_estado) references Estado(sg_est
 
 
 /*____CONSTRAINT CHECK_____________________________________________________________________________
-Define  um  conjunto  de  valores  permitidos  ou  condição  para  inserção  de  valores  em  uma  
-determinada coluna.*/
+    Define  um  conjunto  de  valores  permitidos  ou  condição  para  inserção  de  valores  em  uma  
+    determinada coluna.*/
 
 CREATE TABLE Cliente
 (
@@ -107,8 +107,8 @@ constraint cliente_ie_sexo_ck check(ie_sexo in ('F','M'))
 
 
 /*____CONSTRAINT NOT NULL_________________________________________________________________________
-Indica que é obrigatória a inserção de algum valor nessa coluna. Somente pode ser declarado 
-junto à coluna e não recebe nome da restrição.*/
+    Indica que é obrigatória a inserção de algum valor nessa coluna. Somente pode ser declarado 
+    junto à coluna e não recebe nome da restrição.*/
 
 CREATE TABLE Cliente
 (
@@ -125,10 +125,10 @@ ie_sexo  char(1)
 
 
 /* (COMANDO ALTER e DROP + COMANDO RENAME)________________________________________________________________________________
-Alterações no tipo, na obrigatoriedade, no tamanho e nas restrições dos dados
-de tabelas são feitas com o comando ALTER da DDL-Linguagem de Definição de Dados.
-Para inserir, alterar e deletar dados em uma tabela usa-se os comandos INSERT, 
-UPDATE e DELETE da DML-Linguagem de Manipulação de Dados.
+    Alterações no tipo, na obrigatoriedade, no tamanho e nas restrições dos dados
+    de tabelas são feitas com o comando ALTER da DDL-Linguagem de Definição de Dados.
+    Para inserir, alterar e deletar dados em uma tabela usa-se os comandos INSERT, 
+    UPDATE e DELETE da DML-Linguagem de Manipulação de Dados.
 
 
  (COMANDO ALTER) :
