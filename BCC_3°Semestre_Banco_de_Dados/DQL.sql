@@ -1,9 +1,9 @@
-/* Neste arquivo são apresentados exemplos de uso do comando SELECT da linguagem de operação DQL (Linguagem de Consulta de Dados) da SQL.*/
+/* Neste arquivo são apresentados exemplos de uso do comando SELECT da linguagem de operação DQL (Linguagem de Consulta de Dados) da SQL.
+   →(Utiliza-se os comandos da DML(MANIPULAÇÃO) e da DQL(CONSULTA) com os comandos da DTL(TRANSAÇÃO))←
 
 
-/* (COMANDO SELECT)_______________________________________________________________________________________________________
-Permite a seleção e a manipulação para visualização das informações 
-armazenadas no banco de dados.*/
+  (COMANDO SELECT)_______________________________________________________________________________________________________
+    Permite a seleção e a manipulação para visualização das informações armazenadas no banco de dados.*/
 
 
 /*CREATE TABLE AS SELECT
@@ -46,7 +46,7 @@ FROM employees;
 
 
 /* (CLÁUSULA WHERE)_______________________________________________________________________________________________________
-Indica condição para um SELECT trabalhando com operadores.
+    Indica condição para um SELECT trabalhando com operadores.
 
     Operadores comuns:
         =               Igual 
@@ -69,9 +69,9 @@ Indica condição para um SELECT trabalhando com operadores.
         ALL             Compara o valor com todos os valores retornados pela subqueire.
         EXISTS          Testa se um valor existe
 
-Obs: Parênteses podem ser usados para especificar a ordem na qual os operadores devem ser avaliados (prioridade).
+    Obs: Parênteses podem ser usados para especificar a ordem na qual os operadores devem ser avaliados (prioridade).
      Sempre que haver dúvida sobre qual operador será avaliado primeiro, pode-se usar parênteses para definir a prioridade das expressões.
-Obs: Alfanuméricos e Datas devem estar entre aspas simples.*/
+    Obs: Alfanuméricos e Datas devem estar entre aspas simples.*/
 
 
 /*Operadores comuns com operadores lógicos 
@@ -122,16 +122,16 @@ WHERE Salary NOT BETWEEN 10000 AND 20000;
 
 
 /* (CLÁUSULA ORDER BY)____________________________________________________________________________________________________  
-A cláusula ORDER BY pode ser usada para ordenar as linhas. 
+    A cláusula ORDER BY pode ser usada para ordenar as linhas. 
     
     A ordenação é ascendente(do menor para o maior) mas pode ser invertida para descendente:
         • valores numéricos infinitos primeiro;
         • valores de data primeiro;
         • valores alfanuméricos.
 
-Obs: ORDER BY deve ser sempre a última cláusula da declaração SELECT.
-Nota: Para ordenar por uma coluna, ela não precisa estar declarada no SELECT.
-Nota: Esse comando não altera a ordem dos dados que estão armazenados no Banco de Dados.
+    Obs: ORDER BY deve ser sempre a última cláusula da declaração SELECT.
+    Nota: Para ordenar por uma coluna, ela não precisa estar declarada no SELECT.
+    Nota: Esse comando não altera a ordem dos dados que estão armazenados no Banco de Dados.
 
 
 Ex: Para ordenar por duas colunas e mostrar ordem decrescente do salário e ordem crescente do sobrenome faça:*/
@@ -143,29 +143,29 @@ ORDER BY Salary DESC, Last_name;
 
 /* (CLÁUSULA GROUP BY e CLAUSULA HAVING)__________________________________________________________________________________
 
-• A cláusula GROUP BY organiza dados em grupos, produzindo sumários.
- (todos os campos no SELECT que não possuírem função de grupo devem aparecer na CLÁUSULA GROUP BY)
- (campos existentes na cláusula GROUP BY não precisam aparecer no SELECT)
+    • A cláusula GROUP BY organiza dados em grupos, produzindo sumários.
+    (todos os campos no SELECT que não possuírem função de grupo devem aparecer na CLÁUSULA GROUP BY)
+    (campos existentes na cláusula GROUP BY não precisam aparecer no SELECT)
 
-• A cláusula HAVING estabelece condições para listar esses grupos 
- (deve ser usada depois da cláusula GROUP BY).
+    • A cláusula HAVING estabelece condições para listar esses grupos 
+    (deve ser usada depois da cláusula GROUP BY).
 
-→ obs: A cláusula WHERE não pode ser usada para restringir itens de grupo.
+    → obs: A cláusula WHERE não pode ser usada para restringir itens de grupo.
 
-As funções de grupos:
-    SUM         Retorna a soma de N.
-    AVG         Retorna a média aritmética de N.
-    COUNT       Retorna o número de linhas da consulta.
-    MAX         Retorna o valor máximo de N.
-    MIN         Retorna o valor mínimo de N.
+    As funções de grupos:
+        SUM         Retorna a soma de N.
+        AVG         Retorna a média aritmética de N.
+        COUNT       Retorna o número de linhas da consulta.
+        MAX         Retorna o valor máximo de N.
+        MIN         Retorna o valor mínimo de N.
 
-Ordem das cláusulas na declaração SELECT.
-    SELECT coluna(s)
-    FROM tabela(s)
-    WHERE condição linha
-    GROUP BY coluna(s)
-    HAVING condição de grupo de linhas
-    ORDER BY coluna(s);
+    Ordem das cláusulas na declaração SELECT.
+        SELECT coluna(s)
+        FROM tabela(s)
+        WHERE condição linha
+        GROUP BY coluna(s)
+        HAVING condição de grupo de linhas
+        ORDER BY coluna(s);
 
 
 Ex: Para calcular a média salarial dos empregados:*/
@@ -251,9 +251,9 @@ ORDER BY Department_ID;
 
 
 /* (SUBQUERY ou INNERQUERY (sub pesquisa) e QUERYPRINCIPAL ou OUTERQUERY (pesquisa principal))____________________________
-SUBQUERY é um comando SELECT dentro de um outro comando SELECT. Uma declaração SELECT-SUBQUERY 
-(ou INNERQUERY) é aninhada com uma declaração SELECT-QUERYPRINCIPAL (ou OUTERQUERY), a qual 
-retorna resultados a fim de satisfazer uma cláusula WHERE.
+    SUBQUERY é um comando SELECT dentro de um outro comando SELECT. Uma declaração SELECT-SUBQUERY (ou INNERQUERY) é 
+    aninhada com uma declaração SELECT-QUERYPRINCIPAL (ou OUTERQUERY), a qual retorna resultados a fim de satisfazer
+    uma cláusula WHERE.
 
 
 Ex: Para selecionar os funcionários que possuem um salário maior que o de Abel:*/
@@ -312,29 +312,29 @@ ORDER BY FIRST_NAME
 
 
 /* (EXPRESSÃO DECODE e EXPRESSÃO CASE)____________________________________________________________________________________
-A EXPRESSÃO DECODE e a EXPRESSÃO CASE geram colunas para consultas SELECT. 
-• DECODE substitui um valor específico por outro valor específico ou valor padrão, 
-  dependendo do resultado de uma condição de igualdade.
-• CASE permite o processamento condicional que exija o tratamento de várias hipóteses.
+    A EXPRESSÃO DECODE e a EXPRESSÃO CASE geram colunas para consultas SELECT. 
+    • DECODE substitui um valor específico por outro valor específico ou valor padrão, 
+      dependendo do resultado de uma condição de igualdade.
+    • CASE permite o processamento condicional que exija o tratamento de várias hipóteses.
 
-EXPRESSÃO DECODE - Sintaxe:  
-DECODE (COLUNA/EXPRESSÃO,                   → o nome da coluna ou expressão a ser avaliado
-        "PROCURADO1", 'RESULTADO1',         → valor para ser testado e valor para ser retornado
-        "PROCURADO2", 'RESULTADO2',         → valor para ser testado e valor para ser retornado
-                    ...                     → o processo de teste e retorno pode ser reperido
-        'SEM_RESULTADO'                     → valor retornado as pesquisas não forem satisfeitas
-        ) DECODE_COLUNA_GERADA              → coluna gerada para a consulta select
-obs:
-    - PROCURADO deve ser um dado do tipo coluna ou expressão.
-    - DECODE deve ter, no mínimo, 3 parâmetros ou argumentos
-      ("PROCURADO1", 'RESULTADO1' e 'SEM_RESULTADO')
+    EXPRESSÃO DECODE - Sintaxe:  
+    DECODE (COLUNA/EXPRESSÃO,                   → o nome da coluna ou expressão a ser avaliado
+            "PROCURADO1", 'RESULTADO1',         → valor para ser testado e valor para ser retornado
+            "PROCURADO2", 'RESULTADO2',         → valor para ser testado e valor para ser retornado
+                        ...                     → o processo de teste e retorno pode ser reperido
+            'SEM_RESULTADO'                     → valor retornado as pesquisas não forem satisfeitas
+            ) DECODE_COLUNA_GERADA              → coluna gerada para a consulta select
+    obs:
+        - PROCURADO deve ser um dado do tipo coluna ou expressão.
+        - DECODE deve ter, no mínimo, 3 parâmetros ou argumentos
+        ("PROCURADO1", 'RESULTADO1' e 'SEM_RESULTADO')
 
-EXPRESSÃO CASE - Sintaxe:
-CASE
-    WHEN("quando")  COLUNA  OPERADOR(=, >...)  VALOR(int, 'string'...)  THEN("então")  'MENSAGEM'
-                                                . . .
-ELSE  'MENSAGEM'
-END  CASE_COLUNA_GERADA
+    EXPRESSÃO CASE - Sintaxe:
+    CASE
+        WHEN("quando")  COLUNA  OPERADOR(=, >...)  VALOR(int, 'string'...)  THEN("então")  'MENSAGEM'
+                                                    . . .
+    ELSE  'MENSAGEM'
+    END  CASE_COLUNA_GERADA
 
 
 DECODE-Exemplo: Seleciona o Nome e profissão e gera uma coluna de nome DECODE_CARGO
