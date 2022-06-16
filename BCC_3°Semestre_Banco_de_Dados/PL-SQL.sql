@@ -106,7 +106,7 @@ BEGIN /*Operações SQL e PL/SQL (obrigatório)*/
 END; /*(obrigatório)*/
 
 
-/* (CURSORES)_________________________________________________________________________________________________________________________________________________
+/* (CURSORES)__________________________________________________________________________________________________________________________________________________
     Sintaxe:
     DECLARE                         →    Declarações (opcional)
         CURSOR CURSOR_EXEMPLO IS    →    Declara um cursor implícito (IS) — declarado e gerenciado pelo oracle —.
@@ -139,7 +139,7 @@ BEGIN /*Operações SQL e PL/SQL (obrigatório)*/
 END; /*(obrigatório)*/
 
 
-/* (STORED PROCEDURE)________________________________________________________________________________________________________________________________________
+/* (STORED PROCEDURE)__________________________________________________________________________________________________________________________________________
     Procedimento armazenado ou Stored Procedure é uma Sub-Rotina do tipo procedimento que contém uma coleção de comandos em SQL, que podem 
     ser executadas em um Banco de dados de uma só vez. Os Storeds Procedures encapsulam tarefas repetitivas, aceitam parâmetros de entrada, 
     são capazes de utilizar os comandos como IF e ELSE, WHILE, LOOP, REPEAT e CASE, além de poderem chamar outros Storeds Procedures e podem 
@@ -205,7 +205,7 @@ BEGIN
 END;
 
 
-/* (STORED FUNCTION)___________________________________________________________________________________________
+/* (STORED FUNCTION)___________________________________________________________________________________________________________________________________________
     Função armazenada(também chamada de função do usuário ou função definida pelo usuário) ou Stored Function é 
     uma Sub-Rotina do tipo função, o seja, tem por objetivo retornar algum resultado ou retornar algum valor. 
 
@@ -241,3 +241,95 @@ CREATE OR REPLACE FUNCTION /*A Cláusula REPLACE faz com que uma função seja r
     END balanco;
 /*Executando a Stored Function*/
 SELECT balanco(12345) from dual /*12345 é o número da conta escolhida para a busca de seu saldo.*/
+
+
+/* (EXCEPTION)_________________________________________________________________________________________________________________________________________________
+    Exceções são tratamentos de erros e imprevistos, que podem ocorrer durante a execução de um bloco PL/SQL, através de manipuladores de exceção.
+    
+     Ao invés de verificar se existe um erro em um determinado ponto, adicionaremos um manipulador de 
+    exceção para o bloco PL/SQL. Se a exceção é sempre executada nesse bloco (ou qualquer sub-bloco), 
+    teremos certeza que será tratada.
+     Às vezes, o erro não é muito óbvio e não pode ser detectado tão facilmente. Com um único 
+    tratamento de exceção podemos capturar cálculos com dados incorretos, erros de divisão por zero 
+    e assim por diante. Se houver a necessidade de realizar um tratamento em um ponto específico, 
+    podemos colocar uma única instrução ou um grupo de instruções dentro de seu próprio bloco BEGIN-END.
+
+    Sintaxe:
+        EXCEPTION
+            WHEN nome_da_exceção THEN
+                Relação_de_comandos 
+            WHEN nome_da_exceção THEN
+                Relação_de_comandos
+
+    Exceções pré-definidas no Oracle:
+            EXCEÇÃO                Oracle Erro          SQLCODE Valor       OCASIÃO
+        ACCESS_INTO_NULL            ORA-06530               -6530           Um programa tenta atribuir valores aos 
+                                                                            atributos de um objeto não Inicializado.
+
+        CASE_NOT_FOUND              ORA-06592               -6592           Nenhuma das opções nas cláusulas WHEN de uma declaração 
+                                                                            CASE é selecionada, e não há cláusula ELSE.
+                                                                            
+        COLLECTION_IS_NULL          ORA-06531               -6531           Um programa tenta aplicar métodos de coleta que não existam a um tabela 
+                                                                            aninhada não nitializada ou varray, ou o programa tenta atribuir valores 
+                                                                            aos elementos de uma mesa aninhada uninitializada ou varray.
+                                                                            
+        CURSOR_ALREADY_OPEN         ORA-06511               -6511           Um programa tenta abrir um cursor já aberto. Um cursor deve ser fechado antes 
+                                                                            que possa ser reaberto. Um cursor FOR loop é aberto automaticamente o cursor ao 
+                                                                            qual se refere, de modo que o seu programa não pode abrir esse cursor dentro o loop.
+
+        DUP_VAL_ON_INDEX            ORA-00001               -1              Um programa tenta armazenar valores duplicados em uma coluna 
+                                                                            de banco de dados que é constrangido por um índice único.
+
+        INVALID_CURSOR              ORA-01001               -1001           Um programa tenta uma operação de cursor que não é 
+                                                                            permitida, como o fechamento um cursor não aberto.
+        
+        INVALID_NUMBER              ORA-01722               -1722           Em uma declaração SQL, a conversão de uma sequência de caracteres em um número falha 
+                                                                            porque a sequência não representa um número válido. (Em procedimento declarações, 
+                                                                            VALUE_ERROR é levantada.) Essa exceção também é levantada quando a expressão cláusula 
+                                                                            LIMIT em uma declaração FETCH em massa não avalia um número positivo.
+
+        LOGIN_DENIED                ORA-01017               -1017           Um programa tenta fazer logon no Oracle com um nome de usuário ou senha inválido.
+        
+        NO_DATA_FOUND               ORA-01403                100            Uma instrução SELECT INTO não retorna linhas ou seu programa faz referência a elemento 
+                                                                            excluído em uma tabela aninhada ou um elemento nãonitializado em um índice- por tabela. 
+                                                                            Porque esta exceção é usada internamente por algumas funções SQL para sinal de que eles 
+                                                                            estão acabados, você não deve confiar nesta exceção sendo propagado se você elevá-lo 
+                                                                            dentro de uma função que é chamada como parte de uma consulta.
+                                                                            
+        NOT_LOGGED_ON               ORA-01012               -1012           Um programa emite uma chamada de banco de dados sem estar conectado à Oracle. 
+
+        PROGRAM_ERROR               ORA-06501               -6501           O PL/SQL tem um problema interno.
+
+        ROWTYPE_MISMATCH            ORA-06504               -6504           Variável cursor hospedeiro e variável cursor PL/SQL envolvido em um a atribuição tem 
+                                                                            tipos de retorno incompatíveis. Por exemplo, quando um aberto variável cursor host é 
+                                                                            passado para um subprograma armazenado, os tipos de retorno do parâmetros reais e 
+                                                                            formais devem ser compatíveis.
+
+        SELF_IS_NULL                ORA-30625               -30625          Um programa tenta chamar um método MEMBRO, mas a instância do o tipo de objeto não foi 
+                                                                            inicializado. O parâmetro embutido SELF aponta para o objeto, e é sempre o primeiro 
+                                                                            parâmetro passado para um método MEMBRO.
+
+        STORAGE_ERROR               ORA-06500               -6500           PL/SQL fica sem memória ou memória foi corrompida
+
+        SUBSCRIPT_BEYOND_COUNT      ORA-06533               -6533           Um programa faz referência a uma tabela aninhada ou elemento varray usando um índice 
+                                                                            número maior do que o número de elementos na coleção.
+
+        SUBSCRIPT_OUTSIDE_LIMIT     ORA-06532               -6532           Um programa faz referência a uma tabela aninhada ou elemento varray usando um índice 
+                                                                            número (-1, por exemplo) que está fora da faixa legal
+
+        SYS_INVALID_ROWID           ORA-01410               -1410           A conversão de uma sequência de caracteres em um rowid universal falha porque o 
+                                                                            sequência de caracteres não representa um rowid válido.
+
+        TIMEOUT_ON_RESOURCE         ORA-00051               -51             Um intervalo ocorre enquanto o Oracle aguarda um recurso.
+
+        TOO_MANY_ROWS               ORA-01422               -1422           Uma instrução SELECT INTO retorna mais de uma linha.
+
+        VALUE_ERROR                 ORA-06502               -6502           Ocorre um erro aritmético, de conversão, truncação ou restrição de tamanho. Durante 
+                                                                            exemplo, quando seu programa seleciona um valor de coluna em um caractere variável, 
+                                                                            se o valor for maior do que o comprimento declarado da variável, PL/ SQL aborta a 
+                                                                            tarefa e levanta VALUE_ERROR. No processo declarações, VALUE_ERROR é levantada se a 
+                                                                            conversão de uma sequência de caracteres em um número falha. (Nas declarações do SQL, 
+                                                                            INVALID_NUMBER é levantada).
+                                                                            
+        ZERO_DIVIDE                 ORA-01476               -1476           Um programa tenta dividir um número por zero.
+      */
