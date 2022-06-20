@@ -384,3 +384,61 @@ BEGIN
         when DUP_VAL_ON_INDEX then /*(Exceção pré-definida do Oracle): Quando um programa tenta armazenar valores duplicados em uma coluna de banco de dados.*/
             dbms_output.put_line ('ERRO!!! Código já cadastrado, favor cadastrar novo código diferente de ' || codigo);
 END;
+
+
+/* (TRIGGERS)______________________________________________________
+    Triggers ou gatilhos são blocos PL/SQL disparados automaticamente e implicitamente sempre que 
+    ocorrer um evento associado a uma determinada tabela (DML-UPDATE, INSERT ou DELETE).
+    
+    Um Trigger pode ser utilizado para: 
+        • Manutenção de tabelas de auditoria;
+        • Manutenção de tabelas duplicadas;
+        • Implementação de níveis de segurança mais complexos;
+        • Geração de valores de colunas – por exemplo, gerar o valor total da nota fiscal a cada 
+          inclusão, exclusão ou alteração de itens da nota
+
+    Sintaxe:
+    CREATE OR REPLACE TRIGGER NOME_TRIGGER  → declarar o trigger
+    BEFORE                                  → tempo em que será disparado o evento – BEFORE OU AFTER
+    UPDATE OF NOME_COLUNA                   → DML-UPDATE, INSERT ou DELETE para a coluna que será alterada
+    ON NOME_TABELA                          → nome da tabela em que o trigger será executado
+    FOR EACH ROW                            → PARA CADA LINHA
+    BEGIN
+        COMANDOS                            → PL/SQL-DML
+        :NEW  e  :OLD                       → Registros  especiais       
+    END;                        
+
+
+    Obs: Os  registros  especiais  :NEW  e  :OLD  armazenam  temporariamente  os  valores  do  último  
+        registro manipulado pelo SGBD:
+         DML                  :OLD                    :NEW
+        INSERT                  -                 VALORES NOVOS
+        DELETE           VALORES ANTIGOS                -
+        UPDATE           VALORES ANTIGOS          VALORES NOVOS
+          
+
+Ex: Trigger criado para gravar o valor antigo e o novo valor em uma tabela chamada 
+    de NewProduto, quando se alterar um valor da tabela Produto.
+    Ao executar o comando Update produto set vl_custo_medio =2.93 where cd_produto=4, a 
+    tabela NewProduto é alimentada automaticamente
+    
+    Tabela Produto:                         Tabela NewProduto:
+    cd_produto      vl_custo_medio          cd_produto       vl_anterior     vl_novo
+        1               1.5                     4               3.12          2.93
+        2               2.3
+        3               0.65
+        4               3.12
+        5               1.5                                                         
+ */
+Create or Replace Trigger Verifica_Produto /*Cria um trigger de nome Verifica_Produto*/
+Before                                     /*O evento será disparado antes*/
+Update of vl_custo_medio                   /*A coluna vl_custo_medio será atualizada*/
+on Produto                                 /*A tabela que contém a coluna atualizada*/
+For each row                               /*Para cada linha dessa coluna*/
+Begin                                      /*PL/SQL-DML*/ 
+    Update produto
+    set vl_custo_medio = 2.93
+    where cd_produto = 4;
+    Insert into NewProduto 
+    Values(:old.cd_produto, :old.vl_custo_medio, :new.vl_custo_medio);
+End;
