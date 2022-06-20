@@ -50,6 +50,6 @@
 **DCL - LINGUAGEM DE CONTROLE DE DADOS**</br>
 *Comandos:*
 
-- GRANT:</br>
-- REVOKE:</br>
+- GRANT</br>
+- REVOKE</br>
 - DENY</br>
