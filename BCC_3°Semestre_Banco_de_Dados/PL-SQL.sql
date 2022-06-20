@@ -415,7 +415,21 @@ END;
         INSERT                  -                 VALORES NOVOS
         DELETE           VALORES ANTIGOS                -
         UPDATE           VALORES ANTIGOS          VALORES NOVOS
-          
+    
+    Para desabilitar e Habilitar um Trigger Específico:
+        ALTER TRIGGER nome_da_trigger DISABLE;
+        ALTER TRIGGER nome_da_trigger ENABLE;
+    Para desabilitar e Habilitar todos os Triggers de uma tabela:
+        ALTER TABLE nome_tabela DISABLE ALL TRIGGERS;
+        ALTER TABLE nome_tabela ENABLE ALL TRIGGERS;
+    Para eliminar Triggers e Procedimentos:
+        DROP TRIGGER nome_trigger;
+        DROP PROCEDURE nome_procedure;
+    Para inspecionar o dicionário de dados:
+        SELECT object_name, object_type FROM user_objects WHERE object_type =’TRIGGER’;
+    Para obter detalhes dos Triggers:
+        DESC USER_TRIGGERS;
+    
 
 Ex: Trigger criado para gravar o valor antigo e o novo valor em uma tabela chamada 
     de NewProduto, quando se alterar um valor da tabela Produto.
