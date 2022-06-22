@@ -19,9 +19,12 @@
 **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS**</br>
 *Comandos:*
 
-- INSERT</br>
-- UPDATE</br>
-- DELETE</br>
+- INSERT:
+  - Inserir dados — VALUES —, em uma tabela — INTO —
+- UPDATE:
+  - Atualizar linhas de colunas — SET —
+- DELETE:
+  - Excluir linhas de colunas — FROM —
 </br>
 
 **DQL - LINGUAGEM DE CONSULTA DE DADOS**</br>
@@ -42,14 +45,21 @@
 **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**</br>
 *Comandos:*
 
-- BEGIN</br>
-- COMMIT</br>
-- ROLLBACK</br>
+- BEGIN:
+  - Iniciar transação de informação
+- COMMIT:
+  - Terminar transação gravando as alterações realizadas
+- ROLLBACK:
+  - Terminar transação revertendo as alterações realizadas
 </br>
 
 **DCL - LINGUAGEM DE CONTROLE DE DADOS**</br>
 *Comandos:*
 
-- GRANT</br>
-- REVOKE</br>
-- DENY</br>
+- GRANT:
+  - Adicionar novas permissões a um usuário ao banco de dados
+- REVOKE:
+  - Remover o acesso de um usuário ao banco de dados
+- DENY:
+  - Impedir que um usuário receba uma permissão específica</br>
+</br>
