@@ -1,34 +1,67 @@
-# Algoritmos para estruturas de dados lineares
+# Operaçãos para estruturas de dados lineares
+
+
+- ## Estruturas de Dados Estáticas
+
+  - ### Fila Estática:
+    - Algoritmo 01 - Operação IsFull: Função para verificar se uma fila v está cheia;
+    - Algoritmo 01 - Operação Enqueue: Procedimento para inserir o valor x na fila v;
+    - Algoritmo 01 - Operação IsEmpty: Função para verificar se uma fila v está vazia;
+    - Algoritmo 01 - Operação Dequeue: Função para remover um elemento da fila. </br></br>
+
+  - ### Fila Estática Circular:
+    - Algoritmo 02 - Operação IsFull: Função para verificar se uma fila v está cheia;
+    - Algoritmo 02 - Operação Enqueue: Procedimento para inserir o valor x na fila v;
+    - Algoritmo 02 - Operação IsEmpty: Função para verificar se uma fila v está vazia;
+    - Algoritmo 02 - Operação Dequeue: Função para remover um elemento da fila. </br></br>
+
+  - ### Pilha Estática:
+    - Algoritmo 03 - Operação IsFull: Função para verificar se uma pilha está cheia; 
+    - Algoritmo 03 - Operação Push: Procedimento para inserir o valor x na pilha; 
+    - Algoritmo 03 - Operação IsEmpty: Função para verificar se uma pilha está vazia;
+    - Algoritmo 03 - Operação Pop: Função para remover o valor posicionado no topo da pilha v. </br></br>
+
+  - ### Classificação/Ordenação:
+    - Algoritmo 04 (Iterativo) - Método BubbleSort: Ordenação pelo método de bolhas;
+    - Algoritmo 05 (Iterativo) - Método InsertionSort: Ordenação por inserção;
+    - Algoritmo 06 (Iterativo) - Método SelectionSort: Ordenação por seleção; </br></br>
+    - Algoritmo 07 (Recursivo) - Método Quicksort: Ordenação pelo Método Rápido;
+    - Algoritmo 07 (Recursivo) - Método Partition: Ordenação pelo Método Rápido; </br></br>
+    - Algoritmo 08 (Recursivo) - Método Merge: Ordenação pelo método de intercalação (Ordenação por Mistura);
+    - Algoritmo 08 (Recursivo) - Método MergeSort: Ordenação pelo método de intercalação (Ordenação por Mistura); </br></br>
+
+  - ### Pesquisa/Busca
+    - Algoritmo 09 - Busca: para pesquisa sequencial;
+    - Algoritmo 10 - BuscaComSentinela: para pesquisa sequencial com a utilização de sentinela; </br></br>
+    - Algoritmo 11 - BuscaBinaria: Operação para busca binária.</br></br>
+
+- ## Estruturas de Dados Dinâmicas
+  - ### Lista Ligada (ou encadeada):
+    - Algoritmo 12 - Operação Enqueue: inserção em uma lista duplamente ligada;
+    - Algoritmo 12 - Operação Dequeue: remoção em uma lista duplamente ligada.</br></br>
+
+  - ### Fila Dinâmica:
+    - Algoritmo 13 - Operação Enqueue: inserção em uma fila dinâmica;
+    - Algoritmo 13 - Operação Enqueue: remoção em uma fila dinâmica;</br></br>
+
+  - ### Pilha Dinâmica:
+    - Algoritmo 14 - Operação Push: inserção em uma pilha dinâmica;
+    - Algoritmo 14 - Operação Pop: remoção do valor do da pilha dinâmica;</br></br> 
+
+  - ### Classificação/Ordenação:
+    - Algoritmo 15 - Insertion Sort (Ordenação por inserção);
+    - Algoritmo 15 - Complemento de Insertion Sort;</br></br>
+
+  - ### Classificação/Ordenação (em tempo linear)
+    - Algoritmo 16 - Counting Sort (Ordenação por Contagem)
+    - Algoritmo 17 - Bucket Sort (Ordenação por Balde)</br></br>
+
+  - ### Pesquisa/Busca:
+    - Algoritmo 18 - busca de um valor em uma lista ligada;
+    - Algoritmo 18 - identificar o menor valor em uma lista ligada;
+    - Algoritmo 18 - identificar o maior valor em uma lista ligada;
+    - Algoritmo 18 - retornar o sucessor de um valor em uma lista ligada;
+    - Algoritmo 18 - retornar o predecessor de um valor em uma lista ligada.</br></br></br>
+
+# Operaçãos para estruturas de dados não lineares
 </br>
-
-## Estruturas de Dados Estáticas
-
-### Fila Estática: </br>
-• Algoritmo 01 - IsFull: Função para verificar se uma fila v está cheia; </br>
-• Algoritmo 02 - Enqueue: Procedimento para inserir o valor x na fila v; </br>
-• Algoritmo 03 - IsEmpty: Função para verificar se uma fila v está vazia; </br>
-• Algoritmo 04 - Dequeue: Função para remover um elemento da fila. </br>
-
-### Fila Estática Circular: </br>
-• Algoritmo 05 - IsFull: Função para verificar se uma fila v está cheia; </br>
-• Algoritmo 06 - Enqueue: Procedimento para inserir o valor x na fila v; </br>
-• Algoritmo 07 - IsEmpty: Função para verificar se uma fila v está vazia; </br>
-• Algoritmo 08 - Dequeue: Função para remover um elemento da fila. </br>
-### Pilha Estática: </br>
-• Algoritmo 09 - IsFull: Função para verificar se uma pilha está cheia; </br>
-• Algoritmo 10 - Push: Procedimento para inserir o valor x na pilha; </br>
-• Algoritmo 11 - IsEmpty: Função para verificar se uma pilha está vazia; </br>
-• Algoritmo 12 - Pop: Função para remover o valor posicionado no topo da pilha v. </br>
-</br>
-
-## Classificação e Pesquisa Sequencial
-• Algoritmo 13 - BubbleSort: Ordenação pelo método de bolhas; </br>
-• Algoritmo 14 - InsertionSort: Ordenação por inserção; </br>
-• Algoritmo 15 - SelectionSort: Ordenação por seleção; </br>
-• Algoritmo 16 - Busca: para pesquisa sequencial; </br>
-• Algoritmo 17 - BuscaComSentinela: para pesquisa sequencial com a utilização de sentinela; </br>
-• Algoritmo 18 - Quicksort: Ordenação pelo Método Rápido; </br>
-• Algoritmo 19 - Partition: Ordenação pelo Método Rápido; </br>
-• Algoritmo 20 - Merge: Ordenação pelo método de intercalação(Ordenação por Mistura); </br>
-• Algoritmo 21 - MergeSort: Ordenação pelo método de intercalação(Ordenação por Mistura); </br>
-• Algoritmo 22 - BuscaBinaria: Algoritmo para busca binária.
