@@ -1,7 +1,12 @@
+## ***→ criar aplicativo e site disponibizando códigos em C++, java e python ←***
+
 # Operaçãos para estruturas de dados lineares
 
 
 - ## Estruturas de Dados Estáticas
+
+  - ### Vetor ou Array
+
 
   - ### Fila Estática:
     - Algoritmo 01 - Operação IsFull: Função para verificar se uma fila v está cheia;
@@ -37,6 +42,7 @@
 
 - ## Estruturas de Dados Dinâmicas
   - ### Lista Ligada (ou encadeada):
+    - (usar ArrayList em java)
     - Algoritmo 12 - Operação Enqueue: inserção em uma lista duplamente ligada;
     - Algoritmo 12 - Operação Dequeue: remoção em uma lista duplamente ligada.</br></br>
 

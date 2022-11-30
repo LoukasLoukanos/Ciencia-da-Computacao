@@ -29,7 +29,7 @@ Enqueue(V,x)
         erro overflow //erro overflow (de fila cheia)
 
 
-//Inserção-Enqueue (Enfileirar)
+//Remoção-Dequeue (Desenfileirar)
 Dequeue (V)
     se ! IsEmpty () //se !não IsEnpty (se o começo(head) não for igual ao final(tail) da fila, ou seja, se a fila não estiver vazia)
         x ← V[head] //x = o primeiro valor da fila
