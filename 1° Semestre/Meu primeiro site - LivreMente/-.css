@@ -1,0 +1,5 @@
+body{
+  background: url("_imagens/neurociencia.png") fixed;
+  /*configura o plano de fundo para uma imagem. O valor do atributo é a URL da imagem que você quer usar. Se a imagem é menor do que a janela do navegador, a imagem será repetida até preencher a janela inteira, caso não especifique com "no-repeat;", sem aspas,após chamar a imagem*/
+  background-size: 100%; /* definir qual será o tamanho da imagem de fundo de alguma tag, geralmente uma <div>. Para isso, ele recebe três possíveis valores: um número, a expressão “cover” ou a expressão “contain”. Cover ocupa o escpaço todo, mesmo que use cortes, contain nao ocupa e nao corta*/
+}/*Melhor método de definir imagem de fundo*/
