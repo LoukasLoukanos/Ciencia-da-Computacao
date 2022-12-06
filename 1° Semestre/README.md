@@ -1,6 +1,6 @@
 ## **Conteúdo do diretório:**
 
-### **Meu primeiro site (PseudoSite) desenvolvido em JavaScript, HTML5 e CSS3.**
+### Meu primeiro site (PseudoSite) desenvolvido em JavaScript, HTML5 e CSS3.
 
 </br><hr>
 

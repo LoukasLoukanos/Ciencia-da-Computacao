@@ -1,6 +1,6 @@
 ## **Conteúdo do diretório:**
 
-### **Dois softwares desenvolvidos conforme os parâmetros de duas atividades do Projeto Integrador de Competências.**
+### Dois softwares desenvolvidos conforme os parâmetros de duas atividades do Projeto Integrador de Competências.
 
 </br><hr>
 
