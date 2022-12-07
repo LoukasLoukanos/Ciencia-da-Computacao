@@ -4,7 +4,25 @@ import java.util.Scanner; // importação da classe Scanner do pacote java.util
 public class FilaEstatica {
 	//testa a ocorrência de queue-overflow (estouro de fila cheia)
 
+	
+	//teste queue-underflow (estouro de fila vazia)
+	public static void IsEmpty (void f[], int t) {
+		head = f[t-t];
+		tail = f[t];
+		if (head == tail) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	//teste queue-overflow (estouro de fila cheia) 			
 	public static void IsFull (fila[]) {
+		se count = |V|
+            retorna VERDADEIRO
+        senão
+            retorna FALSO
+			
 		if (this.tail = fila.length) {
 		}
 	}
@@ -56,6 +74,8 @@ public class FilaEstatica {
 
 		
 	}
+	
+
 	sc.close(); // Fecha objeto leitor sc, evitando a perda de recursos e impedindo o uso posterior do dispositivo de entrada.
 	    
 }
