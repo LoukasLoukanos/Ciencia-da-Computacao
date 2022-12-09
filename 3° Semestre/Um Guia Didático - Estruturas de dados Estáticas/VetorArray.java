@@ -2,9 +2,12 @@ import java.util.Scanner; // importação da classe Scanner do pacote java.util
 
 //Declaração, alocação e operações de Vetor (ou Array) — de forma estática na memória —:
 public class VetorArray {
+	
 	public VetorArray () {
 		arrangement();
 	}
+	
+	
 	//Declara e aloca estaticamente um vetor/array arranjo (arrangement) na memória:
 	public static void arrangement () {
 		Scanner sc = new Scanner(System.in);
@@ -18,6 +21,7 @@ public class VetorArray {
 		System.out.print("Tamanho: ");
 		int tamanho = sc.nextInt();
 		assert tamanho>0;
+		
 		tipo nome[] = new int[tamanho];
 		System.out.printf("Arranjo ", nome, " do tipo de dados ", tipo, " de " tamanho, " células alocado.");
 
@@ -25,6 +29,7 @@ public class VetorArray {
 
 		return nome[];
     }
+	
 
 	//Preenche as células de um vetor/array arranjo (arrangement)
 	public static void fillArrangement(nome, tipo) {
@@ -50,6 +55,7 @@ public class VetorArray {
 			}
 		}
     }
+	
  
     //Soma os valores das células
     public static void soma (nome, tipo) {
@@ -66,6 +72,21 @@ public class VetorArray {
 		}
 	}
 	
+	
+	//Busca o índice k de um valor x em um vetor v de tamanho t
+	public static void busca (int x, tipo v[], int t) {
+		for (int k=0; k<t; k++) {
+			if (v[k] == x) {
+				System.out.println("O índice procurado do valor " + x + " é " + k);
+				return k;
+			} else {
+				System.out.println("Não existe índice correspondente, pois não há nenhuma célula com o valor" + x);
+				return null;
+			}
+		}
+	}
+	
+	
 	//Remove o índice k do vetor v de tamanho t
 	public static void remove (int k, tipo v[], int t) {
 		int x = v[k];
@@ -76,14 +97,16 @@ public class VetorArray {
 		return x;
 	}
 	
+	
 	//Insere o valor x no índice k do vetor v de tamanho t
 	public static void insere (int x, int k, tipo v[], int t) {
 		for (int i = t - 1; i > k; i--) {
 			v[i] = v[-1];
 		}
 		v[k] = x;
+		System.out.println("Valor " + x + "inserido na célula de índice" + k);
+		return x;
 	} 
-	//terminar________________↑
 
 
 	//fazendo uso dos métodos
