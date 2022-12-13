@@ -11,65 +11,113 @@ public class VetorArray {
         
 		System.out.print("Tamanho: ");
 		int tamanho = sc.nextInt();
+		assert(tamanho>0): "O tamanho do vetor precisa ser maior que zero";
 
 		System.out.print("Tipo de dados: digite 'p' (para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' (para não primitivos → [string] ...");
 		String tipo_de_dado = sc.nextLine();
+		assert(tipo_de_dado == "p" || tipo_de_dado == "np"): "Aceita-se 'p' ou 'np' como parâmetro";
 		
 		if (tipo_de_dado == "p") {
-			System.out.print("Tipo (byte, short, int, long, float, double, char, boolean): ");
+			System.out.print("Defina o tipo primitivo (byte, short, int, long, float, double, char, boolean): ");
         	String tipo = sc.nextLine();
 		} else if (tipo_de_dado == "np") {
 			String tipo = "String";
 		}
 
-		var_vetor = arranjo(nome, tamanho, tipo);
-
+		//Declaração e Alocação estaticamente do vetor/array arranjo na memória:
+		tipo nome[] = new int[tamanho];
+		System.out.printf("Arranjo ", nome, " do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
+		
+		//Chamando o procedimento de preenchimento das células
+		preencher (tipo nome[]);
+		sc.close();
 	}
 	
 	
-	//Subrotina função
-	//Declara e aloca estaticamente um vetor/array arranjo (arrangement) na memória:
-	public static tipo arranjo (String nomeString, int tamanho, String tipoString) {
-		assert tamanho>0;
-		tipo nome[] = new int[tamanho];
-		System.out.printf("Arranjo ", nome, " do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
-
-		return vetor;
-    }
-	
-	
 	//Subrotina procedimento
-	//Preenche todas as células de um vetor/array arranjo (arrangement)
-	public static void fillArrangement (tipo nome[]) {
-		for (int i=0; i<nome.length; i++) {
-			System.out.printf("Defina o elemento da célula de índice ", i, " : ");
-            if (tipo == "float") {
-                nome[i] = sc.nextFloat();
-            } else if (tipo == "int") {
-                nome[i] = sc.nextInt();
-            } else if (tipo == "byte") {
-                nome[i] = sc.nextByte();
-            } else if (tipo == "long") {
-                nome[i] = sc.nextLong();
-            } else if (tipo == "boolean") {
-                nome[i] = sc.nextBoolean();
-            } else if (tipo == "double") {
-                nome[i] = sc.nextDouble();
-            } else if (tipo == "String") {
-                nome[i] = sc.nextLine();
-            }
-			if (i == nome.length-1) {
+	//Preenche todas as células de um vetor/array arranjo
+	public static void preencher (tipo nome[]) {
+        if (tipo == "byte") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextByte();
+				if (i == nome.length-1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+		} else if (tipo == "short") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextShort();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "int") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextInt();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "long") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextLong();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "float") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextFloat();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "double") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextDouble();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "char") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.next().charAt(0);
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "boolean") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextBoolean();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
+			}
+        } else if (tipo == "String") {
+			for (int i=0; i<nome.length; i++) {
+				System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
+				nome[i] = sc.nextLine();
+				if (i == nome.length-1) {
+				System.out.print("Arranjo definido, todas as células foram preenchidas.");
+				}
 			}
 		}
     }
 	
  
     //Subrotina função
-    //Soma os valores das células
-    public static void somaCelulas (nome[], tipo) {
+    //Soma os valores das células de um vetor
+    public static void somaCelulas (tipo nome[]) {
 		try {
-			int soma = 0; 
+			tipo soma; 
 			for (int i=0; i<nome.length; i++) {
 				System.out.println(nome+"["+i+"] = "+nome[i]);
 				soma += nome[i];
@@ -84,10 +132,10 @@ public class VetorArray {
 	
 	
 	//Subrotina função
-	//Busca o índice i de um valor x em um vetor v de tamanho t
-	public static void buscaIndice (int x, tipo v[], int t) {
-		for (int i=0; i<t; i++) {
-			if (v[i] == x) {
+	//Busca o índice i de um valor x em um vetor
+	public static void buscaIndice (int x, tipo nome[]) {
+		for (int i=0; i<nome.length; i++) {
+			if (nome[i] == x) {
 				System.out.println("O índice procurado do valor " + x + " é " + i);
 				return i;
 			} else {
@@ -99,10 +147,10 @@ public class VetorArray {
 	
 	
 	//Subrotina função
-	//Remove o índice i do vetor v de tamanho t
-	public static void removeIndice (int i, tipo v[], int t) {
-		int valor_indice = v[i];
-		for (int j=i+1; j<t; j++) {
+	//Remove o índice i de um vetor
+	public static void removeIndice (int i, tipo nome[]) {
+		int valor_indice = nome[i];
+		for (int j=i+1; j<nome.length; j++) {
 			v[j-1] = v[j];
 		}
 		System.out.println("Valor " + valor_indice + "da célula de índice" + i + "removido.");
@@ -110,29 +158,36 @@ public class VetorArray {
 	}
 	
 	
-	//Subrotina procedimento (chama subrotinas função)
-	//Remove o valor x em qualquer indice i que for encontrad no vetor v
-	public static void removeValor (int x, tipo v[], int t) {
-		i = buscaIndice (x, v[], t)
-		removeIndice (i. v[], t)
+	//Subrotina procedimento (chama subrotinas funções)
+	//Remove o valor x em qualquer indice i que for encontrado em um vetor
+	public static void removeValor (int x, tipo nome[]) {
+		i = buscaIndice (x, nome[])
+		x = removeIndice (i, nome[])
+		System.out.println("Valor " + x + "da célula de índice" + i + "removido.");
 	}	
 	
 	
 	//Subrotina procedimento
-	//Insere o valor x no índice i do vetor v de tamanho t
-	public static void insereValor (int x, int i, tipo v[], int t) {
-		for (int j = t - 1; j > i; j--) {
-			v[j] = v[-1];
+	//Insere o valor x no índice i de um vetor
+	public static void insereValor (int x, int i, tipo nome[]) {
+		for (int j=nome.length-1; j>i; j--) {
+			nome[j] = nome[j-1];
 		}
-		v[i] = x;
+		nome[i] = x;
 		System.out.println("Valor " + x + "inserido na célula de índice" + i);
 	} 
 
-
 	
 	//fazendo uso dos métodos
-    fillArrangement (nome, tipo);
-	soma (nome, tipo);
-
-	sc.close(); 
+	somaCelulas (tipo nome[]);
+	
+	int valor_para_busca = 1,618;
+	indice_retornado = buscaIndice (valor_para_busca, nome[]); //buscou o índice do valor 1,618
+	indice_removido = removeIndice (indice_retornado, nome[]); //removeu esse índice, ou seja, removeu o próprio valor 1,618
+	
+	valor_para_remocao = valor_para_busca;
+	valor_removido = removeValor (valor_para_remocao, tipo nome[]); //removeu o valr 1,618 sem precisar buscar o índice (o preocedimendo fez isso)
+	
+	insereValor (valor_removido, indice_retornado, nome[]); //insere novamente o valor 1,618 que foi removido
+	
 }
