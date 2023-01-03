@@ -1,6 +1,7 @@
+import java.sql.Array;
 import java.util.Scanner; // importação da classe Scanner do pacote java.util
 
-//Declaração, alocação e operações de Vetor (ou Array) — de forma estática na memória —:
+//Declaração, alocação e operações — de forma estática na memória — de Vetor (ou Array) de estrutura de dados primitivos, do mesmo tipo (estrutura homogênea), ou não primitivos:
 public class VetorArray {
 
 	public VetorArray () {
@@ -130,9 +131,10 @@ public class VetorArray {
 		}
 
 		sc.close();
-		
+	}
 
-		//fazendo uso dos métodos
+	public static void main(String[] args) {
+		//Exemplos de uso dos métodos
 		somaCelulas (array);
 		
 		float valor_para_busca = 1.618;
@@ -143,16 +145,15 @@ public class VetorArray {
 		valor_removido = removeValor (valor_para_remocao, array); //removeu o valr 1,618 sem precisar buscar o índice (o preocedimendo fez isso)
 		arraynsereValor (valor_removido, indice_retornado, array); //insere novamente o valor 1,618 que foi removido
 	}
-
-	// Subrotina função
+	
+	// Subrotina procedimento
 	// Soma os valores das células de um vetor
-
-	public static void somaCelulas(int inteiro[], float flutuante[], double dupla[]) {
-		float soma = 0;
+	public static void somaCelulas(int array[]) {
+		int soma = 0;
 		try {
-			for (int i = 0; i < inteiro.length; i++) {
-				System.out.println(inteiro + "[" + i + "] = " + inteiro[i]);
-				soma += inteiro[i];
+			for (int i = 0; i < array.length; i++) {
+				System.out.println(array + "[" + i + "] = " + array[i]);
+				soma += array[i];
 			}
 			System.out.println("Soma: " + soma);
 		} catch (Exception e) {
