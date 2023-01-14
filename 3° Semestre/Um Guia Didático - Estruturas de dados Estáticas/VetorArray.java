@@ -1,23 +1,25 @@
 import java.util.Scanner; // importação da classe Scanner do pacote java.util
 
-//Declaração, alocação e operações — de forma estática na memória — de Vetor/Array de estrutura de dados primitivos (do mesmo tipo → estrutura homogênea), ou não primitivos:
+//Declaração, alocação e operações — de forma estática na memória — de Vetor/Array de estrutura
+//de dados primitivos (do mesmo tipo → estrutura homogênea), ou não primitivos:
 public class VetorArray {
 	public Scanner sc = new Scanner(System.in);
 
 	public VetorArray() {
 		System.out.print("Tamanho: ");
 		int tamanho = sc.nextInt();
-		assert (tamanho > 0) : "O tamanho do vetor precisa ser maior que zero";
+		assert (tamanho > 0) : "O tamanho do vetor precisa ser maior que zero!";
 
-		System.out.print("Tipo de dados: digite 'p' (para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' (para não primitivos → [string] ...");
+		System.out.print(
+				"Tipo de dados: digite 'p' (para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' (para não primitivos → [string] ...");
 		sc.nextLine();
-        String tipo_de_dado = sc.nextLine();
-		assert (tipo_de_dado == "p" || tipo_de_dado == "np") : "Aceita-se 'p' ou 'np' como parâmetro";
+		String tipo_de_dado = sc.nextLine();
+		assert (tipo_de_dado == "p" || tipo_de_dado == "np") : "Aceita-se 'p' ou 'np' como parâmetro!";
 
 		if (tipo_de_dado == "p") {
 			System.out.print("Defina o tipo primitivo (byte, short, int, long, float, double, char, boolean): ");
 			sc.nextLine();
-            String tipo = sc.nextLine();
+			String tipo = sc.nextLine();
 
 			if (tipo == "byte") {
 				getByteArray(tamanho, tipo, sc);
@@ -37,7 +39,7 @@ public class VetorArray {
 				getBooleanArray(tamanho, tipo, sc);
 			}
 		} else if (tipo_de_dado == "np") {
-				getStringArray(tamanho, sc);
+			getStringArray(tamanho, sc);
 		}
 	}
 
@@ -48,24 +50,25 @@ public class VetorArray {
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
-            sc.nextLine();
+			sc.nextLine();
 			array[i] = sc.nextByte();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					byte valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
-						valor = valor + array[i];
+						valor = (byte) (valor + array[i]);
 					}
 					System.out.println("Soma: " + valor);
 				} catch (Exception e) {
@@ -74,12 +77,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				byte x = sc.nextByte();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -87,21 +90,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				byte valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				byte x = sc.nextByte();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						byte valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -114,25 +117,26 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				byte valor = sc.nextByte();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
-		
+		// ___↑ operações ↑_________
+
 		sc.close();
 		return array;
 	}
@@ -145,23 +149,24 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextShort();
+			array[i] = sc.nextShort();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					short valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
-						valor = valor + array[i];
+						valor = (short) (valor + array[i]);
 					}
 					System.out.println("Soma: " + valor);
 				} catch (Exception e) {
@@ -170,12 +175,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				short x = sc.nextShort();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -183,21 +188,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				short valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				short x = sc.nextShort();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						short valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -210,24 +215,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				short valor = sc.nextShort();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -241,20 +247,21 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextInt();
+			array[i] = sc.nextInt();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					int valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
 						valor = valor + array[i];
@@ -266,12 +273,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				int x = sc.nextInt();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -279,21 +286,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				int valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				int x = sc.nextInt();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						int valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -306,24 +313,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				int valor = sc.nextInt();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -333,24 +341,25 @@ public class VetorArray {
 		// Declaração e Alocação estaticamente do vetor/array arranjo na memória:
 		long array[] = new long[tamanho];
 		System.out.printf("Vetor do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
-		
+
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextLong();
+			array[i] = sc.nextLong();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					long valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
 						valor = valor + array[i];
@@ -362,12 +371,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				long x = sc.nextLong();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -375,21 +384,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				long valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				long x = sc.nextLong();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						long valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -402,24 +411,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				long valor = sc.nextLong();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -433,20 +443,21 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextFloat();
+			array[i] = sc.nextFloat();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					float valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
 						valor = valor + array[i];
@@ -458,12 +469,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				float x = sc.nextFloat();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -471,21 +482,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				float valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				float x = sc.nextFloat();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						float valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -498,24 +509,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				float valor = sc.nextFloat();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -529,20 +541,21 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextDouble();
+			array[i] = sc.nextDouble();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					double valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
 						valor = valor + array[i];
@@ -554,12 +567,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				double x = sc.nextDouble();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -567,21 +580,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				double valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				double x = sc.nextDouble();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						double valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -594,24 +607,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				double valor = sc.nextDouble();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -625,37 +639,29 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.next().charAt(0);
+			array[i] = sc.next().charAt(0);
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
-				try {
-					valor = array[0];
-					for (int i = 1; i < array.length; i++) {
-						System.out.println(array + "[" + i + "] = " + array[i]);
-						valor = valor + array[i];
-					}
-					System.out.println("Soma: " + valor);
-				} catch (Exception e) {
-					System.out.println("Vetor/Array de tipo de dados inválido para esta operação.");
-				}
+				System.out.println("Vetor/Array de tipo de dados inválido para esta operação.");
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				char x = sc.next().charAt(0);
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -663,21 +669,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				char valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				char x = sc.next().charAt(0);
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						char valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -690,25 +696,26 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				char valor = sc.next().charAt(0);
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
-		
+		// ___↑ operações ↑_________
+
 		sc.close();
 		return array;
 	}
@@ -721,23 +728,24 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo", tipo, ":");
 			sc.nextLine();
-            array[i] = sc.nextBoolean();
+			array[i] = sc.nextBoolean();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					boolean valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
-						valor = valor + array[i];
+						valor = valor & array[i];
 					}
 					System.out.println("Soma: " + valor);
 				} catch (Exception e) {
@@ -746,12 +754,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				boolean x = sc.nextBoolean();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -759,21 +767,21 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
-				String valor_indice = array[indice];
+				boolean valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
 					array[j - 1] = array[j];
 				}
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
-				String x = sc.nextLine();
+				sc.nextLine();
+				boolean x = sc.nextBoolean();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						String valor_indice = array[i];
+						boolean valor_indice = array[i];
 						for (int j = i + 1; j < array.length; j++) {
 							array[j - 1] = array[j];
 						}
@@ -786,24 +794,25 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
-				String valor = sc.nextLine();
+				sc.nextLine();
+				boolean valor = sc.nextBoolean();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
-				array[indice] = valor;
+				valor = array[indice];
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
@@ -817,20 +826,21 @@ public class VetorArray {
 		for (int i = 0; i < array.length; i++) {
 			System.out.printf("Defina o elemento da célula de índice ", i, "de tipo string:");
 			sc.nextLine();
-            array[i] = sc.nextLine();
+			array[i] = sc.nextLine();
 			if (i == array.length - 1) {
 				System.out.print("Arranjo definido, todas as células foram preenchidas.");
 			}
 		}
 
-		//___↓ operações ↓_________
-		System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+		// ___↓ operações ↓_________
+		System.out.println(
+				"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 		sc.nextLine();
-        String operacao = sc.nextLine();
-		while (operacao != "q") { 
+		String operacao = sc.nextLine();
+		while (operacao != "q") {
 			if (operacao == "s") {
 				try {
-					valor = array[0];
+					String valor = array[0];
 					for (int i = 1; i < array.length; i++) {
 						System.out.println(array + "[" + i + "] = " + array[i]);
 						valor = valor + array[i];
@@ -842,12 +852,12 @@ public class VetorArray {
 			} else if (operacao == "b") {
 				System.out.print("Digite o valor a ser buscado o índice: ");
 				sc.nextLine();
-                String x = sc.nextLine();
+				String x = sc.nextLine();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
 					if (array[i] == x) {
-						System.out.println("O índice" + i + " contém o valor " + x );
-						count ++;
+						System.out.println("O índice" + i + " contém o valor " + x);
+						count++;
 					}
 				}
 				if (count == 0) {
@@ -855,7 +865,7 @@ public class VetorArray {
 				}
 			} else if (operacao == "ri") {
 				System.out.print("Digite o índice da célula a ser removida: ");
-                sc.nextLine();
+				sc.nextLine();
 				int indice = sc.nextInt();
 				String valor_indice = array[indice];
 				for (int j = indice + 1; j < array.length; j++) {
@@ -864,7 +874,7 @@ public class VetorArray {
 				System.out.println("Célula de índice " + indice + " de valor " + valor_indice + " removida.");
 			} else if (operacao == "rv") {
 				System.out.print("Digite o valor contido na(s) célula(s) a ser removida(s): ");
-                sc.nextLine();
+				sc.nextLine();
 				String x = sc.nextLine();
 				int count = 0;
 				for (int i = 0; i < array.length; i++) {
@@ -882,11 +892,11 @@ public class VetorArray {
 				}
 			} else if (operacao == "i") {
 				System.out.print("Digite o valor a ser inserido:");
-                sc.nextLine();
+				sc.nextLine();
 				String valor = sc.nextLine();
 				System.out.print("Digite o índice no qual será inserido o valor:");
 				sc.nextLine();
-                int indice = sc.nextInt();
+				int indice = sc.nextInt();
 				for (int j = array.length - 1; j > indice; j--) {
 					array[j] = array[j - 1];
 				}
@@ -894,15 +904,21 @@ public class VetorArray {
 				System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
 			}
 
-			System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice" );
+			System.out.println(
+					"Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
 			sc.nextLine();
-            String novaoperacao = sc.nextLine();
+			String novaoperacao = sc.nextLine();
 			operacao = novaoperacao;
 		}
-		//___↑ operações ↑_________
+		// ___↑ operações ↑_________
 
 		sc.close();
 		return array;
 	}
 }
 
+public class TestaVetorArray {
+	public static void main(String[] args) {
+		VetorArray obj = new VetorArray();
+	}
+}
