@@ -4,22 +4,30 @@ import java.util.Scanner; // importação da classe Scanner do pacote java.util
 //de dados primitivos (do mesmo tipo → estrutura homogênea), ou não primitivos:
 public class VetorArray {
 	public Scanner sc = new Scanner(System.in);
+	private int tamanho;
+	private String tipo_de_dado;
+	private String tipo;
 
+	public static void main(String[] args, Scanner sc) {
+		VetorArray myobj = new VetorArray ();
+        myobj.info();
+	}
+	
 	public VetorArray() {
 		System.out.print("Tamanho: ");
-		int tamanho = sc.nextInt();
+		this.tamanho = sc.nextInt();
 		assert (tamanho > 0) : "O tamanho do vetor precisa ser maior que zero!";
 
 		System.out.print(
-				"Tipo de dados: digite 'p' (para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' (para não primitivos → [string] ...");
+				"Tipo de dados: digite 'p' para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' para não primitivos → [string] ...");
 		sc.nextLine();
-		String tipo_de_dado = sc.nextLine();
+		this.tipo_de_dado = sc.nextLine();
 		assert (tipo_de_dado == "p" || tipo_de_dado == "np") : "Aceita-se 'p' ou 'np' como parâmetro!";
 
 		if (tipo_de_dado == "p") {
 			System.out.print("Defina o tipo primitivo (byte, short, int, long, float, double, char, boolean): ");
 			sc.nextLine();
-			String tipo = sc.nextLine();
+			this.tipo = sc.nextLine();
 
 			if (tipo == "byte") {
 				getByteArray(tamanho, tipo, sc);
@@ -41,6 +49,10 @@ public class VetorArray {
 		} else if (tipo_de_dado == "np") {
 			getStringArray(tamanho, sc);
 		}
+	}
+
+	public void info() {
+		System.out.printf("Vetor do tipo de dados " + this.tipo_de_dado + "(" + this.tipo + ")" + " de " + this.tamanho + " células definido.");
 	}
 
 	public static byte[] getByteArray(int tamanho, String tipo, Scanner sc) {
@@ -914,11 +926,5 @@ public class VetorArray {
 
 		sc.close();
 		return array;
-	}
-}
-
-public class TestaVetorArray {
-	public static void main(String[] args) {
-		VetorArray obj = new VetorArray();
 	}
 }
