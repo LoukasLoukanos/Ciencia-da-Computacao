@@ -1,6 +1,5 @@
 # Algoritmos de Estruturas de Dados Lineares
 
-
 - ## Estruturas de Dados Estáticas
 
   - ### Vetor ou Array
