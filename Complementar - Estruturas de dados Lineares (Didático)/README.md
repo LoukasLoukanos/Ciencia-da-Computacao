@@ -67,5 +67,5 @@
     - Algoritmo 18 - retornar o sucessor de um valor em uma lista ligada;
     - Algoritmo 18 - retornar o predecessor de um valor em uma lista ligada.</br></br></br>
 
-# Algoritmos de Estruturas de Dados Não Lineares → 4° Semestre
+# Algoritmos de Estruturas de Dados Não Lineares
 </br>

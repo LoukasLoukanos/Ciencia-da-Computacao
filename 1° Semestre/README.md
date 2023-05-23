@@ -1,10 +1,10 @@
-## **Conteúdo do diretório:**
+## **Conhecimento Aplicado:**
 
 ### Meu primeiro site (PseudoSite) desenvolvido em JavaScript, HTML5 e CSS3.
 
 </br><hr>
 
-### **Conteúdo apresentado no semestre:**
+### **Grade Semestral:**
 
 - Aplicações para internet;
 - Lógica Computacional;

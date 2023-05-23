@@ -1,10 +1,10 @@
-## **Conteúdo do diretório:**
+## **Conhecimento Aplicado:**
 
 ### Dois softwares desenvolvidos conforme os parâmetros de duas atividades do Projeto Integrador de Competências.
 
 </br><hr>
 
-### **Conteúdo apresentado no semestre:**
+### **Grade Semestral:**
 
 - Matemática Aplicada;
 - Modelagem de Dados;
