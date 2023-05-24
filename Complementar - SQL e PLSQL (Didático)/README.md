@@ -1,8 +1,9 @@
 # **LINGUAGENS DE OPERAÇÕES DA SQL**
 
 ### **DDL - LINGUAGEM DE DEFINIÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DDL.sql">→ Exemplos DDL</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DDL.sql">Exemplos DDL</a> |
 |:-:|
+
 ***Comandos:*** 
 ```sql
 CREATE /*Criar tabelas (TABLE):*/
@@ -20,8 +21,9 @@ DROP /*Excluir tabela (TABLE)*/
 </br>
 
 ### **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DML.sql">→ Exemplos DML</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DML.sql">Exemplos DML</a> |
 |:-:|
+
 ***Comandos:*** 
 ```sql
 INSERT
@@ -36,8 +38,9 @@ DELETE
 </br>
 
 ### **DQL - LINGUAGEM DE CONSULTA DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DQL.sql">→ Exemplos DQL</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DQL.sql">Exemplos DQL</a> |
 |:-:|
+
 ***Comandos:*** 
 ```sql
 SELECT 
@@ -55,8 +58,9 @@ SELECT
 </br>
 
 ### **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DTL.sql">→ Exemplos DTL</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DTL.sql">Exemplos DTL</a> |
 |:-:|
+
 ***Comandos:*** 
 ```sql
 BEGIN 
@@ -71,8 +75,9 @@ ROLLBACK
 </br>
 
 ### **DCL - LINGUAGEM DE CONTROLE DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">→ Exemplos DCL</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">Exemplos DCL</a> |
 |:-:|
+
 ***Comandos:*** 
 ```sql
 GRANT
