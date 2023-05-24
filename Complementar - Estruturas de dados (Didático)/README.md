@@ -4,7 +4,6 @@
 
   - ### Vetor ou Array
 
-
   - ### Fila Estática:
     - Algoritmo 01 - Operação IsFull: Função para verificar se uma fila v está cheia;
     - Algoritmo 01 - Operação Enqueue: Procedimento para inserir o valor x na fila v;

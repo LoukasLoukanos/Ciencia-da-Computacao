@@ -1,8 +1,6 @@
 # **LINGUAGENS DE OPERAÇÕES DA SQL**
 
 ### **DDL - LINGUAGEM DE DEFINIÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DDL.sql">Exemplos DDL</a> |
-|:-:|
 
 ***Comandos:*** 
 ```sql
@@ -18,13 +16,15 @@ ALTER /*Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabel
 DROP /*Excluir tabela (TABLE)*/
     RENAME /*para alterar o nome*/
 ```
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DDL.sql">Exemplos DDL</a> |
+|:-:|
+
 </br>
 
 ### **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DML.sql">Exemplos DML</a> |
-|:-:|
 
-***Comandos:*** 
+***Comandos:***
 ```sql
 INSERT
     /*Inserir dados — VALUES —, em uma tabela — INTO —*/
@@ -35,13 +35,15 @@ UPDATE
 DELETE
     /*Excluir linhas de colunas — FROM —*/
 ```
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DML.sql">Exemplos DML</a> |
+|:-:|
+
 </br>
 
 ### **DQL - LINGUAGEM DE CONSULTA DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DQL.sql">Exemplos DQL</a> |
-|:-:|
 
-***Comandos:*** 
+***Comandos:***
 ```sql
 SELECT 
   /*1. Visualizar linhas de SUBQUERY/INNERQUERY (sub pesquisa) e QUERYPRINCIPAL/OUTERQUERY (pesquisa principal):*/
@@ -55,13 +57,15 @@ SELECT
     GROUP BY /*Cláusula para produzir grupos de dados gerando sumários*/
     HAVING /*Cláusula para estabelecer condições para listar grupos de dados*/
 ```
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DQL.sql">Exemplos DQL</a> |
+|:-:|
+
 </br>
 
 ### **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DTL.sql">Exemplos DTL</a> |
-|:-:|
 
-***Comandos:*** 
+***Comandos:***
 ```sql
 BEGIN 
     /*Iniciar transação de informação*/
@@ -72,13 +76,15 @@ COMMIT
 ROLLBACK 
     /*Terminar transação revertendo as alterações realizadas*/
 ```
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DTL.sql">Exemplos DTL</a> |
+|:-:|
+
 </br>
 
 ### **DCL - LINGUAGEM DE CONTROLE DE DADOS**
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">Exemplos DCL</a> |
-|:-:|
 
-***Comandos:*** 
+***Comandos:***
 ```sql
 GRANT
     /*Adicionar novas permissões a um usuário ao banco de dados*/
@@ -89,3 +95,6 @@ REVOKE
 DENY
     /*Impedir que um usuário receba uma permissão específica*/
 ```
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">Exemplos DCL</a> |
+|:-:|
