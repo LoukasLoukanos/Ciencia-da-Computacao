@@ -4,10 +4,10 @@
 <hr>
 
 ### **Conhecimento aplicado por semestre:**
-| <a href='#'>Todos os Semestres</a> | <a href='#'>1° Sem</a> | <a href='#'>2° Sem</a> | <a href='#'>3° Sem</a> | <a href='#'>4° Sem</a> | <a href='#'>5° Sem</a> | <a href='#'>6° Sem</a> | <a href='#'>7° Sem</a> | <a href='#'>8° Sem</a> |
+| <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado'>Todos os Semestres</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/1%C2%B0%20Semestre#conhecimento-aplicado'>1° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/2%C2%B0%20Semestre#conhecimento-aplicado'>2° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/3%C2%B0%20Semestre#conhecimento-aplicado'>3° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/4%C2%B0%20Semestre#conhecimento-aplicado'>4° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/5%C2%B0%20Semestre#conhecimento-aplicado'>5° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/6%C2%B0%20Semestre#conhecimento-aplicado'>6° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/7%C2%B0%20Semestre#conhecimento-aplicado'>7° Sem</a> | <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/8%C2%B0%20Semestre#conhecimento-aplicado'>8° Sem</a> |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 ### **Trabalho de Conclusão de Curso:**
-<a href='#'>→ TCC</a>
+<a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/TCC#trabalho-de-conclus%C3%A3o-de-curso'>→ TCC</a>
 
 ### **Conteúdo Complementar:**
 <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'>→ Guia Algoritmos de Estruturas de Dados (didático)</a></br>
