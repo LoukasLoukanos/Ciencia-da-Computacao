@@ -1,5 +1,5 @@
 # **BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO λ**
-| <img src="robot1.png" alt="robo" width="500"> | ***O seguinte repositório tem a finalidade de apresentar um conteúdo pessoal, baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, ele inclui projetos e conteúdos de estudo pessoais, que são imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
+| <img src="[robot1.png](https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot1.png)" alt="robo" width="500"> | ***O seguinte repositório tem a finalidade de apresentar um conteúdo pessoal, baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, ele inclui projetos e conteúdos de estudo pessoais, que são imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
 |:-:|:-:|
 <hr>
 
@@ -17,5 +17,5 @@
 <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'>→ Livro - Python Fluente</a></br>
 
 <div style="text-align: center; margin-top: 45px;">
-    <img src="robot2.png" alt="robo" width="399">
+    <img src="[robot2.png](https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot2.png)" alt="robo" width="399">
 </div>
