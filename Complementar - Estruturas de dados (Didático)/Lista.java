@@ -23,6 +23,13 @@ public class Lista<T> {
         elementos[indice] = elemento;
     }
 	
+	/*
+	public T[] tipo_alocado (T tamanho) {
+		T elementos[] = new T[tamanho];
+	    Lista<T> lista = new Lista<T>(elementos);
+		System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
+	}
+	*/
 	public void Aloca() {
 		System.out.print("Tamanho: ");
 		this.tamanho = sc.nextInt();
@@ -37,28 +44,44 @@ public class Lista<T> {
 			System.out.print("Defina o tipo primitivo (byte, short, int, long, float, double, char, boolean): ");
 			sc.nextLine();
 			this.tipo = sc.nextLine();
-
+			
 			if (tipo == "byte") {
 				Byte elementos[] = new Byte[tamanho];
 	    		Lista<Byte> lista = new Lista<Byte>(elementos);
 				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "short") {
-
+				Short elementos[] = new Short[tamanho];
+	    		Lista<Short> lista = new Lista<Short>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "int") {
-
+				Integer elementos[] = new Integer[tamanho];
+	    		Lista<Integer> lista = new Lista<Integer>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "long") {
-
+				Long elementos[] = new Long[tamanho];
+	    		Lista<Long> lista = new Lista<Long>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "float") {
-
+				Float elementos[] = new Float[tamanho];
+	    		Lista<Float> lista = new Lista<Float>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "double") {
-
+				Double elementos[] = new Double[tamanho];
+	    		Lista<Double> lista = new Lista<Double>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "char") {
-
+				Character elementos[] = new Character[tamanho];
+	    		Lista<Character> lista = new Lista<Character>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			} else if (tipo == "boolean") {
-
+				Boolean elementos[] = new Boolean[tamanho];
+	    		Lista<Boolean> lista = new Lista<Boolean>(elementos);
+				System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 			}
 		} else if (tipo_de_dado == "np") {
-
+			String elementos[] = new String[tamanho];
+	    	Lista<String> lista = new Lista<String>(elementos);
+			System.out.printf("Lista do tipo de dados ", tipo, " de ", tamanho, " células alocado.");
 		}
 	}
 	public void Define(int indice) {
