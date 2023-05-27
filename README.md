@@ -16,6 +16,6 @@
 <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Java%20Guia%20do%20Programador%20(Did%C3%A1tico)#java-guia-do-programador-4%C2%AA-ed'>→ Livro - Java Guia do Progradador</a></br>
 <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'>→ Livro - Python Fluente</a></br>
 
-<div style="text-align: center; margin-top: 90px;">
-    <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot2.png" alt="robo" width="300">
-</div>
+</br></br>
+
+<img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot2.png" alt="robo" width="333">
