@@ -1,5 +1,5 @@
 # **BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO λ**
-| <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot1.png" alt="robo" width="500"> | ***O seguinte repositório tem a finalidade de apresentar um conteúdo pessoal, baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, ele inclui projetos e conteúdos de estudo pessoais, que são imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
+| <img src="https://giphy.com/embed/doXBzUFJRxpaUbuaqz" alt="tech" width="500"> | ***O seguinte repositório tem a finalidade de apresentar um conteúdo pessoal, baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, ele inclui projetos e conteúdos de estudo pessoais, que são imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
 |:-:|:-:|
 <hr>
 
@@ -18,4 +18,4 @@
 
 </br></br>
 
-<img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/robot2.png" alt="robo" width="333">
+<img src="https://giphy.com/embed/xT9IgzoKnwFNmISR8I" alt="robo" width="500">
