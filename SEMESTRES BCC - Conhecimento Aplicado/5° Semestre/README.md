@@ -2,15 +2,8 @@
 
 </br>
 
-#### ***Título***
-Descrição
-| <a href="#">Repositório</a> |
-|:-:|
-
-</br>
-
-#### ***Título***
-Descrição
+#### ***Chatbot em Prolog — PIC —***
+Projeto interdisciplinar que visa construir um chatbot implementado em prolog especialista em responder a perguntas relacionadas à redes de computadores. O usuário poderá realizar perguntas para o software sobre rede de computadores e a IA irá respondê-las.
 | <a href="#">Repositório</a> |
 |:-:|
 
@@ -21,7 +14,7 @@ Descrição
 ### ***5° Semestre:***
 - Processamento de Imagens;
 - Sistemas Operacionais;
-- Computabilidade e Complexidade de Algoritmos
+- Computabilidade e Complexidade de Algoritmos;
 - Paradigmas de Programação;
 - Redes de Computadores;
 - Inteligência Artificial;
