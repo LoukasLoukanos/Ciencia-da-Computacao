@@ -18,4 +18,4 @@
 
 </br></br>
 
-<img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech2.gif" alt="code" width="200">
+<img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech2.gif" alt="code" width="600">
