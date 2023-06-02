@@ -99,7 +99,7 @@
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">Exemplos DCL</a> | 
  |:-:|
 
-</br> 
+</br></br> 
 
 # **PL/SQL (Program Language SQL)**
 *PL/SQL é a linguagem de programação da Oracle que permite efetuar transações, como a DTL, porém com muitas funcionalidades:*
@@ -287,7 +287,7 @@ END;
  </br> 
   
 
-### **TRIGGERS**
+### **TRIGGER**
 *Triggers ou gatilhos são blocos PL/SQL disparados automaticamente e implicitamente sempre que ocorrer um evento associado a uma determinada tabela (DML-UPDATE, INSERT ou DELETE).*
 
 *Um Trigger pode ser utilizado para:*
