@@ -126,13 +126,13 @@ END; /* (obrigatório) */
 
 ```
 
- | <a href="#">Exemplos PL/SQL</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-SQL.sql">Exemplos PL/SQL</a> | 
  |:-:| 
   
  </br> 
   
 
-### **CURSORES**
+### **CURSOR**
 *Um cursor é uma estrutura de dados que permite percorrer e manipular os resultados de uma consulta SQL de forma sequencial. Um cursor pode ser visto como um ponteiro para um conjunto de registros retornados por uma consulta.*
 #### **Sintaxe:**
 ```sql
@@ -147,7 +147,7 @@ BEGIN /* Operações SQL e PL/SQL (obrigatório) */
 END; /* (obrigatório) */
 ```
 
- | <a href="#">Exemplos CURSOR</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-Cursor.sql">Exemplos CURSOR</a> | 
  |:-:| 
   
  </br> 
@@ -187,7 +187,7 @@ BEGIN
 END;
 ```
 
- | <a href="#">Exemplos STORED PROCEDURE</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-StoredProcedure.sql">Exemplos STORED PROCEDURE</a> | 
  |:-:| 
   
  </br> 
@@ -221,7 +221,7 @@ BEGIN
     /*code*/
 END;
 ```
- | <a href="#">Exemplos STORED FUNCTION</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-StoredFunction.sql">Exemplos STORED FUNCTION</a> | 
  |:-:| 
   
  </br> 
@@ -281,7 +281,7 @@ BEGIN
 END;
 ```
 
- | <a href="#">Exemplos EXCEPTION</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-Exception.sql">Exemplos EXCEPTION</a> | 
  |:-:| 
   
  </br> 
@@ -347,7 +347,5 @@ BEGIN
    /* COMANDOS PL/SQL, :NEW e :OLD (Registros  especiais) */
 END;                   
 ```
- | <a href="#">Exemplos TRIGGER</a> | 
+ | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-Trigger.sql">Exemplos TRIGGER</a> | 
  |:-:| 
-  
- </br> 
