@@ -50,7 +50,9 @@ public class Alg01<T> {
         return this.elementos[indice];
     }
 
-    /*↓ Considerando uma Vetor do tipo int → (modificar para aceitar todos os tipos) ↓*/
+    /*↓_________CODIGO ADICIONAL→ TERMINAR E FAZER O EQUIVALENTE NOS OUTROS CODIGOS FONTE EM PY E C++ _________↓
+
+    ↓ Considerando uma Vetor do tipo int → (modificar para aceitar todos os tipos) ↓*/
     public T operacoes(T[] elementos) {
     	System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
         sc.nextLine();
@@ -131,5 +133,5 @@ public class Alg01<T> {
     public static void main(String[] args) {
         // Código adicional, se necessário
     }
-    
+    /*↑_________CODIGO ADICIONAL→ TERMINAR E FAZER O EQUIVALENTE NOS OUTROS CODIGOS FONTE EM PY E C++ _________↑*/
 }
