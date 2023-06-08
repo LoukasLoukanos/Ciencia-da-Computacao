@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-public class Lista<T> {
+public class Alg01<T> {
     private T[] elementos;
     Scanner sc = new Scanner(System.in);
 
-    public Lista(T[] elementos) {
+    public Alg01(T[] elementos) {
         this.elementos = elementos;
 
         System.out.print("Tamanho: ");
         int tamanho = sc.nextInt();
-        assert (tamanho > 0) : "O tamanho da lista precisa ser maior que zero!";
+        assert (tamanho > 0) : "O tamanho do Vetor precisa ser maior que zero!";
 
         System.out.print("Tipo de dados: digite 'p' para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' para não primitivos → [string] ...");
         sc.nextLine();
@@ -25,8 +25,8 @@ public class Lista<T> {
                 try {
                     Class<?> clazz = Class.forName("java.lang." + tipo.substring(0, 1).toUpperCase() + tipo.substring(1));
                     this.elementos = (T[]) Array.newInstance(clazz, tamanho);
-                    Lista<T> lista = new Lista<T>(this.elementos);
-                    System.out.printf("Lista do tipo de dados %s de %d células alocadas.\n", tipo, tamanho);
+                    Alg01<T> vetor = new Alg01<T>(this.elementos);
+                    System.out.printf("Vetor do tipo de dados %s de %d células alocadas.\n", tipo, tamanho);
                 } catch (ClassNotFoundException e) {
                     System.out.println("Tipo de dado inválido!");
                 }
@@ -35,8 +35,8 @@ public class Lista<T> {
             }
         } else if (tipo_de_dado.equals("np")) {
             this.elementos = (T[]) new String[tamanho];
-            Lista<T> lista = new Lista<T>(this.elementos);
-            System.out.printf("Lista do tipo de dados String de %d células alocadas.\n", tamanho);
+            Alg01<T> vetor = new Alg01<T>(this.elementos);
+            System.out.printf("Vetor do tipo de dados String de %d células alocadas.\n", tamanho);
         } else {
             System.out.println("Tipo de dado inválido!");
         }
@@ -50,7 +50,7 @@ public class Lista<T> {
         return this.elementos[indice];
     }
 
-    /*↓ Considerando uma lista doi tipo int → (modificar para aceitar todos os tipos) ↓*/
+    /*↓ Considerando uma Vetor do tipo int → (modificar para aceitar todos os tipos) ↓*/
     public T operacoes(T[] elementos) {
     	System.out.println("Digite uma operação ou 'q' para finalizar: \n 's' → para soma dos valores de todas as células \n 'b' → para buscar os índices de um valor \n 'ri' → para remover o valor da célula informando o índice \n 'rv' → para remover valor de célula(s) informando o valor\n  'i' → para inserir um valor em uma célula informando o índice");
         sc.nextLine();
@@ -65,7 +65,7 @@ public class Lista<T> {
                     }
                     System.out.println("Soma: " + valor);
                 } catch (Exception e) {
-                    System.out.println("Lista de tipo de dados inválido para esta operação.");
+                    System.out.println("Vetor de tipo de dados inválido para esta operação.");
                 }
             } else if (operacao == "b") {
                 System.out.print("Digite o valor a ser buscado o índice: ");
@@ -116,7 +116,7 @@ public class Lista<T> {
                 sc.nextLine();
                 int indice = sc.nextInt();
 
-                lista.inserir(indice, valor);
+                Vetor.inserir(indice, valor);
 
                 System.out.println("Valor " + valor + "inserido na célula de índice" + indice);
             }
