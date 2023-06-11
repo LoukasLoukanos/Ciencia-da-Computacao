@@ -3,10 +3,10 @@
 - ## **Estruturas de Dados Estáticas**
 
   - ### ***Array unidimensional (Vetor)***
-    - **Algoritmo 01** - vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo (estrutura homogênea))</br></br>
+    - **Algoritmo 01** - array vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo – estrutura homogênea –)</br></br>
 
   - ### ***Fila Estática Circular/Não-Circular***
-    - **Algoritmo 02** - Estrutura de dados linear de fila (de regra de acesso FIFO) estática genérica utilizando um array unidimensional (vetor)
+    - **Algoritmo 02** - Estrutura de dados linear de fila (FIFO) estática genérica utilizando um array vetor
       - isEmpty - verificar se a fila está vazia;
       - isFull - verificar se a fila está cheia;
       - enqueue - adicionar elementos;
@@ -16,7 +16,7 @@
       - showQueue - mostar elementos da fila.</br></br>
 
   - ### ***Pilha Estática:***
-    - **Algoritmo 03** - Estrutura de dados linear de pilha (de regra de acesso LIFO) estática genérica utilizando um array unidimensional (vetor)
+    - **Algoritmo 03** - Estrutura de dados linear de pilha (LIFO) estática genérica utilizando um array vetor
       - isEmpty - verificar se a pilha está vazia;
       - isFull - verificar se a pilha está cheia;
       - push - inserir elementos no topo da pilha;
