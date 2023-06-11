@@ -3,27 +3,42 @@
 - ## **Estruturas de Dados Estáticas**
 
   - ### ***Array unidimensional (Vetor)***
-    - **Algoritmo 01** - array vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo – estrutura homogênea –)</br></br>
+    - #### **Algoritmo 01:** 
+      Implementação de um array vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo – estrutura homogênea – )
+
+      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+      </br>
 
   - ### ***Fila Estática Circular/Não-Circular***
-    - **Algoritmo 02** - Estrutura de dados linear de fila (FIFO) estática genérica utilizando um array vetor
+    - #### **Algoritmo 02:**
+      Implementação de um array vetor para uma estrutura de dados linear de fila (FIFO) estática genérica, com os métodos:
       - isEmpty - verificar se a fila está vazia;
       - isFull - verificar se a fila está cheia;
       - enqueue - adicionar elementos;
       - dequeue - remover o elemento da frente da fila;
       - size - obter o tamanho atual da fila;
       - front - acessar o elemento da frente da fila sem removê-lo;
-      - showQueue - mostar elementos da fila.</br></br>
+      - showQueue - mostar elementos da fila.
+
+      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+      </br>
 
   - ### ***Pilha Estática:***
-    - **Algoritmo 03** - Estrutura de dados linear de pilha (LIFO) estática genérica utilizando um array vetor
+    - #### **Algoritmo 03:**
+      Implementação de um array vetor para uma estrutura de dados linear de pilha (LIFO) estática genérica, com os métodos:
       - isEmpty - verificar se a pilha está vazia;
       - isFull - verificar se a pilha está cheia;
       - push - inserir elementos no topo da pilha;
       - pop - remover elementos do dopo da pilha;
       - size - obter o tamanho atual da pilha;
       - front - acessar o elemento do topo da pilha sem removê-lo;
-      - showStack - mostar elementos da pilha (do topo para base).</br></br>
+      - showStack - mostar elementos da pilha (do topo para base).
+
+      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+      </br>
 
   - ### Classificação/Ordenação:
     - **Algoritmo 04** - Método BubbleSort (Iterativo): Ordenação pelo método de bolhas;
