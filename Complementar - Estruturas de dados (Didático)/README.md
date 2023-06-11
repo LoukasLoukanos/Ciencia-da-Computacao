@@ -2,24 +2,19 @@
 
 - ## **Estruturas de Dados Estáticas**
 
-  - ### ***Vetor ou Array***
+  - ### ***Array unidimensional (Vetor)***
     - **Algoritmo 01** - vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo (estrutura homogênea))
-  - ### ***Fila Estática***
-    - **Algoritmo 02**
-      - Operação IsFull: Função para verificar se uma fila v está cheia;
-      - Operação Enqueue: Procedimento para inserir o valor x na fila v;
-      - Operação IsEmpty: Função para verificar se uma fila v está vazia;
-      - Operação Dequeue: Função para remover um elemento da fila. </br></br>
+  - ### ***Fila Estática Circular/Não-Circular***
+    - **Algoritmo 02** - Estrutura de dados linear de uma fila (de regra de acesso FIFO) não-circular estática genérica utilizando um array unidimensional (vetor)
+      - isEmpty - verificar se a fila está vazia;
+      - isFull - verificar se a fila está cheia;
+      - size - obter o tamanho atual da fila;
+      - front - acessar o elemento da frente da fila sem removê-lo;
+      - enqueue - adicionar elementos;
+      - dequeue - remover o elemento da frente da fila.</br></br>
 
-  - ### ***Fila Estática Circular***
-    - **Algoritmo 03**
-      - Operação IsFull: Função para verificar se uma fila v está cheia;
-      - Operação Enqueue: Procedimento para inserir o valor x na fila v;
-      - Operação IsEmpty: Função para verificar se uma fila v está vazia;
-      - Operação Dequeue: Função para remover um elemento da fila. </br></br>
-
-  - ### Pilha Estática:
-    - **Algoritmo 04**
+  - ### ***Pilha Estática:***
+    - **Algoritmo 04** - regra de acesso LIFO (Last In First Out)
       - Operação IsFull: Função para verificar se uma pilha está cheia;
       - Operação Push: Procedimento para inserir o valor x na pilha;
       - Operação IsEmpty: Função para verificar se uma pilha está vazia;
