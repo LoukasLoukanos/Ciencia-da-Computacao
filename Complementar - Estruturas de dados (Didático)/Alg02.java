@@ -1,15 +1,19 @@
 /* Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular estática genérica utilizando um array unidimensional (vetor)
 
-Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
-Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços livres, caso haja, no início da fila.
+→ Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
+  livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
+
+→ Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
+  livres, caso haja, no início da fila.
 
 Métodos:
  isEmpty - verificar se a fila está vazia; 
  isFull - verificar se a fila está cheia;
- size - obter o tamanho atual da fila.
- front - acessar o elemento da frente da fila sem removê-lo; 
  enqueue - adicionar elementos;
  dequeue - remover o elemento da frente da fila;
+ size - obter o tamanho atual da fila;
+ front - acessar o elemento da frente da fila sem removê-lo;
+ showQueue - mostar elementos da fila.
 */
 
 public class Alg02<T> {
@@ -72,14 +76,27 @@ public class Alg02<T> {
         return tamanho;
     }
 
+    public void showQueue() {
+        if (isEmpty()) {
+            System.out.println("A fila está vazia.");
+            return;
+        }
+        System.out.println("Elementos da fila:");
+        for (int i = 0; i <= tamanho ; i++) {
+            System.out.println(elementos[i]);
+        }
+    }
+
     public static void main(String[] args) {
         Alg02<Integer> fila = new Alg02<>(5);
         fila.enqueue(10);
         fila.enqueue(20);
         fila.enqueue(30);
-        System.out.println("Tamanho da fila: " + fila.size()); // Saída: 3
-        System.out.println("Elemento na frente da fila: " + fila.front()); // Saída: 10
-        System.out.println("Removendo elemento da fila: " + fila.dequeue()); // Saída: 10
-        System.out.println("Tamanho da fila após remoção: " + fila.size()); // Saída: 2
+        System.out.println("Tamanho da fila: " + fila.size());
+        System.out.println("Elemento na frente da fila: " + fila.front());
+        System.out.println("Removendo elemento da fila: " + fila.dequeue());
+        System.out.println("Tamanho da fila após remoção: " + fila.size());
+
+        fila.showQueue();
     }
 }
