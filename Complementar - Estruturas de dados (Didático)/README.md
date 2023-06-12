@@ -6,7 +6,7 @@
     - #### **Algoritmo 01:** 
       Implementação de um array vetor de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo – estrutura homogênea – )
 
-      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
       </br>
 
@@ -21,7 +21,7 @@
       - front - acessar o elemento da frente da fila sem removê-lo;
       - showQueue - mostar elementos da fila.
 
-      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
       </br>
 
@@ -36,7 +36,7 @@
       - front - acessar o elemento do topo da pilha sem removê-lo;
       - showStack - mostar elementos da pilha (do topo para base).
 
-      | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Java</a> | <a href="#">C++</a> | <a href="#">Ruby</a> |
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
       </br>
 
