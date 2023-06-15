@@ -1,3 +1,23 @@
+=begin
+Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular estática genérica utilizando um array unidimensional (vetor)
+
+→ Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
+  livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
+
+→ Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
+  livres, caso haja, no início da fila.
+
+Métodos:
+ isEmpty - verificar se a fila está vazia; 
+ isFull - verificar se a fila está cheia;
+ enqueue - adicionar elementos;
+ dequeue - remover o elemento da frente da fila;
+ size - obter o tamanho atual da fila;
+ front - acessar o elemento da frente da fila sem removê-lo;
+ showQueue - mostar elementos da fila.
+*/
+=end
+
 class Alg02
     def initialize(capacidade)
       @capacidade = capacidade
