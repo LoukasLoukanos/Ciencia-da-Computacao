@@ -40,31 +40,31 @@
       |:-:|:-:|:-:|:-:|:-:|:-:|
       </br>
 
-  - ### Classificação/Ordenação:
-    - **Algoritmo 04** - Método BubbleSort (Iterativo): Ordenação pelo método de bolhas;
+  - ### ***Classificação/Ordenação:***
+    - **Algoritmo 04** - Método (Iterativo) BubbleSort ou Ordenação pelo método de bolhas:
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 05** - Método InsertionSort (Iterativo): Ordenação por inserção;
+    - **Algoritmo 05** - Método (Iterativo) InsertionSort ou Ordenação por inserção:
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 06** - Método SelectionSort (Iterativo): Ordenação por seleção;
+    - **Algoritmo 06** - Método (Iterativo) SelectionSort ou Ordenação por seleção:
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 07** - Método Quicksort (Recursivo): Ordenação pelo Método Rápido;
+    - **Algoritmo 07** - Método (Recursivo) Quicksort ou Ordenação pelo Método Rápido:
         | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-    - **Algoritmo 08** - Método Partition (Recursivo): Ordenação pelo Método Rápido;
+    - **Algoritmo 08** - Método (Recursivo) Partition ou Ordenação pelo Método Rápido:
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 09** - Método Merge (Recursivo): Ordenação pelo método de intercalação (Ordenação por Mistura);
+    - **Algoritmo 09** - Método (Recursivo) Merge ou Ordenação pelo método de intercalação (Ordenação por Mistura):
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 10** - Método MergeSort (Recursivo): Ordenação pelo método de intercalação (Ordenação por Mistura); 
+    - **Algoritmo 10** - Método (Recursivo) MergeSort ou Ordenação pelo método de intercalação (Ordenação por Mistura): 
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
     </br></br>
