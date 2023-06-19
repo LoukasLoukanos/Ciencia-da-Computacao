@@ -1,6 +1,6 @@
 =begin
- Estrutura de dados linear de Classificação/Ordenação estatica 
- InsertionSort ou Método (Iterativo) de Ordenação por inserção
+ Algoritmo da Estrutura de dados linear de Classificação/Ordenação estatica (não dinâmica)
+ InsertionSort, também conhecida como Ordenação pelo Método (Iterativo) de Inserção 
 =end
 
 def insertion_sort(array)
