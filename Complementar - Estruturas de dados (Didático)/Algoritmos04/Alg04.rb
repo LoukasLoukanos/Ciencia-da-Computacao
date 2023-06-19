@@ -1,6 +1,6 @@
 =begin
- Estrutura de dados linear de Classificação/Ordenação estatica BubbleSort 
- ou Método BubbleSort (Iterativo): Ordenação pelo método de bolhas.
+ Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) 
+ BubbleSort, também conhecida como Ordanação pelo Método (Iterativo) de Bolhas. 
 =end
 
 def bubble_sort(array)
