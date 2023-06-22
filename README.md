@@ -1,5 +1,5 @@
 # **BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO λ**
-| <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech_1.gif" alt="internet" width="111"> | ***O seguinte repositório tem a finalidade de apresentar um conteúdo pessoal, baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, ele inclui projetos e conteúdos de estudo pessoais, que são imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
+| <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech_1.gif" alt="internet" width="111"> | ***O repositório tem a finalidade de apresentar um conteúdo baseado no estudo universitário, bem como em estudos complementares de livros e pesquisas realizados ao decorrer do curso. De forma inerente à grade curricular, inclui projetos e conteúdos de estudo pessoais, imprescindíveis para a compreensão, aprendizado e domínio de áreas da formação.*** |
 |:-:|:-:|
 <hr>
 
