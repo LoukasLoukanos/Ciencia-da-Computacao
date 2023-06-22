@@ -12,14 +12,14 @@
 
   - ### ***Fila Estática Circular/Não-Circular***
     - #### **Algoritmo 02:**
-      Implementação de um array vetor para uma estrutura de dados linear de fila (FIFO) estática genérica, com os métodos:
-      - isEmpty - verificar se a fila está vazia;
-      - isFull - verificar se a fila está cheia;
-      - enqueue - adicionar elementos;
-      - dequeue - remover o elemento da frente da fila;
-      - size - obter o tamanho atual da fila;
-      - front - acessar o elemento da frente da fila sem removê-lo;
-      - showQueue - mostar elementos da fila.
+      Implementação de um array vetor para uma estrutura de dados linear de fila (FIFO) estática genérica, com os métodos:</br>
+      • isEmpty - verificar se a fila está vazia;</br>
+      • isFull - verificar se a fila está cheia;</br>
+      • enqueue - adicionar elementos;</br>
+      • dequeue - remover o elemento da frente da fila;</br>
+      • size - obter o tamanho atual da fila;</br>
+      • front - acessar o elemento da frente da fila sem removê-lo;</br>
+      • showQueue - mostar elementos da fila.
 
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -27,14 +27,14 @@
 
   - ### ***Pilha Estática:***
     - #### **Algoritmo 03:**
-      Implementação de um array vetor para uma estrutura de dados linear de pilha (LIFO) estática genérica, com os métodos:
-      - isEmpty - verificar se a pilha está vazia;
-      - isFull - verificar se a pilha está cheia;
-      - push - inserir elementos no topo da pilha;
-      - pop - remover elementos do dopo da pilha;
-      - size - obter o tamanho atual da pilha;
-      - front - acessar o elemento do topo da pilha sem removê-lo;
-      - showStack - mostar elementos da pilha (do topo para base).
+      Implementação de um array vetor para uma estrutura de dados linear de pilha (LIFO) estática genérica, com os métodos:</br>
+      • isEmpty - verificar se a pilha está vazia;</br>
+      • isFull - verificar se a pilha está cheia;</br>
+      • push - inserir elementos no topo da pilha;</br>
+      • pop - remover elementos do dopo da pilha;</br>
+      • size - obter o tamanho atual da pilha;</br>
+      • front - acessar o elemento do topo da pilha sem removê-lo;</br>
+      • showStack - mostar elementos da pilha (do topo para base).
 
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -42,15 +42,15 @@
 
   - ### ***Classificação/Ordenação:***
     - **Algoritmo 04** - Método (Iterativo) BubbleSort ou Ordenação pelo método de bolhas:
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
     - **Algoritmo 05** - Método (Iterativo) InsertionSort ou Ordenação por inserção:
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
     - **Algoritmo 06** - Método (Iterativo) SelectionSort ou Ordenação por seleção:
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
     - **Algoritmo 07** - Método (Recursivo) Quicksort ou Ordenação pelo Método Rápido:
