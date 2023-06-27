@@ -53,59 +53,52 @@
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 07** - Método (Recursivo) Quicksort ou Ordenação pelo Método Rápido:
+    - **Algoritmo 07** - Método (Recursivo) de divisão e conquista QuickSort ou Ordenação pelo Método Rápido:
         | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-    - **Algoritmo 08** - Método (Recursivo) Partition ou Ordenação pelo Método Rápido:
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
-      |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 09** - Método (Recursivo) Merge ou Ordenação pelo método de intercalação (Ordenação por Mistura):
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
-      |:-:|:-:|:-:|:-:|:-:|:-:|
-
-    - **Algoritmo 10** - Método (Recursivo) MergeSort ou Ordenação pelo método de intercalação (Ordenação por Mistura): 
+    - **Algoritmo 08** - Método (Recursivo) de divisão e conquista MergeSort ou Ordenação pelo método de Mistura/Mesclagem:
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
     </br></br>
 
   - ### Pesquisa/Busca
-    - **Algoritmo 11** - Busca: para pesquisa sequencial;
-    - **Algoritmo 12** - BuscaComSentinela: para pesquisa sequencial com a utilização de sentinela; </br></br>
-    - **Algoritmo 13** - BuscaBinaria: Operação para busca binária.</br></br>
+    - **Algoritmo 10** - Busca: para pesquisa sequencial;
+    - **Algoritmo 11** - BuscaComSentinela: para pesquisa sequencial com a utilização de sentinela; </br></br>
+    - **Algoritmo 12** - BuscaBinaria: Operação para busca binária.</br></br>
 
 - ## Estruturas de Dados Dinâmicas
   - ### Lista Ligada (ou encadeada):
     - (usar ArrayList em java)
-    - **Algoritmo 14**
+    - **Algoritmo 13**
       - Operação Enqueue: inserção em uma lista duplamente ligada;
       - Operação Dequeue: remoção em uma lista duplamente ligada.</br></br>
 
   - ### Fila Dinâmica:
-    - **Algoritmo 15**
+    - **Algoritmo 14**
       - Operação Enqueue: inserção em uma fila dinâmica;
       - Operação Enqueue: remoção em uma fila dinâmica;</br></br>
 
   - ### Pilha Dinâmica:
-    - **Algoritmo 16**
+    - **Algoritmo 15**
       - Operação Push: inserção em uma pilha dinâmica;
       - Operação Pop: remoção do valor do da pilha dinâmica;</br></br> 
 
   - ### Classificação/Ordenação:
-    - **Algoritmo 17**
+    - **Algoritmo 16**
       - Insertion Sort (Ordenação por inserção);
       - Complemento de Insertion Sort;</br></br>
 
   - ### Classificação/Ordenação (em tempo linear)
-    - **Algoritmo 18** - Counting Sort (Ordenação por Contagem)
-    - **Algoritmo 19** - Bucket Sort (Ordenação por Balde)</br></br>
+    - **Algoritmo 17** - Counting Sort (Ordenação por Contagem)
+    - **Algoritmo 18** - Bucket Sort (Ordenação por Balde)</br></br>
 
   - ### Pesquisa/Busca:
-    - **Algoritmo 20** - busca de um valor em uma lista ligada;
-    - **Algoritmo 21** - identificar o menor valor em uma lista ligada;
-    - **Algoritmo 22** - identificar o maior valor em uma lista ligada;
-    - **Algoritmo 23** - retornar o sucessor de um valor em uma lista ligada;
-    - **Algoritmo 24** - retornar o predecessor de um valor em uma lista ligada.</br></br></br>
+    - **Algoritmo 19** - busca de um valor em uma lista ligada;
+    - **Algoritmo 20** - identificar o menor valor em uma lista ligada;
+    - **Algoritmo 21** - identificar o maior valor em uma lista ligada;
+    - **Algoritmo 22** - retornar o sucessor de um valor em uma lista ligada;
+    - **Algoritmo 23** - retornar o predecessor de um valor em uma lista ligada.</br></br></br>
 
 # Algoritmos de Estruturas de Dados Não Lineares
 </br>
