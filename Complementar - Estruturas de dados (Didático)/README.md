@@ -41,31 +41,40 @@
       </br>
 
   - ### ***Classificação/Ordenação:***
-    - **Algoritmo 04** - Método (Iterativo) BubbleSort ou Ordenação pelo método de bolhas:
+    - **Algoritmo 04** - Método (Iterativo) bubbleSort ou Ordenação pelo método de bolhas:
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 05** - Método (Iterativo) InsertionSort ou Ordenação por inserção:
+    - **Algoritmo 05** - Método (Iterativo) insertionSort ou Ordenação por inserção:
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 06** - Método (Iterativo) SelectionSort ou Ordenação por seleção:
+    - **Algoritmo 06** - Método (Iterativo) selectionSort ou Ordenação por seleção:
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 07** - Método (Recursivo) de divisão e conquista QuickSort ou Ordenação pelo Método Rápido:
-        | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+    - **Algoritmo 07** - Método (Recursivo) de divisão e conquista quickSort ou Ordenação pelo Método Rápido:
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 08** - Método (Recursivo) de divisão e conquista MergeSort ou Ordenação pelo método de Mistura/Mesclagem:
-      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+    - **Algoritmo 08** - Método (Recursivo) de divisão e conquista mergeSort ou Ordenação pelo método de Mistura/Mesclagem:
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
     </br></br>
 
   - ### Pesquisa/Busca
-    - **Algoritmo 10** - Busca: para pesquisa sequencial;
-    - **Algoritmo 11** - BuscaComSentinela: para pesquisa sequencial com a utilização de sentinela; </br></br>
-    - **Algoritmo 12** - BuscaBinaria: Operação para busca binária.</br></br>
+    - **Algoritmo 09** - buscaSequencial: para pesquisa sequencial;
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - **Algoritmo 10** - buscaSequencialComSentinela: para pesquisa sequencial com a utilização de sentinela;
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - **Algoritmo 11** - buscaBinaria: Operação para busca binária.
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+    </br></br>
 
 - ## Estruturas de Dados Dinâmicas
   - ### Lista Ligada (ou encadeada):
