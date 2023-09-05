@@ -8,7 +8,8 @@
 
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos01/Alg01.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-      </br>
+  </br></br>
+
 
   - ### ***Fila Estática Circular/Não-Circular***
     - #### **Algoritmo 02:**
@@ -23,9 +24,10 @@
 
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos02/Alg02.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-      </br>
+  </br></br>
 
-  - ### ***Pilha Estática:***
+
+  - ### ***Pilha Estática***
     - #### **Algoritmo 03:**
       Implementação de um array vetor para uma estrutura de dados linear de pilha (LIFO) estática genérica, com os métodos:</br>
       • isEmpty - verificar se a pilha está vazia;</br>
@@ -38,76 +40,174 @@
 
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos03/Alg03.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-      </br>
+  </br></br>
 
-  - ### ***Classificação/Ordenação:***
-    - **Algoritmo 04** - Método (Iterativo) bubbleSort ou Ordenação pelo método de bolhas:
+
+  - ### ***Classificação/Ordenação***
+    - #### **Algoritmo 04:**
+      Método (Iterativo) bubbleSort ou Ordenação pelo método de bolhas.
+
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos04/Alg04.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 05** - Método (Iterativo) insertionSort ou Ordenação por inserção:
+    - #### **Algoritmo 05:**
+      Método (Iterativo) insertionSort ou Ordenação por inserção.
+
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos05/Alg05.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 06** - Método (Iterativo) selectionSort ou Ordenação por seleção:
+    - #### **Algoritmo 06:**
+      Método (Iterativo) selectionSort ou Ordenação por seleção.
+
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos06/Alg06.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 07** - Método (Recursivo) de divisão e conquista quickSort ou Ordenação pelo Método Rápido:
+    - #### **Algoritmo 07:**
+      Método (Recursivo) de divisão e conquista quickSort ou Ordenação pelo Método Rápido.
+      
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos07/Alg07.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 08** - Método (Recursivo) de divisão e conquista mergeSort ou Ordenação pelo método de Mistura/Mesclagem:
+    - #### **Algoritmo 08:**
+      Método (Recursivo) de divisão e conquista mergeSort ou Ordenação pelo método de Mistura/Mesclagem.
+      
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.cpp">C++</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.java">Java</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.js">JavaScript</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.php">PHP</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.py">Python</a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos08/Alg08.rb">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-    </br></br>
+  </br></br>
+
 
   - ### Pesquisa/Busca
-    - **Algoritmo 09** - buscaSequencial: para pesquisa sequencial;
+    - #### **Algoritmo 09:**
+      Método buscaSequencial para pesquisa sequencial.
+
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 10** - buscaSequencialComSentinela: para pesquisa sequencial com a utilização de sentinela;
+    - #### **Algoritmo 10:**
+      Método buscaSequencialComSentinela para pesquisa sequencial com a utilização de variável/sentinela.
+
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
 
-    - **Algoritmo 11** - buscaBinaria: Operação para busca binária.
+    - #### **Algoritmo 11:**
+      Método buscaBinaria para pesquisa/busca binária.
+
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
-    </br></br>
+  </br></br>
+
 
 - ## Estruturas de Dados Dinâmicas
-  - ### Lista Ligada (ou encadeada):
-    - (usar ArrayList em java)
-    - **Algoritmo 13**
-      - Operação Enqueue: inserção em uma lista duplamente ligada;
-      - Operação Dequeue: remoção em uma lista duplamente ligada.</br></br>
+  - ### Lista Ligada (ou Encadeada) Simples
+    - #### **Algoritmo 12:**
+      Estrutura de dados linear dinâmica de Lista Ligada (FIFO).</br>
+      Operações:</br>
+      • Operação addList: inserção em uma lista ligada simples;</br>
+      • Operação removeList: remoção em uma lista ligada simples;</br>
+      • Operação showList: exibição dos elementos da lista ligada simples.
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
 
-  - ### Fila Dinâmica:
-    - **Algoritmo 14**
-      - Operação Enqueue: inserção em uma fila dinâmica;
-      - Operação Enqueue: remoção em uma fila dinâmica;</br></br>
 
-  - ### Pilha Dinâmica:
-    - **Algoritmo 15**
-      - Operação Push: inserção em uma pilha dinâmica;
-      - Operação Pop: remoção do valor do da pilha dinâmica;</br></br> 
+  - ### Lista Duplamente Ligada (ou Duplamente Encadeada)
+    - #### **Algoritmo 13:**
+      Estrutura de dados linear dinâmica de Lista Duplamente Ligada (FIFO).</br>
+      Operações:</br>
+      • Operação addList: inserção em uma lista duplamente ligada;</br>
+      • Operação removeList: remoção em uma lista duplamente ligada;</br>
+      • Operação showList: exibição dos elementos da lista duplamente ligada.
 
-  - ### Classificação/Ordenação:
-    - **Algoritmo 16**
-      - Insertion Sort (Ordenação por inserção);
-      - Complemento de Insertion Sort;</br></br>
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+  - ### Fila Dinâmica
+    - #### **Algoritmo 14:**
+      Estrutura de dados linear dinâmica de Fila (FIFO).</br>
+      Operações:</br>
+      • isEmpty - verificar se a fila está vazia;</br>
+      • enqueue - adicionar elementos;</br>
+      • dequeue - remover o elemento da frente da fila;</br>
+      • size - obter o tamanho atual da fila;</br>
+      • front - acessar o elemento da frente da fila sem removê-lo;</br>
+      • showQueue - mostar elementos da fila.
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+  - ### Pilha Dinâmica
+    - #### **Algoritmo 15:**
+      Operação Push: inserção em uma pilha dinâmica;
+      Operação Pop: remoção do valor do da pilha dinâmica.
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+  - ### Classificação/Ordenação
+    - #### **Algoritmo 16:**
+      Insertion Sort (Ordenação por inserção);
+      Complemento de Insertion Sort.
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
 
   - ### Classificação/Ordenação (em tempo linear)
-    - **Algoritmo 17** - Counting Sort (Ordenação por Contagem)
-    - **Algoritmo 18** - Bucket Sort (Ordenação por Balde)</br></br>
+    - #### **Algoritmo 17:**
+      Counting Sort (Ordenação por Contagem)
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 18:**
+      Bucket Sort (Ordenação por Balde)
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
 
   - ### Pesquisa/Busca:
-    - **Algoritmo 19** - busca de um valor em uma lista ligada;
-    - **Algoritmo 20** - identificar o menor valor em uma lista ligada;
-    - **Algoritmo 21** - identificar o maior valor em uma lista ligada;
-    - **Algoritmo 22** - retornar o sucessor de um valor em uma lista ligada;
-    - **Algoritmo 23** - retornar o predecessor de um valor em uma lista ligada.</br></br></br>
+    - #### **Algoritmo 19:**
+      busca de um valor em uma lista ligada;
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 20:**
+      identificar o menor valor em uma lista ligada;
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 21:**
+      identificar o maior valor em uma lista ligada;
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 22:**
+      retornar o sucessor de um valor em uma lista ligada;
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 23:**
+      retornar o predecessor de um valor em uma lista ligada.
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+</br><hr></br>
+
 
 # Algoritmos de Estruturas de Dados Não Lineares
 </br>
