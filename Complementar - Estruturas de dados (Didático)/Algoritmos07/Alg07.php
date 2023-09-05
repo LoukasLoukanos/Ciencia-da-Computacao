@@ -1,6 +1,6 @@
 <?php
-/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) de divisão e 
-   conquista QuickSort, também conhecida como Ordenação pelo Método (Recursivo) Rápido */
+/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) de 
+divisão e conquista QuickSort, também conhecida como Ordenação pelo Método (Recursivo) Rápido */
 
    function trocar(&$array, $indice1, $indice2) {
     $temp = $array[$indice1];
