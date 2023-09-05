@@ -3,7 +3,7 @@
 
 public class Alg10 {
 
-    public static int BuscaSequencialComSentinela(int[] array, int valorProcurado) {
+    public static int buscaSequencialComSentinela(int[] array, int valorProcurado) {
         int tamanhoArray = array.length;
         
         // Adiciona o valor procurado como sentinela na última posição do array
@@ -30,7 +30,7 @@ public class Alg10 {
         int[] array = {10, 5, 2, 8, 3, 7, 1, 6, 9, 4};
         int valorProcurado = 7;
         
-        int indiceEncontrado = BuscaSequencialComSentinela(array, valorProcurado);
+        int indiceEncontrado = buscaSequencialComSentinela(array, valorProcurado);
         
         if (indiceEncontrado != -1) {
             System.out.println("Valor " + valorProcurado + " encontrado no índice: " + indiceEncontrado);
