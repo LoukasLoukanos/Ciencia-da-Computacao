@@ -1,4 +1,6 @@
-''' Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular estática genérica utilizando um array unidimensional (vetor)
+''' 
+  Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular 
+  estática genérica utilizando um array unidimensional (vetor)
 
 → Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
   livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
