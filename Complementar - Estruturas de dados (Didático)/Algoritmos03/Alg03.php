@@ -1,7 +1,8 @@
 <?php
 
-/* Estrutura de dados linear de uma pilha (de regra de acesso LIFO) estática genérica utilizando um array unidimensional (vetor)
-
+/* Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
+ uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
+ 
 Métodos:
  isEmpty - verificar se a pilha está vazia; 
  isFull - verificar se a pilha está cheia;
