@@ -1,3 +1,7 @@
+'''
+ Estrutura de dados linear de um array (de regra de acesso FIFO) unidimensional (vetor) de tipo genérico
+'''
+
 import array as arr
 
 class Alg01:

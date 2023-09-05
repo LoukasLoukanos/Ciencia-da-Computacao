@@ -1,5 +1,7 @@
 <?php
 
+/* Estrutura de dados linear de um array (de regra de acesso FIFO) unidimensional (vetor) de tipo genérico */
+
 class Alg01 {
     private $elementos;
     private $sc;

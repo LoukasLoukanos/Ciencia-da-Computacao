@@ -1,3 +1,5 @@
+/* Estrutura de dados linear de um array (de regra de acesso FIFO) unidimensional (vetor) de tipo genérico */
+
 import java.util.Scanner;
 
 public class Alg01<T> {
