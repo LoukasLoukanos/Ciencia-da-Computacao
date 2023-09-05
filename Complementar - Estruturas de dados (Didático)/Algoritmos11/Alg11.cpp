@@ -1,5 +1,5 @@
 /* Algoritmo da Estrutura de dados linear estática (não dinâmica)
-   de Pesquisa/Busca buscaBinaria para busca binária */
+   de Pesquisa/Busca buscaBinaria para realização de busca binária */
 
 #include <iostream>
 using namespace std;
