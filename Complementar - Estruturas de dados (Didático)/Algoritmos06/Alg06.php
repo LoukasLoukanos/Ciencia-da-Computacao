@@ -1,8 +1,9 @@
 <?php
-/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estatica (não dinâmica)
-   SelectionSort, também conhecida como Ordenação pelo Método (Iterativo) de Seleção */
+/*
+♦ Algoritmo 06: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Selection Sort (Ordenação pelo Método (Iterativo) de Seleção).
+*/
 
-   function selectionSort(&$array) {
+function selectionSort(&$array) {
     $n = count($array);
     
     for ($i = 0; $i < $n - 1; $i++) {

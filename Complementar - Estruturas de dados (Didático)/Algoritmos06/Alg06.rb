@@ -1,6 +1,5 @@
 =begin
- Algoritmo da Estrutura de dados linear de Classificação/Ordenação estatica (não dinâmica)
- SelectionSort, também conhecida como Ordenação pelo Método (Iterativo) de Seleção
+♦ Algoritmo 06: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Selection Sort (Ordenação pelo Método (Iterativo) de Seleção).
 =end
 
 def selection_sort(array)
@@ -19,12 +18,12 @@ def selection_sort(array)
     end
   
     return array
-  end
+end
   
-  array = [64, 34, 25, 12, 22, 11, 90]
-  
-  array_ordenado = selection_sort(array)
-  
-  puts "Array ordenado:"
-  puts array_ordenado.join(" ")
+array = [64, 34, 25, 12, 22, 11, 90]
+
+array_ordenado = selection_sort(array)
+
+puts "Array ordenado:"
+puts array_ordenado.join(" ")
   
