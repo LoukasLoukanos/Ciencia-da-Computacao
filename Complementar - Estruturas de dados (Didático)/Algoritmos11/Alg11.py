@@ -1,6 +1,5 @@
 '''
- Algoritmo da Estrutura de dados linear estática (não dinâmica)
- de Pesquisa/Busca buscaBinaria para realização de busca binária
+♦ Algoritmo 11: Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Busca Binária.
 '''
 
 def busca_binaria(array, valor_procurado):
