@@ -1,97 +1,100 @@
 =begin 
-  Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular 
-  estática genérica utilizando um array unidimensional (vetor)
+♦ Estrutura de Dados Linear Estática de Fila Circular e Não-Circular (regra de acesso FIFO) de tipo de dados genérico: Algoritmo 02.
+→ Operações:
+    • isEmpty - verificar se a fila está vazia;
+    • isFull - verificar se a fila está cheia;
+    • enqueue - adicionar elementos;
+    • dequeue - remover o elemento da frente da fila;
+    • size - obter o tamanho atual da fila;
+    • front - acessar o elemento da frente da fila sem removê-lo;
+    • showQueue - mostar elementos da fila.
 
-→ Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
-  livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
+obs: Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
+    livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
 
-→ Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
-  livres, caso haja, no início da fila.
-
-Métodos:
- isEmpty - verificar se a fila está vazia; 
- isFull - verificar se a fila está cheia;
- enqueue - adicionar elementos;
- dequeue - remover o elemento da frente da fila;
- size - obter o tamanho atual da fila;
- front - acessar o elemento da frente da fila sem removê-lo;
- showQueue - mostar elementos da fila.
-*/
+obs: Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
+    livres, caso haja, no início da fila.
 =end
 
-class Alg02
+class FilaCircular
   def initialize(capacidade)
     @capacidade = capacidade
     @elementos = Array.new(capacidade)
     @tamanho = 0
-    @inicio = 0
-    @fim = -1
+    @frente = 0
+    @traseira = -1
   end
 
-  def isEmpty()
+  # Verificar se a fila está vazia
+  def is_empty?
     @tamanho == 0
   end
 
-  def isFull()
+  # Verificar se a fila está cheia
+  def is_full?
     @tamanho == @capacidade
   end
 
+  # Adicionar elementos à fila (enqueue)
   def enqueue(elemento)
-    if isFull()
-      puts "A fila está cheia. Não é possível adicionar mais elementos."
-      return
+    if is_full?
+      raise "A fila está cheia"
     end
 
-    @fim = (@fim + 1) % @capacidade
-    @elementos[@fim] = elemento
+    @traseira = (@traseira + 1) % @capacidade
+    @elementos[@traseira] = elemento
     @tamanho += 1
   end
 
-  def dequeue()
-    if isEmpty()
-      puts "A fila está vazia. Não é possível remover elementos."
-      return nil
+  # Remover o elemento da frente da fila (dequeue)
+  def dequeue
+    if is_empty?
+      raise "A fila está vazia"
     end
 
-    elementoRemovido = @elementos[@inicio]
-    @elementos[@inicio] = nil
-    @inicio = (@inicio + 1) % @capacidade
+    elemento_removido = @elementos[@frente]
+    @elementos[@frente] = nil
+    @frente = (@frente + 1) % @capacidade
     @tamanho -= 1
-    return elementoRemovido
+
+    elemento_removido
   end
 
-  def front()
-    if isEmpty()
-      puts "A fila está vazia. Não há elementos para retornar."
-      return nil
-    end
-
-    return @elementos[@inicio]
+  # Obter o tamanho atual da fila
+  def size
+    @tamanho
   end
 
-  def size()
-    return @tamanho
+  # Acessar o elemento da frente da fila sem removê-lo
+  def front
+    if is_empty?
+      raise "A fila está vazia"
+    end
+
+    @elementos[@frente]
   end
 
-  def showQueue()
-    if isEmpty()
-      puts "A fila está vazia."
-      return
+  # Mostrar elementos da fila
+  def show_queue
+    index = @frente
+    @tamanho.times do
+      print "#{@elementos[index]} "
+      index = (index + 1) % @capacidade
     end
-    puts "Elementos da fila:"
-    for i in 0..@tamanho
-      puts @elementos[i]
-    end
+    puts
   end
 end
 
-fila = Alg02.new(5)
-fila.enqueue(10)
-fila.enqueue(20)
-fila.enqueue(30)
-puts "Tamanho da fila: #{fila.size()}"
-puts "Elemento na frente da fila: #{fila.front()}"
-puts "Removendo elemento da fila: #{fila.dequeue()}"
-puts "Tamanho da fila após remoção: #{fila.size()}"
+# Exemplo de uso
+fila = FilaCircular.new(5)
+fila.enqueue(1)
+fila.enqueue(2)
+fila.enqueue(3)
 
-fila.showQueue()
+fila.show_queue
+
+puts "Frente da fila: #{fila.front}"
+puts "Tamanho da fila: #{fila.size}"
+
+fila.dequeue
+fila.show_queue

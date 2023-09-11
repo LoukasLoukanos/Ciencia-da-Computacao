@@ -1,109 +1,111 @@
-/* Estrutura de dados linear de uma fila (de regra de acesso FIFO) circular/não-circular 
-  estática genérica utilizando um array unidimensional (vetor)
+/*
+♦ Estrutura de Dados Linear Estática de Fila Circular e Não-Circular (regra de acesso FIFO) de tipo de dados genérico: Algoritmo 02.
+→ Operações:
+    • isEmpty - verificar se a fila está vazia;
+    • isFull - verificar se a fila está cheia;
+    • enqueue - adicionar elementos;
+    • dequeue - remover o elemento da frente da fila;
+    • size - obter o tamanho atual da fila;
+    • front - acessar o elemento da frente da fila sem removê-lo;
+    • showQueue - mostar elementos da fila.
 
-→ Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
-  livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
+obs: Em uma fila circular é necessário administrar os elementos na fila em relação à exclusão de espaços 
+    livres do início, para obter, de forma circular, mais espaços no fim, para adição de novos elementos.
 
-→ Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
-  livres, caso haja, no início da fila.
-
-Métodos:
- isEmpty - verificar se a fila está vazia; 
- isFull - verificar se a fila está cheia;
- enqueue - adicionar elementos;
- dequeue - remover o elemento da frente da fila;
- size - obter o tamanho atual da fila;
- front - acessar o elemento da frente da fila sem removê-lo;
- showQueue - mostar elementos da fila.
+obs: Para implementar uma fila não-circular, basta apenas deixar a fila encher sem utilizar os espaços 
+    livres, caso haja, no início da fila.
 */
 
 #include <iostream>
 
 template <typename T>
-class Alg02 {
+class FilaCircular {
 private:
+    int capacidade;
     T* elementos;
     int tamanho;
-    int capacidade;
-    int inicio;
-    int fim;
+    int frente;
+    int traseira;
 
 public:
-    Alg02(int capacidade) {
-        this->capacidade = capacidade;
-        this->elementos = new T[capacidade];
-        this->tamanho = 0;
-        this->inicio = 0;
-        this->fim = -1;
-    }
+    FilaCircular(int capacidade) : capacidade(capacidade), elementos(new T[capacidade]), tamanho(0), frente(0), traseira(-1) {}
 
+    // Verificar se a fila está vazia
     bool isEmpty() {
         return tamanho == 0;
     }
 
+    // Verificar se a fila está cheia
     bool isFull() {
         return tamanho == capacidade;
     }
 
+    // Adicionar elementos à fila (enqueue)
     void enqueue(T elemento) {
         if (isFull()) {
-            std::cout << "A fila está cheia. Não é possível adicionar mais elementos." << std::endl;
-            return;
+            throw std::runtime_error("A fila está cheia");
         }
 
-        fim = (fim + 1) % capacidade;
-        elementos[fim] = elemento;
+        traseira = (traseira + 1) % capacidade;
+        elementos[traseira] = elemento;
         tamanho++;
     }
 
+    // Remover o elemento da frente da fila (dequeue)
     T dequeue() {
         if (isEmpty()) {
-            std::cout << "A fila está vazia. Não é possível remover elementos." << std::endl;
-            return T();
+            throw std::runtime_error("A fila está vazia");
         }
 
-        T elementoRemovido = elementos[inicio];
-        elementos[inicio] = T();
-        inicio = (inicio + 1) % capacidade;
+        T elementoRemovido = elementos[frente];
+        elementos[frente] = T();
+        frente = (frente + 1) % capacidade;
         tamanho--;
+
         return elementoRemovido;
     }
 
-    T front() {
-        if (isEmpty()) {
-            std::cout << "A fila está vazia. Não há elementos para retornar." << std::endl;
-            return T();
-        }
-
-        return elementos[inicio];
-    }
-
+    // Obter o tamanho atual da fila
     int size() {
         return tamanho;
     }
 
-    void showQueue() {
+    // Acessar o elemento da frente da fila sem removê-lo
+    T front() {
         if (isEmpty()) {
-            std::cout << "A fila está vazia." << std::endl;
-            return;
+            throw std::runtime_error("A fila está vazia");
         }
-        std::cout << "Elementos da fila:" << std::endl;
+
+        return elementos[frente];
+    }
+
+    // Mostrar elementos da fila
+    void showQueue() {
+        int index = frente;
         for (int i = 0; i < tamanho; i++) {
-            std::cout << elementos[i] << std::endl;
+            std::cout << elementos[index] << " ";
+            index = (index + 1) % capacidade;
         }
+        std::cout << std::endl;
+    }
+
+    ~FilaCircular() {
+        delete[] elementos;
     }
 };
 
 int main() {
-    Alg02<int> fila(5);
-    fila.enqueue(10);
-    fila.enqueue(20);
-    fila.enqueue(30);
-    std::cout << "Tamanho da fila: " << fila.size() << std::endl;
-    std::cout << "Elemento na frente da fila: " << fila.front() << std::endl;
-    std::cout << "Removendo elemento da fila: " << fila.dequeue() << std::endl;
-    std::cout << "Tamanho da fila após remoção: " << fila.size() << std::endl;
+    FilaCircular<int> fila(5);
+    fila.enqueue(1);
+    fila.enqueue(2);
+    fila.enqueue(3);
 
+    fila.showQueue();
+
+    std::cout << "Frente da fila: " << fila.front() << std::endl;
+    std::cout << "Tamanho da fila: " << fila.size() << std::endl;
+
+    fila.dequeue();
     fila.showQueue();
 
     return 0;
