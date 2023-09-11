@@ -1,77 +1,52 @@
 '''
- Algoritmo da Estrutura de dados linear dinâmica (não estática) 
- Alg14 de Fila (regra de acesso FIFO) Dinâmica
+♦ Algoritmo 14: Estrutura de Dados Linear Dinâmica (não Estática) de Fila (regra de acesso FIFO) de tipo de dados genérico.
+→ Operações:
+    • isEmpty - verificar se a fila está vazia;
+    • enqueue - adicionar elementos;
+    • dequeue - remover o elemento da frente da fila;
+    • size - obter o tamanho atual da fila;
+    • front - acessar o elemento da frente da fila sem removê-lo;
+    • showQueue - mostar elementos da fila.
 '''
 
+from collections import deque
+
 class FilaDinamica:
-    class Nodo:
-        def __init__(self, dado):
-            self.dado = dado
-            self.proximo = None
-
     def __init__(self):
-        self.cabeca = None
-        self.cauda = None
-        self.tamanho = 0
+        self.fila = deque()
 
-    # Verificar se a fila está vazia
     def isEmpty(self):
-        return self.tamanho == 0
+        return len(self.fila) == 0
 
-    # Adicionar elementos à fila (enqueue)
-    def enqueue(self, dado):
-        novoNodo = self.Nodo(dado)
-        if self.isEmpty():
-            self.cabeca = novoNodo
-            self.cauda = novoNodo
-        else:
-            self.cauda.proximo = novoNodo
-            self.cauda = novoNodo
-        self.tamanho += 1
+    def enqueue(self, elemento):
+        self.fila.append(elemento)
 
-    # Remover o elemento da frente da fila (dequeue)
     def dequeue(self):
         if self.isEmpty():
             raise ValueError("A fila está vazia")
+        self.fila.popleft()
 
-        dadoRemovido = self.cabeca.dado
-        self.cabeca = self.cabeca.proximo
-        self.tamanho -= 1
-
-        if self.isEmpty():
-            self.cauda = None
-
-        return dadoRemovido
-
-    # Obter o tamanho atual da fila
     def size(self):
-        return self.tamanho
+        return len(self.fila)
 
-    # Acessar o elemento da frente da fila sem removê-lo
     def front(self):
         if self.isEmpty():
             raise ValueError("A fila está vazia")
+        return self.fila[0]
 
-        return self.cabeca.dado
-
-    # Mostrar elementos da fila
     def showQueue(self):
-        atual = self.cabeca
-        while atual is not None:
-            print(atual.dado, end=" ")
-            atual = atual.proximo
-        print()
+        print(" ".join(map(str, self.fila)))
 
-# Exemplo de uso
 fila = FilaDinamica()
+
 fila.enqueue(1)
 fila.enqueue(2)
 fila.enqueue(3)
 
 fila.showQueue()
 
-print("Frente da fila:", fila.front())
 print("Tamanho da fila:", fila.size())
+print("Frente da fila:", fila.front())
 
 fila.dequeue()
 fila.showQueue()

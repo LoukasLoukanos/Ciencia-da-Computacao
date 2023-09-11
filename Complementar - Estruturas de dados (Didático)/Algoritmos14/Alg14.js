@@ -1,89 +1,60 @@
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) 
-   Alg14 de Fila (regra de acesso FIFO) Dinâmica */
-
-class Nodo {
-    constructor(dado) {
-        this.dado = dado;
-        this.proximo = null;
-    }
-}
+/*
+♦ Algoritmo 14: Estrutura de Dados Linear Dinâmica (não Estática) de Fila (regra de acesso FIFO) de tipo de dados genérico.
+→ Operações:
+    • isEmpty - verificar se a fila está vazia;
+    • enqueue - adicionar elementos;
+    • dequeue - remover o elemento da frente da fila;
+    • size - obter o tamanho atual da fila;
+    • front - acessar o elemento da frente da fila sem removê-lo;
+    • showQueue - mostar elementos da fila.
+*/
 
 class FilaDinamica {
     constructor() {
-        this.cabeca = null;
-        this.cauda = null;
-        this.tamanho = 0;
+        this.fila = [];
     }
 
-    // Verificar se a fila está vazia
     isEmpty() {
-        return this.tamanho === 0;
+        return this.fila.length === 0;
     }
 
-    // Adicionar elementos à fila (enqueue)
-    enqueue(dado) {
-        const novoNodo = new Nodo(dado);
-        if (this.isEmpty()) {
-            this.cabeca = novoNodo;
-            this.cauda = novoNodo;
-        } else {
-            this.cauda.proximo = novoNodo;
-            this.cauda = novoNodo;
-        }
-        this.tamanho++;
+    enqueue(elemento) {
+        this.fila.push(elemento);
     }
 
-    // Remover o elemento da frente da fila (dequeue)
     dequeue() {
         if (this.isEmpty()) {
             throw new Error("A fila está vazia");
         }
-
-        const dadoRemovido = this.cabeca.dado;
-        this.cabeca = this.cabeca.proximo;
-        this.tamanho--;
-
-        if (this.isEmpty()) {
-            this.cauda = null;
-        }
-
-        return dadoRemovido;
+        this.fila.shift();
     }
 
-    // Obter o tamanho atual da fila
     size() {
-        return this.tamanho;
+        return this.fila.length;
     }
 
-    // Acessar o elemento da frente da fila sem removê-lo
     front() {
         if (this.isEmpty()) {
             throw new Error("A fila está vazia");
         }
-
-        return this.cabeca.dado;
+        return this.fila[0];
     }
 
-    // Mostrar elementos da fila
     showQueue() {
-        let atual = this.cabeca;
-        while (atual !== null) {
-            process.stdout.write(atual.dado + " ");
-            atual = atual.proximo;
-        }
-        console.log();
+        console.log(this.fila.join(' '));
     }
 }
 
 const fila = new FilaDinamica();
+
 fila.enqueue(1);
 fila.enqueue(2);
 fila.enqueue(3);
 
 fila.showQueue();
 
-console.log("Frente da fila: " + fila.front());
 console.log("Tamanho da fila: " + fila.size());
+console.log("Frente da fila: " + fila.front());
 
 fila.dequeue();
 fila.showQueue();

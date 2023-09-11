@@ -1,98 +1,59 @@
 <?php
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) 
-   Alg14 de Fila (regra de acesso FIFO) Dinâmica */
-   
+/*
+♦ Algoritmo 14: Estrutura de Dados Linear Dinâmica (não Estática) de Fila (regra de acesso FIFO) de tipo de dados genérico.
+→ Operações:
+    • isEmpty - verificar se a fila está vazia;
+    • enqueue - adicionar elementos;
+    • dequeue - remover o elemento da frente da fila;
+    • size - obter o tamanho atual da fila;
+    • front - acessar o elemento da frente da fila sem removê-lo;
+    • showQueue - mostar elementos da fila.
+*/
+
 class FilaDinamica {
-    private $cabeca;
-    private $cauda;
-    private $tamanho;
+    private $fila = [];
 
-    private class Nodo {
-        public $dado;
-        public $proximo;
-
-        public function __construct($dado) {
-            $this->dado = $dado;
-            $this->proximo = null;
-        }
-    }
-
-    public function __construct() {
-        $this->cabeca = null;
-        $this->cauda = null;
-        $this->tamanho = 0;
-    }
-
-    // Verificar se a fila está vazia
     public function isEmpty() {
-        return $this->tamanho == 0;
+        return empty($this->fila);
     }
 
-    // Adicionar elementos à fila (enqueue)
-    public function enqueue($dado) {
-        $novoNodo = new Nodo($dado);
-        if ($this->isEmpty()) {
-            $this->cabeca = $novoNodo;
-            $this->cauda = $novoNodo;
-        } else {
-            $this->cauda->proximo = $novoNodo;
-            $this->cauda = $novoNodo;
-        }
-        $this->tamanho++;
+    public function enqueue($elemento) {
+        array_push($this->fila, $elemento);
     }
 
-    // Remover o elemento da frente da fila (dequeue)
     public function dequeue() {
         if ($this->isEmpty()) {
             throw new Exception("A fila está vazia");
         }
-
-        $dadoRemovido = $this->cabeca->dado;
-        $this->cabeca = $this->cabeca->proximo;
-        $this->tamanho--;
-
-        if ($this->isEmpty()) {
-            $this->cauda = null;
-        }
-
-        return $dadoRemovido;
+        array_shift($this->fila);
     }
 
-    // Obter o tamanho atual da fila
     public function size() {
-        return $this->tamanho;
+        return count($this->fila);
     }
 
-    // Acessar o elemento da frente da fila sem removê-lo
     public function front() {
         if ($this->isEmpty()) {
             throw new Exception("A fila está vazia");
         }
-
-        return $this->cabeca->dado;
+        return reset($this->fila);
     }
 
-    // Mostrar elementos da fila
     public function showQueue() {
-        $atual = $this->cabeca;
-        while ($atual != null) {
-            echo $atual->dado . " ";
-            $atual = $atual->proximo;
-        }
-        echo "\n";
+        echo implode(' ', $this->fila) . "\n";
     }
 }
 
-// Exemplo de uso
 $fila = new FilaDinamica();
+
 $fila->enqueue(1);
 $fila->enqueue(2);
 $fila->enqueue(3);
 
 $fila->showQueue();
 
-echo "Frente da fila: " . $fila->front() . "\n";
 echo "Tamanho da fila: " . $fila->size() . "\n";
+echo "Frente da fila: " . $fila->front() . "\n";
 
 $fila->dequeue();
 $fila->showQueue();
