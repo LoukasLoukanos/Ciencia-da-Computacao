@@ -1,80 +1,92 @@
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) ListaDuplamenteLigada 
-de Lista Duplamente Ligada, também conhecida como Lista Duplamente Encadeada */
+/*
+♦ Algoritmo 13: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Duplamente Ligada;
+    • removeList: remoção em uma Lista Duplamente Ligada;
+    • size - obter o tamanho atual da Lista Duplamente Ligada;
+    • showList: exibição dos elementos da Lista Duplamente Ligada.
+*/
+
+class Nodo {
+    constructor(valor) {
+        this.valor = valor;
+        this.anterior = null;
+        this.proximo = null;
+    }
+}
 
 class ListaDuplamenteLigada {
     constructor() {
-        this.cabeca = null;
-        this.cauda = null;
+        this.primeiro = null;
+        this.ultimo = null;
         this.tamanho = 0;
-
-        // Classe interna Nodo
-        class Nodo {
-            constructor(dado) {
-                this.dado = dado;
-                this.proximo = null;
-                this.anterior = null;
-            }
-        }
-
-        this.Nodo = Nodo;
     }
 
-    // Inserir um elemento no final da lista
-    addList(dado) {
-        const novoNodo = new this.Nodo(dado);
-        if (!this.cabeca) {
-            this.cabeca = novoNodo;
-            this.cauda = novoNodo;
+    addList(valor) {
+        const novoNodo = new Nodo(valor);
+        if (this.primeiro === null) {
+            this.primeiro = novoNodo;
+            this.ultimo = novoNodo;
         } else {
-            novoNodo.anterior = this.cauda;
-            this.cauda.proximo = novoNodo;
-            this.cauda = novoNodo;
+            novoNodo.anterior = this.ultimo;
+            this.ultimo.proximo = novoNodo;
+            this.ultimo = novoNodo;
         }
         this.tamanho++;
     }
 
-    // Remover um elemento da lista
-    removeList(dado) {
-        let atual = this.cabeca;
-        while (atual) {
-            if (atual.dado === dado) {
-                if (atual === this.cabeca) {
-                    this.cabeca = atual.proximo;
-                    if (this.cabeca) {
-                        this.cabeca.anterior = null;
+    removeList(valor) {
+        let nodoAtual = this.primeiro;
+        while (nodoAtual !== null) {
+            if (nodoAtual.valor === valor) {
+                if (nodoAtual === this.primeiro) {
+                    this.primeiro = nodoAtual.proximo;
+                    if (this.primeiro !== null) {
+                        this.primeiro.anterior = null;
                     }
-                } else if (atual === this.cauda) {
-                    this.cauda = atual.anterior;
-                    if (this.cauda) {
-                        this.cauda.proximo = null;
+                } else if (nodoAtual === this.ultimo) {
+                    this.ultimo = nodoAtual.anterior;
+                    if (this.ultimo !== null) {
+                        this.ultimo.proximo = null;
                     }
                 } else {
-                    atual.anterior.proximo = atual.proximo;
-                    atual.proximo.anterior = atual.anterior;
+                    const anterior = nodoAtual.anterior;
+                    const proximo = nodoAtual.proximo;
+                    anterior.proximo = proximo;
+                    proximo.anterior = anterior;
                 }
                 this.tamanho--;
                 return;
             }
-            atual = atual.proximo;
+            nodoAtual = nodoAtual.proximo;
         }
     }
 
-    // Exibir os elementos da lista
+    size() {
+        return this.tamanho;
+    }
+
     showList() {
-        let atual = this.cabeca;
-        while (atual) {
-            process.stdout.write(atual.dado + " ");
-            atual = atual.proximo;
+        let nodoAtual = this.primeiro;
+        while (nodoAtual !== null) {
+            console.log(nodoAtual.valor + " ");
+            nodoAtual = nodoAtual.proximo;
         }
         console.log();
     }
 }
 
 const lista = new ListaDuplamenteLigada();
-lista.addList(1);
-lista.addList(2);
-lista.addList(3);
+lista.addList(10);
+lista.addList(20);
+lista.addList(30);
+
+console.log("Tamanho da lista: " + lista.size());
+console.log("Elementos da lista: ");
 lista.showList();
 
-lista.removeList(2);
+lista.removeList(20);
+
+console.log("Tamanho da lista após remoção: " + lista.size());
+console.log("Elementos da lista após remoção: ");
 lista.showList();

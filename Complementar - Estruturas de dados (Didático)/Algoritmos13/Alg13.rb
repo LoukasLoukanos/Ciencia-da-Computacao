@@ -1,78 +1,90 @@
 =begin
- Algoritmo da Estrutura de dados linear dinâmica (não estática) ListaDuplamenteLigada 
- de Lista Duplamente Ligada, também conhecida como Lista Duplamente Encadeada */
+♦ Algoritmo 13: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Duplamente Ligada;
+    • removeList: remoção em uma Lista Duplamente Ligada;
+    • size - obter o tamanho atual da Lista Duplamente Ligada;
+    • showList: exibição dos elementos da Lista Duplamente Ligada.
 =end
 
-class ListaDuplamenteLigada
-    class Nodo
-      attr_accessor :dado, :proximo, :anterior
-  
-      def initialize(dado)
-        @dado = dado
-        @proximo = nil
-        @anterior = nil
-      end
-    end
-  
-    def initialize
-      @cabeca = nil
-      @cauda = nil
-      @tamanho = 0
-    end
-  
-    # Inserir um elemento no final da lista
-    def add_list(dado)
-      novo_nodo = Nodo.new(dado)
-      if @cabeca.nil?
-        @cabeca = novo_nodo
-        @cauda = novo_nodo
-      else
-        novo_nodo.anterior = @cauda
-        @cauda.proximo = novo_nodo
-        @cauda = novo_nodo
-      end
-      @tamanho += 1
-    end
-  
-    # Remover um elemento da lista
-    def remove_list(dado)
-      atual = @cabeca
-      while !atual.nil?
-        if atual.dado == dado
-          if atual == @cabeca
-            @cabeca = atual.proximo
-            @cabeca.anterior = nil unless @cabeca.nil?
-          elsif atual == @cauda
-            @cauda = atual.anterior
-            @cauda.proximo = nil unless @cauda.nil?
-          else
-            atual.anterior.proximo = atual.proximo
-            atual.proximo.anterior = atual.anterior
-          end
-          @tamanho -= 1
-          return
-        end
-        atual = atual.proximo
-      end
-    end
-  
-    # Exibir os elementos da lista
-    def show_list
-      atual = @cabeca
-      while !atual.nil?
-        print "#{atual.dado} "
-        atual = atual.proximo
-      end
-      puts
-    end
+class Nodo
+  attr_accessor :valor, :anterior, :proximo
+
+  def initialize(valor)
+    @valor = valor
+    @anterior = nil
+    @proximo = nil
+  end
 end
-  
+
+class ListaDuplamenteLigada
+  def initialize
+    @primeiro = nil
+    @ultimo = nil
+    @tamanho = 0
+  end
+
+  def add_list(valor)
+    novo_nodo = Nodo.new(valor)
+    if @primeiro.nil?
+      @primeiro = novo_nodo
+      @ultimo = novo_nodo
+    else
+      novo_nodo.anterior = @ultimo
+      @ultimo.proximo = novo_nodo
+      @ultimo = novo_nodo
+    end
+    @tamanho += 1
+  end
+
+  def remove_list(valor)
+    nodo_atual = @primeiro
+    while nodo_atual
+      if nodo_atual.valor == valor
+        if nodo_atual == @primeiro
+          @primeiro = nodo_atual.proximo
+          @primeiro.anterior = nil if @primeiro
+        elsif nodo_atual == @ultimo
+          @ultimo = nodo_atual.anterior
+          @ultimo.proximo = nil if @ultimo
+        else
+          anterior = nodo_atual.anterior
+          proximo = nodo_atual.proximo
+          anterior.proximo = proximo
+          proximo.anterior = anterior
+        end
+        @tamanho -= 1
+        return
+      end
+      nodo_atual = nodo_atual.proximo
+    end
+  end
+
+  def size
+    @tamanho
+  end
+
+  def show_list
+    nodo_atual = @primeiro
+    while nodo_atual
+      print "#{nodo_atual.valor} "
+      nodo_atual = nodo_atual.proximo
+    end
+    puts
+  end
+end
+
 lista = ListaDuplamenteLigada.new
-lista.add_list(1)
-lista.add_list(2)
-lista.add_list(3)
+lista.add_list(10)
+lista.add_list(20)
+lista.add_list(30)
+
+puts "Tamanho da lista: #{lista.size}"
+print "Elementos da lista: "
 lista.show_list
 
-lista.remove_list(2)
+lista.remove_list(20)
+
+puts "Tamanho da lista após remoção: #{lista.size}"
+print "Elementos da lista após remoção: "
 lista.show_list
-  
