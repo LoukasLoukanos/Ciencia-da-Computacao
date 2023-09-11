@@ -1,6 +1,5 @@
 '''
- Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) 
- BubbleSort, também conhecida como Ordanação pelo Método (Iterativo) de Bolhas. 
+♦ Algoritmo 04: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Bubble Sort (Ordanação pelo Método (Iterativo) de Bolhas).
 '''
 
 def bubbleSort(array):

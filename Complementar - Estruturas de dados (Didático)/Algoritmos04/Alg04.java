@@ -1,5 +1,6 @@
-/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) 
-   BubbleSort, também conhecida como Ordanação pelo Método (Iterativo) de Bolhas. */
+/*
+♦ Algoritmo 04: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Bubble Sort (Ordanação pelo Método (Iterativo) de Bolhas).
+*/
    
 public class Alg04 {
     public static void bubbleSort(int[] array) {
