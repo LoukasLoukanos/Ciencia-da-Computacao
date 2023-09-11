@@ -1,5 +1,6 @@
-/* Algoritmo da Estrutura de dados linear estática (não dinâmica) de Pesquisa/Busca 
-   buscaSequencial para pesquisa sequencial sem a utilização de sentinela */
+/*
+♦ Algoritmo 09: Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Pesquisa Sequencial (sem a utilização de variável/sentinela).
+*/
 
 function buscaSequencial(array, valorProcurado) {
     for (let i = 0; i < array.length; i++) {
