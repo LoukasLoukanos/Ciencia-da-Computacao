@@ -1,5 +1,6 @@
-/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estatica (não dinâmica)
-   InsertionSort, também conhecida como Ordenação pelo Método (Iterativo) de Inserção */
+/*
+♦ Algoritmo 05: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Insertion Sort (Ordenação pelo Método (Iterativo) de Inserção).
+*/
 
 public class Alg05 {
     public static void insertionSort(int[] array) {
