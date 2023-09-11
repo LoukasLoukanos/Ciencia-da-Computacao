@@ -1,60 +1,115 @@
-/* Estrutura de dados linear de um array (de regra de acesso FIFO) unidimensional (vetor) de tipo genérico */
+/*
+♦ Implementação de um array unidimensional (vetor) de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo — estrutura homogênea — ): Algoritmo 01.
+*/
 
 #include <iostream>
-#include <array>
-#include <string>
+#include <cassert>
+#include <cstring>
 
 template <typename T>
 class Alg01 {
 private:
-    std::array<T, 1> elementos;
+    T* elementos;
+    int tamanho;
+    int tamanhoAtual;
 
 public:
-    Alg01() {
-        std::cout << "Tamanho: ";
-        int tamanho;
-        std::cin >> tamanho;
-        assert(tamanho > 0 && "O tamanho do vetor precisa ser maior que zero!");
+    Alg01(int tamanho) : tamanho(tamanho), tamanhoAtual(0) {
+        elementos = new T[tamanho];
+    }
 
-        std::cout << "Tipo de dados: digite 'p' para primitivos → [byte, short, int, long, float, double, char, boolean] ou 'np' para não primitivos → [string] ...";
-        std::string tipo_de_dado;
-        std::cin >> tipo_de_dado;
-        assert((tipo_de_dado == "p" || tipo_de_dado == "np") && "Aceita-se 'p' ou 'np' como parâmetro!");
+    ~Alg01() {
+        delete[] elementos;
+    }
 
-        if (tipo_de_dado == "p") {
-            std::cout << "Defina o tipo primitivo (byte, short, int, long, float, double, char, boolean): ";
-            std::string tipo;
-            std::cin >> tipo;
+    bool isEmpty() const {
+        return tamanhoAtual == 0;
+    }
 
-            if (tipo == "byte" || tipo == "short" || tipo == "int" || tipo == "long" || tipo == "float" || tipo == "double" || tipo == "char" || tipo == "boolean") {
-                try {
-                    this->elementos.fill(T());
-                    std::cout << "Vetor do tipo de dados " << tipo << " de " << tamanho << " células alocadas." << std::endl;
-                } catch (...) {
-                    std::cout << "Tipo de dado inválido!" << std::endl;
-                }
-            } else {
-                std::cout << "Tipo de dado inválido!" << std::endl;
-            }
-        } else if (tipo_de_dado == "np") {
-            this->elementos.fill(T());
-            std::cout << "Vetor do tipo de dados String de " << tamanho << " células alocadas." << std::endl;
-        } else {
-            std::cout << "Tipo de dado inválido!" << std::endl;
+    bool isFull() const {
+        return tamanhoAtual == tamanho;
+    }
+
+    void addElement(int indice, const T& valor) {
+        if (indice < 0 || indice >= tamanho) {
+            throw std::out_of_range("Índice fora dos limites do vetor.");
         }
+
+        if (isFull()) {
+            throw std::runtime_error("O vetor está cheio.");
+        }
+
+        elementos[indice] = valor;
+        tamanhoAtual++;
     }
 
-    void inserir(int indice, T valor) {
-        this->elementos[indice] = valor;
+    void removeElement(int indice) {
+        if (indice < 0 || indice >= tamanho) {
+            throw std::out_of_range("Índice fora dos limites do vetor.");
+        }
+
+        if (isEmpty()) {
+            throw std::runtime_error("O vetor está vazio.");
+        }
+
+        elementos[indice] = T(); // Define o elemento como um valor padrão (0 para tipos numéricos).
+        tamanhoAtual--;
     }
 
-    T valor(int indice) {
-        return this->elementos[indice];
+    int sizeArray() const {
+        return tamanhoAtual;
+    }
+
+    T accessElement(int indice) const {
+        if (indice < 0 || indice >= tamanho) {
+            throw std::out_of_range("Índice fora dos limites do vetor.");
+        }
+
+        if (isEmpty()) {
+            throw std::runtime_error("O vetor está vazio.");
+        }
+
+        return elementos[indice];
+    }
+
+    void showQueue() const {
+        for (int i = 0; i < tamanhoAtual; i++) {
+            std::cout << elementos[i] << " ";
+        }
+        std::cout << std::endl;
     }
 };
 
 int main() {
-    // Código adicional, se necessário
-    Alg01<int> vetor;
+    // Exemplo de criação de um vetor de inteiros
+    Alg01<int> vetorInt(10);
+
+    // Verificar se o vetor está vazio
+    std::cout << "O vetor está vazio? " << (vetorInt.isEmpty() ? "Sim" : "Não") << std::endl;
+
+    // Adicionar elementos
+    vetorInt.addElement(0, 10);
+    vetorInt.addElement(1, 20);
+    vetorInt.addElement(2, 30);
+
+    // Verificar o tamanho atual do vetor
+    std::cout << "Tamanho atual do vetor: " << vetorInt.sizeArray() << std::endl;
+
+    // Acessar um elemento
+    std::cout << "Elemento no índice 1: " << vetorInt.accessElement(1) << std::endl;
+
+    // Remover um elemento
+    vetorInt.removeElement(1);
+
+    // Verificar se o vetor está vazio novamente
+    std::cout << "O vetor está vazio? " << (vetorInt.isEmpty() ? "Sim" : "Não") << std::endl;
+
+    // Verificar se o vetor está cheio
+    std::cout << "O vetor está cheio? " << (vetorInt.isFull() ? "Sim" : "Não") << std::endl;
+
+    // Mostrar todos os elementos
+    std::cout << "Elementos do vetor: ";
+    vetorInt.showQueue();
+
     return 0;
 }
