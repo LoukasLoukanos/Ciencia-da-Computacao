@@ -1,80 +1,100 @@
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) 
-ListaLigada de Lista Ligada, também conhecida como Lista Encadeada */
+/*
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
+*/
 
-public class Alg12 {
-    private No cabeca;
+public class Alg12<T> {
 
-    private class No {
-        int dado;
-        No proximo;
-
-        public No(int dado) {
-            this.dado = dado;
-            this.proximo = null;
-        }
-    }
+    private Nodo<T> primeiro;
+    private int tamanho;
 
     public Alg12() {
-        this.cabeca = null;
+        primeiro = null;
+        tamanho = 0;
     }
 
-    // Adicionar um elemento no final da lista
-    public void addList(int dado) {
-        No novoNo = new No(dado);
-        if (cabeca == null) {
-            cabeca = novoNo;
-        } else {
-            No atual = cabeca;
-            while (atual.proximo != null) {
-                atual = atual.proximo;
+    public void addList(T valor) {
+        Nodo<T> novoNodo = new Nodo<>(valor);
+        novoNodo.setProximo(primeiro);
+        primeiro = novoNodo;
+        tamanho++;
+    }
+
+    public void removeList(T valor) {
+        if (primeiro == null) {
+            return;
+        }
+
+        if (primeiro.getValor().equals(valor)) {
+            primeiro = primeiro.getProximo();
+            tamanho--;
+            return;
+        }
+
+        Nodo<T> nodoAtual = primeiro;
+        while (nodoAtual.getProximo() != null) {
+            if (nodoAtual.getProximo().getValor().equals(valor)) {
+                nodoAtual.setProximo(nodoAtual.getProximo().getProximo());
+                tamanho--;
+                return;
             }
-            atual.proximo = novoNo;
+            nodoAtual = nodoAtual.getProximo();
         }
     }
 
-    // Remover um elemento da lista
-    public void removeList(int dado) {
-        if (cabeca == null) {
-            return;
-        }
-
-        if (cabeca.dado == dado) {
-            cabeca = cabeca.proximo;
-            return;
-        }
-
-        No atual = cabeca;
-        No anterior = null;
-        while (atual != null && atual.dado != dado) {
-            anterior = atual;
-            atual = atual.proximo;
-        }
-
-        if (atual == null) {
-            return;
-        }
-
-        anterior.proximo = atual.proximo;
+    public int size() {
+        return tamanho;
     }
 
-    // Imprimir a lista
     public void showList() {
-        No atual = cabeca;
-        while (atual != null) {
-            System.out.print(atual.dado + " ");
-            atual = atual.proximo;
+        Nodo<T> nodoAtual = primeiro;
+        while (nodoAtual != null) {
+            System.out.print(nodoAtual.getValor() + " ");
+            nodoAtual = nodoAtual.getProximo();
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        Alg12 lista = new Alg12();
-        lista.addList(1);
-        lista.addList(2);
-        lista.addList(3);
+        Alg12<Integer> lista = new Alg12<>();
+        lista.addList(10);
+        lista.addList(20);
+        lista.addList(30);
+
+        System.out.println("Tamanho da lista: " + lista.size());
+        System.out.print("Elementos da lista: ");
         lista.showList();
 
-        lista.removeList(2);
+        lista.removeList(20);
+
+        System.out.println("Tamanho da lista após remoção: " + lista.size());
+        System.out.print("Elementos da lista após remoção: ");
         lista.showList();
+    }
+}
+
+class Nodo<T> {
+    private T valor;
+    private Nodo<T> proximo;
+
+    public Nodo(T valor) {
+        this.valor = valor;
+        this.proximo = null;
+    }
+
+    public T getValor() {
+        return valor;
+    }
+
+    public Nodo<T> getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(Nodo<T> proximo) {
+        this.proximo = proximo;
     }
 }

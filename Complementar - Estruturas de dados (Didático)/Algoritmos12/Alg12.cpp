@@ -1,90 +1,101 @@
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) ListaLigada de Lista Ligada, também conhecida como Lista Encadeada */
+/*
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
+*/
 
 #include <iostream>
 
+template <typename T>
+class Nodo {
+public:
+    T valor;
+    Nodo* proximo;
+
+    Nodo(T valor) : valor(valor), proximo(nullptr) {}
+};
+
+template <typename T>
 class ListaLigada {
 private:
-    struct No {
-        int dado;
-        No* proximo;
-
-        No(int dado) : dado(dado), proximo(nullptr) {}
-    };
-
-    No* cabeca;
+    Nodo<T>* primeiro;
+    int tamanho;
 
 public:
-    ListaLigada() : cabeca(nullptr) {}
+    ListaLigada() : primeiro(nullptr), tamanho(0) {}
 
-    // Adicionar um elemento no final da lista
-    void addList(int dado) {
-        No* novoNo = new No(dado);
-        if (cabeca == nullptr) {
-            cabeca = novoNo;
-        } else {
-            No* atual = cabeca;
-            while (atual->proximo != nullptr) {
-                atual = atual->proximo;
-            }
-            atual->proximo = novoNo;
-        }
+    void addList(T valor) {
+        Nodo<T>* novoNodo = new Nodo<T>(valor);
+        novoNodo->proximo = primeiro;
+        primeiro = novoNodo;
+        tamanho++;
     }
 
-    // Remover um elemento da lista
-    void removeList(int dado) {
-        if (cabeca == nullptr) {
+    void removeList(T valor) {
+        if (primeiro == nullptr) {
             return;
         }
 
-        if (cabeca->dado == dado) {
-            No* temp = cabeca;
-            cabeca = cabeca->proximo;
+        if (primeiro->valor == valor) {
+            Nodo<T>* temp = primeiro;
+            primeiro = primeiro->proximo;
             delete temp;
+            tamanho--;
             return;
         }
 
-        No* atual = cabeca;
-        No* anterior = nullptr;
-        while (atual != nullptr && atual->dado != dado) {
-            anterior = atual;
-            atual = atual->proximo;
+        Nodo<T>* nodoAtual = primeiro;
+        while (nodoAtual->proximo != nullptr) {
+            if (nodoAtual->proximo->valor == valor) {
+                Nodo<T>* temp = nodoAtual->proximo;
+                nodoAtual->proximo = nodoAtual->proximo->proximo;
+                delete temp;
+                tamanho--;
+                return;
+            }
+            nodoAtual = nodoAtual->proximo;
         }
-
-        if (atual == nullptr) {
-            return;
-        }
-
-        anterior->proximo = atual->proximo;
-        delete atual;
     }
 
-    // Imprimir a lista
-    void showList() {
-        No* atual = cabeca;
-        while (atual != nullptr) {
-            std::cout << atual->dado << " ";
-            atual = atual->proximo;
+    int size() const {
+        return tamanho;
+    }
+
+    void showList() const {
+        Nodo<T>* nodoAtual = primeiro;
+        while (nodoAtual != nullptr) {
+            std::cout << nodoAtual->valor << " ";
+            nodoAtual = nodoAtual->proximo;
         }
         std::cout << std::endl;
     }
 
     ~ListaLigada() {
-        while (cabeca != nullptr) {
-            No* temp = cabeca;
-            cabeca = cabeca->proximo;
+        while (primeiro != nullptr) {
+            Nodo<T>* temp = primeiro;
+            primeiro = primeiro->proximo;
             delete temp;
         }
     }
 };
 
 int main() {
-    ListaLigada lista;
-    lista.addList(1);
-    lista.addList(2);
-    lista.addList(3);
+    ListaLigada<int> lista;
+    lista.addList(10);
+    lista.addList(20);
+    lista.addList(30);
+
+    std::cout << "Tamanho da lista: " << lista.size() << std::endl;
+    std::cout << "Elementos da lista: ";
     lista.showList();
 
-    lista.removeList(2);
+    lista.removeList(20);
+
+    std::cout << "Tamanho da lista após remoção: " << lista.size() << std::endl;
+    std::cout << "Elementos da lista após remoção: ";
     lista.showList();
 
     return 0;

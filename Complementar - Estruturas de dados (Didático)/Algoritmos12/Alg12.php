@@ -1,81 +1,86 @@
 <?php
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) 
-ListaLigada de Lista Ligada, também conhecida como Lista Encadeada */
+/*
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
+*/
+
+class Nodo {
+    public $valor;
+    public $proximo;
+
+    public function __construct($valor) {
+        $this->valor = $valor;
+        $this->proximo = null;
+    }
+}
 
 class ListaLigada {
-    private $cabeca;
-
-    private class No {
-        public $dado;
-        public $proximo;
-
-        public function __construct($dado) {
-            $this->dado = $dado;
-            $this->proximo = null;
-        }
-    }
+    private $primeiro;
+    private $tamanho;
 
     public function __construct() {
-        $this->cabeca = null;
+        $this->primeiro = null;
+        $this->tamanho = 0;
     }
 
-    // Adicionar um elemento no final da lista
-    public function addList($dado) {
-        $novoNo = new No($dado);
-        if ($this->cabeca == null) {
-            $this->cabeca = $novoNo;
-        } else {
-            $atual = $this->cabeca;
-            while ($atual->proximo != null) {
-                $atual = $atual->proximo;
+    public function addList($valor) {
+        $novoNodo = new Nodo($valor);
+        $novoNodo->proximo = $this->primeiro;
+        $this->primeiro = $novoNodo;
+        $this->tamanho++;
+    }
+
+    public function removeList($valor) {
+        if ($this->primeiro === null) {
+            return;
+        }
+
+        if ($this->primeiro->valor == $valor) {
+            $this->primeiro = $this->primeiro->proximo;
+            $this->tamanho--;
+            return;
+        }
+
+        $nodoAtual = $this->primeiro;
+        while ($nodoAtual->proximo !== null) {
+            if ($nodoAtual->proximo->valor == $valor) {
+                $nodoAtual->proximo = $nodoAtual->proximo->proximo;
+                $this->tamanho--;
+                return;
             }
-            $atual->proximo = $novoNo;
+            $nodoAtual = $nodoAtual->proximo;
         }
     }
 
-    // Remover um elemento da lista
-    public function removeList($dado) {
-        if ($this->cabeca == null) {
-            return;
-        }
-
-        if ($this->cabeca->dado == $dado) {
-            $this->cabeca = $this->cabeca->proximo;
-            return;
-        }
-
-        $atual = $this->cabeca;
-        $anterior = null;
-        while ($atual != null && $atual->dado != $dado) {
-            $anterior = $atual;
-            $atual = $atual->proximo;
-        }
-
-        if ($atual == null) {
-            return;
-        }
-
-        $anterior->proximo = $atual->proximo;
+    public function size() {
+        return $this->tamanho;
     }
 
-    // Imprimir a lista
     public function showList() {
-        $atual = $this->cabeca;
-        while ($atual != null) {
-            echo $atual->dado . " ";
-            $atual = $atual->proximo;
+        $nodoAtual = $this->primeiro;
+        while ($nodoAtual !== null) {
+            echo $nodoAtual->valor . " ";
+            $nodoAtual = $nodoAtual->proximo;
         }
         echo "\n";
     }
 }
 
 $lista = new ListaLigada();
-$lista->addList(1);
-$lista->addList(2);
-$lista->addList(3);
+$lista->addList(10);
+$lista->addList(20);
+$lista->addList(30);
+
+echo "Tamanho da lista: " . $lista->size() . "\n";
+echo "Elementos da lista: ";
 $lista->showList();
 
-$lista->removeList(2);
-$lista->showList();
+$lista->removeList(20);
 
-?>
+echo "Tamanho da lista após remoção: " . $lista->size() . "\n";
+echo "Elementos da lista após remoção: ";
+$lista->showList();

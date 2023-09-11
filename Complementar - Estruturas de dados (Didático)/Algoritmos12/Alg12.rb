@@ -1,73 +1,79 @@
 =begin
- Algoritmo da Estrutura de dados linear dinâmica (não estática) 
- ListaLigada de Lista Ligada, também conhecida como Lista Encadeada 
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
 =end
 
+class Nodo
+  attr_accessor :valor, :proximo
+
+  def initialize(valor)
+    @valor = valor
+    @proximo = nil
+  end
+end
+
 class ListaLigada
-    class No
-      attr_accessor :dado, :proximo
-  
-      def initialize(dado)
-        @dado = dado
-        @proximo = nil
-      end
+  def initialize
+    @primeiro = nil
+    @tamanho = 0
+  end
+
+  def add_list(valor)
+    novo_nodo = Nodo.new(valor)
+    novo_nodo.proximo = @primeiro
+    @primeiro = novo_nodo
+    @tamanho += 1
+  end
+
+  def remove_list(valor)
+    return if @primeiro.nil?
+
+    if @primeiro.valor == valor
+      @primeiro = @primeiro.proximo
+      @tamanho -= 1
+      return
     end
-  
-    def initialize
-      @cabeca = nil
-    end
-  
-    # Adicionar um elemento no final da lista
-    def addList(dado)
-      novo_no = No.new(dado)
-      if @cabeca.nil?
-        @cabeca = novo_no
-      else
-        atual = @cabeca
-        while atual.proximo
-          atual = atual.proximo
-        end
-        atual.proximo = novo_no
-      end
-    end
-  
-    # Remover um elemento da lista
-    def removeList(dado)
-      return if @cabeca.nil?
-  
-      if @cabeca.dado == dado
-        @cabeca = @cabeca.proximo
+
+    nodo_atual = @primeiro
+    while nodo_atual.proximo
+      if nodo_atual.proximo.valor == valor
+        nodo_atual.proximo = nodo_atual.proximo.proximo
+        @tamanho -= 1
         return
       end
-  
-      atual = @cabeca
-      anterior = nil
-      while atual && atual.dado != dado
-        anterior = atual
-        atual = atual.proximo
-      end
-  
-      return if atual.nil?
-  
-      anterior.proximo = atual.proximo
+      nodo_atual = nodo_atual.proximo
     end
-  
-    # Imprimir a lista
-    def showList
-      atual = @cabeca
-      while atual
-        print "#{atual.dado} "
-        atual = atual.proximo
-      end
-      puts
-    end
-end
-  
-lista = ListaLigada.new
-lista.addList(1)
-lista.addList(2)
-lista.addList(3)
-lista.showList
+  end
 
-lista.removeList(2)
-lista.showList
+  def size
+    @tamanho
+  end
+
+  def show_list
+    nodo_atual = @primeiro
+    while nodo_atual
+      print nodo_atual.valor.to_s + ' '
+      nodo_atual = nodo_atual.proximo
+    end
+    puts
+  end
+end
+
+lista = ListaLigada.new
+lista.add_list(10)
+lista.add_list(20)
+lista.add_list(30)
+
+puts 'Tamanho da lista:', lista.size
+print 'Elementos da lista: '
+lista.show_list
+
+lista.remove_list(20)
+
+puts 'Tamanho da lista após remoção:', lista.size
+print 'Elementos da lista após remoção: '
+lista.show_list

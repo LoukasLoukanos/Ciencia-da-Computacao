@@ -1,62 +1,66 @@
 '''
- Algoritmo da Estrutura de dados linear dinâmica (não estática) 
- ListaLigada de Lista Ligada, também conhecida como Lista Encadeada 
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
 '''
 
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.proximo = None
+
 class ListaLigada:
-    class No:
-        def __init__(self, dado):
-            self.dado = dado
-            self.proximo = None
-
     def __init__(self):
-        self.cabeca = None
+        self.primeiro = None
+        self.tamanho = 0
 
-    # Adicionar um elemento no final da lista
-    def addList(self, dado):
-        novoNo = self.No(dado)
-        if self.cabeca is None:
-            self.cabeca = novoNo
-        else:
-            atual = self.cabeca
-            while atual.proximo is not None:
-                atual = atual.proximo
-            atual.proximo = novoNo
+    def addList(self, valor):
+        novoNodo = Nodo(valor)
+        novoNodo.proximo = self.primeiro
+        self.primeiro = novoNodo
+        self.tamanho += 1
 
-    # Remover um elemento da lista
-    def removeList(self, dado):
-        if self.cabeca is None:
+    def removeList(self, valor):
+        if self.primeiro is None:
             return
 
-        if self.cabeca.dado == dado:
-            self.cabeca = self.cabeca.proximo
+        if self.primeiro.valor == valor:
+            self.primeiro = self.primeiro.proximo
+            self.tamanho -= 1
             return
 
-        atual = self.cabeca
-        anterior = None
-        while atual is not None and atual.dado != dado:
-            anterior = atual
-            atual = atual.proximo
+        nodoAtual = self.primeiro
+        while nodoAtual.proximo is not None:
+            if nodoAtual.proximo.valor == valor:
+                nodoAtual.proximo = nodoAtual.proximo.proximo
+                self.tamanho -= 1
+                return
+            nodoAtual = nodoAtual.proximo
 
-        if atual is None:
-            return
+    def size(self):
+        return self.tamanho
 
-        anterior.proximo = atual.proximo
-
-    # Imprimir a lista
     def showList(self):
-        atual = self.cabeca
-        while atual is not None:
-            print(atual.dado, end=" ")
-            atual = atual.proximo
+        nodoAtual = self.primeiro
+        while nodoAtual is not None:
+            print(nodoAtual.valor, end=" ")
+            nodoAtual = nodoAtual.proximo
         print()
 
-if __name__ == "__main__":
-    lista = ListaLigada()
-    lista.addList(1)
-    lista.addList(2)
-    lista.addList(3)
-    lista.showList()
+lista = ListaLigada()
+lista.addList(10)
+lista.addList(20)
+lista.addList(30)
 
-    lista.removeList(2)
-    lista.showList()
+print("Tamanho da lista:", lista.size())
+print("Elementos da lista:", end=" ")
+lista.showList()
+
+lista.removeList(20)
+
+print("Tamanho da lista após remoção:", lista.size())
+print("Elementos da lista após remoção:", end=" ")
+lista.showList()

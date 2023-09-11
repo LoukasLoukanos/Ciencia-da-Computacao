@@ -1,75 +1,79 @@
-/* Algoritmo da Estrutura de dados linear dinâmica (não estática) 
-ListaLigada de Lista Ligada, também conhecida como Lista Encadeada */
+/*
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
+→ Operações:
+    • addList: inserção em uma Lista Ligada Simples;
+    • removeList: remoção em uma Lista Ligada Simples;
+    • size - obter o tamanho atual da Lista Ligada Simples;
+    • showList: exibição dos elementos da Lista Ligada Simples.
+*/
+
+class Nodo {
+    constructor(valor) {
+        this.valor = valor;
+        this.proximo = null;
+    }
+}
 
 class ListaLigada {
     constructor() {
-        this.cabeca = null;
+        this.primeiro = null;
+        this.tamanho = 0;
+    }
 
-        class No {
-            constructor(dado) {
-                this.dado = dado;
-                this.proximo = null;
+    addList(valor) {
+        const novoNodo = new Nodo(valor);
+        novoNodo.proximo = this.primeiro;
+        this.primeiro = novoNodo;
+        this.tamanho++;
+    }
+
+    removeList(valor) {
+        if (this.primeiro === null) {
+            return;
+        }
+
+        if (this.primeiro.valor === valor) {
+            this.primeiro = this.primeiro.proximo;
+            this.tamanho--;
+            return;
+        }
+
+        let nodoAtual = this.primeiro;
+        while (nodoAtual.proximo !== null) {
+            if (nodoAtual.proximo.valor === valor) {
+                nodoAtual.proximo = nodoAtual.proximo.proximo;
+                this.tamanho--;
+                return;
             }
-        }
-
-        this.No = No;
-    }
-
-    // Adicionar um elemento no final da lista
-    addList(dado) {
-        const novoNo = new this.No(dado);
-        if (this.cabeca === null) {
-            this.cabeca = novoNo;
-        } else {
-            let atual = this.cabeca;
-            while (atual.proximo !== null) {
-                atual = atual.proximo;
-            }
-            atual.proximo = novoNo;
+            nodoAtual = nodoAtual.proximo;
         }
     }
 
-    // Remover um elemento da lista
-    removeList(dado) {
-        if (this.cabeca === null) {
-            return;
-        }
-
-        if (this.cabeca.dado === dado) {
-            this.cabeca = this.cabeca.proximo;
-            return;
-        }
-
-        let atual = this.cabeca;
-        let anterior = null;
-        while (atual !== null && atual.dado !== dado) {
-            anterior = atual;
-            atual = atual.proximo;
-        }
-
-        if (atual === null) {
-            return;
-        }
-
-        anterior.proximo = atual.proximo;
+    size() {
+        return this.tamanho;
     }
 
-    // Imprimir a lista
     showList() {
-        let atual = this.cabeca;
-        while (atual !== null) {
-            console.log(atual.dado + " ");
-            atual = atual.proximo;
+        let nodoAtual = this.primeiro;
+        while (nodoAtual !== null) {
+            console.log(nodoAtual.valor + " ");
+            nodoAtual = nodoAtual.proximo;
         }
         console.log();
     }
 }
 
 const lista = new ListaLigada();
-lista.addList(1);
-lista.addList(2);
-lista.addList(3);
+lista.addList(10);
+lista.addList(20);
+lista.addList(30);
+
+console.log("Tamanho da lista: " + lista.size());
+console.log("Elementos da lista: ");
 lista.showList();
 
-lista.removeList(2);
+lista.removeList(20);
+
+console.log("Tamanho da lista após remoção: " + lista.size());
+console.log("Elementos da lista após remoção: ");
 lista.showList();
