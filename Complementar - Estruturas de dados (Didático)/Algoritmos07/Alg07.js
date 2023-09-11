@@ -1,5 +1,6 @@
-/* Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) de 
-divisão e conquista QuickSort, também conhecida como Ordenação pelo Método (Recursivo) Rápido */
+/*
+♦ Algoritmo 07: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação de Divisão e Conquista Quick Sort (Ordenação pelo Método (Recursivo) Rápido).
+*/
 
 function trocar(array, indice1, indice2) {
     var temp = array[indice1];
