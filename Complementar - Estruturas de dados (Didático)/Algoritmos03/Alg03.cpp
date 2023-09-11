@@ -1,98 +1,103 @@
-/* Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
- uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
- 
-Métodos:
- isEmpty - verificar se a pilha está vazia; 
- isFull - verificar se a pilha está cheia;
- push - inserir elementos no topo da pilha;
- pop - remover elementos do dopo da pilha;
- size - obter o tamanho atual da pilha;
- front - acessar o elemento do topo da pilha sem removê-lo;
- showStack - mostar elementos da pilha (do topo para base).
+/*
+♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
+→ Operações:
+    • isEmpty - verificar se a pilha está vazia;
+    • isFull - verificar se a pilha está cheia;
+    • push - inserir elementos no topo da pilha;
+    • pop - remover elementos do dopo da pilha;
+    • size - obter o tamanho atual da pilha;
+    • front - acessar o elemento do topo da pilha sem removê-lo;
+    • showStack - mostar elementos da pilha (do topo para base).
 */
 
 #include <iostream>
+#include <stdexcept>
 
-template <class T>
-class Alg03 {
+template <typename T>
+class Pilha {
 private:
-    int tamanhoMaximo;
+    int capacidade;
+    T *elementos;
     int topo;
-    T* elementos;
 
 public:
-    Alg03(int tamanhoMaximo) {
-        this->tamanhoMaximo = tamanhoMaximo;
+    Pilha(int capacidade) {
+        this->capacidade = capacidade;
+        this->elementos = new T[capacidade];
         this->topo = -1;
-        this->elementos = new T[tamanhoMaximo];
     }
 
+    // Verificar se a pilha está vazia
     bool isEmpty() {
         return topo == -1;
     }
 
+    // Verificar se a pilha está cheia
     bool isFull() {
-        return topo == tamanhoMaximo - 1;
+        return topo == capacidade - 1;
     }
 
+    // Inserir elementos no topo da pilha
     void push(T elemento) {
         if (isFull()) {
-            std::cout << "A pilha está cheia. Não é possível empilhar o elemento." << std::endl;
-            return;
+            throw std::overflow_error("A pilha está cheia");
         }
+
         topo++;
         elementos[topo] = elemento;
     }
 
+    // Remover elementos do topo da pilha
     T pop() {
         if (isEmpty()) {
-            std::cout << "A pilha está vazia. Não é possível desempilhar um elemento." << std::endl;
-            return NULL;
+            throw std::underflow_error("A pilha está vazia");
         }
-        T elemento = elementos[topo];
+
+        T elementoRemovido = elementos[topo];
         topo--;
-        return elemento;
+
+        return elementoRemovido;
     }
 
-    T front() {
-        if (isEmpty()) {
-            std::cout << "A pilha está vazia. Não há elemento no topo." << std::endl;
-            return NULL;
-        }
-        return elementos[topo];
-    }
-
+    // Obter o tamanho atual da pilha
     int size() {
         return topo + 1;
     }
 
-    void showStack() {
+    // Acessar o elemento do topo da pilha sem removê-lo
+    T front() {
         if (isEmpty()) {
-            std::cout << "A pilha está vazia." << std::endl;
-            return;
+            throw std::underflow_error("A pilha está vazia");
         }
-        std::cout << "Elementos da pilha (do topo para base):" << std::endl;
+
+        return elementos[topo];
+    }
+
+    // Mostrar elementos da pilha (do topo para base)
+    void showStack() {
         for (int i = topo; i >= 0; i--) {
-            std::cout << elementos[i] << std::endl;
+            std::cout << elementos[i] << " ";
         }
+        std::cout << std::endl;
+    }
+
+    ~Pilha() {
+        delete[] elementos;
     }
 };
 
 int main() {
-    Alg03<int> pilha(5);
+    Pilha<int> pilha(5);
+    pilha.push(1);
+    pilha.push(2);
+    pilha.push(3);
 
-    pilha.push(10);
-    pilha.push(20);
-    pilha.push(30);
+    pilha.showStack();
 
+    std::cout << "Topo da pilha: " << pilha.front() << std::endl;
     std::cout << "Tamanho da pilha: " << pilha.size() << std::endl;
-    std::cout << "Elemento no topo: " << pilha.front() << std::endl;
 
     pilha.pop();
-
-    std::cout << "Tamanho da pilha: " << pilha.size() << std::endl;
-    std::cout << "Elemento no topo: " << pilha.front() << std::endl;
-
     pilha.showStack();
 
     return 0;

@@ -1,87 +1,87 @@
 =begin
- Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
- uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
- 
-Métodos:
- isEmpty - verificar se a pilha está vazia; 
- isFull - verificar se a pilha está cheia;
- push - inserir elementos no topo da pilha;
- pop - remover elementos do dopo da pilha;
- size - obter o tamanho atual da pilha;
- front - acessar o elemento do topo da pilha sem removê-lo;
- showStack - mostar elementos da pilha (do topo para base).
+♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
+→ Operações:
+    • isEmpty - verificar se a pilha está vazia;
+    • isFull - verificar se a pilha está cheia;
+    • push - inserir elementos no topo da pilha;
+    • pop - remover elementos do dopo da pilha;
+    • size - obter o tamanho atual da pilha;
+    • front - acessar o elemento do topo da pilha sem removê-lo;
+    • showStack - mostar elementos da pilha (do topo para base).
 =end
 
-class Alg03
-  def initialize(tamanhoMaximo)
-    @tamanhoMaximo = tamanhoMaximo
+class Pilha
+  def initialize(capacidade)
+    @capacidade = capacidade
+    @elementos = Array.new(capacidade)
     @topo = -1
-    @elementos = Array.new(tamanhoMaximo)
   end
 
-  def isEmpty()
+  # Verificar se a pilha está vazia
+  def isEmpty
     @topo == -1
   end
 
-  def isFull()
-    @topo == @tamanhoMaximo - 1
+  # Verificar se a pilha está cheia
+  def isFull
+    @topo == @capacidade - 1
   end
 
+  # Inserir elementos no topo da pilha
   def push(elemento)
-    if isFull()
-      puts "A pilha está cheia. Não é possível empilhar o elemento."
-      return
+    if isFull
+      raise "A pilha está cheia"
     end
+
     @topo += 1
     @elementos[@topo] = elemento
   end
 
-  def pop()
-    if isEmpty()
-      puts "A pilha está vazia. Não é possível desempilhar um elemento."
-      return nil
+  # Remover elementos do topo da pilha
+  def pop
+    if isEmpty
+      raise "A pilha está vazia"
     end
-    elemento = @elementos[@topo]
+
+    elemento_removido = @elementos[@topo]
+    @elementos[@topo] = nil
     @topo -= 1
-    return elemento
+
+    return elemento_removido
   end
 
-  def front()
-    if isEmpty()
-      puts "A pilha está vazia. Não há elemento no topo."
-      return nil
+  # Obter o tamanho atual da pilha
+  def size
+    @topo + 1
+  end
+
+  # Acessar o elemento do topo da pilha sem removê-lo
+  def front
+    if isEmpty
+      raise "A pilha está vazia"
     end
-    return @elementos[@topo]
+
+    @elementos[@topo]
   end
 
-  def size()
-    return @topo + 1
-  end
-
-  def showStack()
-    if isEmpty()
-      puts "A pilha está vazia."
-      return
-    end
-    puts "Elementos da pilha (do topo para base):"
+  # Mostrar elementos da pilha (do topo para base)
+  def showStack
     for i in @topo.downto(0)
-      puts @elementos[i]
+      print "#{@elementos[i]} "
     end
+    puts
   end
 end
 
-pilha = Alg03.new(5)
+pilha = Pilha.new(5)
+pilha.push(1)
+pilha.push(2)
+pilha.push(3)
 
-pilha.push(10)
-pilha.push(20)
-pilha.push(30)
+pilha.showStack
 
-puts "Tamanho da pilha: #{pilha.size()}"
-puts "Elemento no topo: #{pilha.front()}"
+puts "Topo da pilha: #{pilha.front}"
+puts "Tamanho da pilha: #{pilha.size}"
 
-pilha.pop()
-
-puts "Tamanho da pilha: #{pilha.size()}"
-puts "Elemento no topo: #{pilha.front()}"
-
-pilha.showStack()
+pilha.pop
+pilha.showStack

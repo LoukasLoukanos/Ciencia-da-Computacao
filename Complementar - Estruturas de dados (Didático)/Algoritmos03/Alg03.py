@@ -1,73 +1,74 @@
-''' 
- Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
- uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
- 
-Métodos:
- isEmpty - verificar se a pilha está vazia; 
- isFull - verificar se a pilha está cheia;
- push - inserir elementos no topo da pilha;
- pop - remover elementos do dopo da pilha;
- size - obter o tamanho atual da pilha;
- front - acessar o elemento do topo da pilha sem removê-lo;
- showStack - mostar elementos da pilha (do topo para base).
+'''
+♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
+→ Operações:
+    • isEmpty - verificar se a pilha está vazia;
+    • isFull - verificar se a pilha está cheia;
+    • push - inserir elementos no topo da pilha;
+    • pop - remover elementos do dopo da pilha;
+    • size - obter o tamanho atual da pilha;
+    • front - acessar o elemento do topo da pilha sem removê-lo;
+    • showStack - mostar elementos da pilha (do topo para base).
 '''
 
-class Alg03:
-    def __init__(self, tamanhoMaximo):
-        self.tamanhoMaximo = tamanhoMaximo
+class Pilha:
+    def __init__(self, capacidade):
+        self.capacidade = capacidade
+        self.elementos = [None] * capacidade
         self.topo = -1
-        self.elementos = [None] * tamanhoMaximo
 
+    # Verificar se a pilha está vazia
     def isEmpty(self):
         return self.topo == -1
 
+    # Verificar se a pilha está cheia
     def isFull(self):
-        return self.topo == self.tamanhoMaximo - 1
+        return self.topo == self.capacidade - 1
 
+    # Inserir elementos no topo da pilha
     def push(self, elemento):
         if self.isFull():
-            print("A pilha está cheia. Não é possível empilhar o elemento.")
-            return
+            raise Exception("A pilha está cheia")
+
         self.topo += 1
         self.elementos[self.topo] = elemento
 
+    # Remover elementos do topo da pilha
     def pop(self):
         if self.isEmpty():
-            print("A pilha está vazia. Não é possível desempilhar um elemento.")
-            return None
-        elemento = self.elementos[self.topo]
+            raise Exception("A pilha está vazia")
+
+        elemento_removido = self.elementos[self.topo]
+        self.elementos[self.topo] = None
         self.topo -= 1
-        return elemento
 
-    def front(self):
-        if self.isEmpty():
-            print("A pilha está vazia. Não há elemento no topo.")
-            return None
-        return self.elementos[self.topo]
+        return elemento_removido
 
+    # Obter o tamanho atual da pilha
     def size(self):
         return self.topo + 1
 
-    def showStack(self):
+    # Acessar o elemento do topo da pilha sem removê-lo
+    def front(self):
         if self.isEmpty():
-            print("A pilha está vazia.")
-            return
-        print("Elementos da pilha (do topo para base):")
+            raise Exception("A pilha está vazia")
+
+        return self.elementos[self.topo]
+
+    # Mostrar elementos da pilha (do topo para base)
+    def showStack(self):
         for i in range(self.topo, -1, -1):
-            print(self.elementos[i])
+            print(self.elementos[i], end=" ")
+        print()
 
-pilha = Alg03(5)
+pilha = Pilha(5)
+pilha.push(1)
+pilha.push(2)
+pilha.push(3)
 
-pilha.push(10)
-pilha.push(20)
-pilha.push(30)
+pilha.showStack()
 
+print("Topo da pilha:", pilha.front())
 print("Tamanho da pilha:", pilha.size())
-print("Elemento no topo:", pilha.front())
 
 pilha.pop()
-
-print("Tamanho da pilha:", pilha.size())
-print("Elemento no topo:", pilha.front())
-
 pilha.showStack()

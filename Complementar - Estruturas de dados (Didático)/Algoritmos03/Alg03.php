@@ -1,94 +1,94 @@
 <?php
-
-/* Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
- uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
- 
-Métodos:
- isEmpty - verificar se a pilha está vazia; 
- isFull - verificar se a pilha está cheia;
- push - inserir elementos no topo da pilha;
- pop - remover elementos do dopo da pilha;
- size - obter o tamanho atual da pilha;
- front - acessar o elemento do topo da pilha sem removê-lo;
- showStack - mostar elementos da pilha (do topo para base).
+/*
+♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
+→ Operações:
+    • isEmpty - verificar se a pilha está vazia;
+    • isFull - verificar se a pilha está cheia;
+    • push - inserir elementos no topo da pilha;
+    • pop - remover elementos do dopo da pilha;
+    • size - obter o tamanho atual da pilha;
+    • front - acessar o elemento do topo da pilha sem removê-lo;
+    • showStack - mostar elementos da pilha (do topo para base).
 */
 
-class Alg03 {
-    private $tamanhoMaximo;
-    private $topo;
+class Pilha {
+    private $capacidade;
     private $elementos;
+    private $topo;
 
-    public function __construct($tamanhoMaximo) {
-        $this->tamanhoMaximo = $tamanhoMaximo;
+    public function __construct($capacidade) {
+        $this->capacidade = $capacidade;
+        $this->elementos = array_fill(0, $capacidade, null);
         $this->topo = -1;
-        $this->elementos = array_fill(0, $tamanhoMaximo, null);
     }
 
+    // Verificar se a pilha está vazia
     public function isEmpty() {
-        return $this->topo === -1;
+        return $this->topo == -1;
     }
 
+    // Verificar se a pilha está cheia
     public function isFull() {
-        return $this->topo === $this->tamanhoMaximo - 1;
+        return $this->topo == $this->capacidade - 1;
     }
 
+    // Inserir elementos no topo da pilha
     public function push($elemento) {
         if ($this->isFull()) {
-            echo "A pilha está cheia. Não é possível empilhar o elemento.\n";
-            return;
+            throw new Exception("A pilha está cheia");
         }
+
         $this->topo++;
         $this->elementos[$this->topo] = $elemento;
     }
 
+    // Remover elementos do topo da pilha
     public function pop() {
         if ($this->isEmpty()) {
-            echo "A pilha está vazia. Não é possível desempilhar um elemento.\n";
-            return null;
+            throw new Exception("A pilha está vazia");
         }
-        $elemento = $this->elementos[$this->topo];
+
+        $elementoRemovido = $this->elementos[$this->topo];
+        $this->elementos[$this->topo] = null;
         $this->topo--;
-        return $elemento;
+
+        return $elementoRemovido;
     }
 
-    public function front() {
-        if ($this->isEmpty()) {
-            echo "A pilha está vazia. Não há elemento no topo.\n";
-            return null;
-        }
-        return $this->elementos[$this->topo];
-    }
-
+    // Obter o tamanho atual da pilha
     public function size() {
         return $this->topo + 1;
     }
 
-    public function showStack() {
+    // Acessar o elemento do topo da pilha sem removê-lo
+    public function front() {
         if ($this->isEmpty()) {
-            echo "A pilha está vazia.\n";
-            return;
+            throw new Exception("A pilha está vazia");
         }
-        echo "Elementos da pilha (do topo para base):\n";
+
+        return $this->elementos[$this->topo];
+    }
+
+    // Mostrar elementos da pilha (do topo para base)
+    public function showStack() {
         for ($i = $this->topo; $i >= 0; $i--) {
-            echo $this->elementos[$i] . "\n";
+            echo $this->elementos[$i] . " ";
         }
+        echo PHP_EOL;
     }
 }
 
-$pilha = new Alg03(5);
+$pilha = new Pilha(5);
+$pilha->push(1);
+$pilha->push(2);
+$pilha->push(3);
 
-$pilha->push(10);
-$pilha->push(20);
-$pilha->push(30);
+$pilha->showStack();
 
-echo "Tamanho da pilha: " . $pilha->size() . "\n";
-echo "Elemento no topo: " . $pilha->front() . "\n";
+echo "Topo da pilha: " . $pilha->front() . PHP_EOL;
+echo "Tamanho da pilha: " . $pilha->size() . PHP_EOL;
 
 $pilha->pop();
-
-echo "Tamanho da pilha: " . $pilha->size() . "\n";
-echo "Elemento no topo: " . $pilha->front() . "\n";
-
 $pilha->showStack();
 
 ?>

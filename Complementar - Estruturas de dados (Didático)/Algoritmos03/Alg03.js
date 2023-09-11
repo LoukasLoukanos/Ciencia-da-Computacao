@@ -1,86 +1,86 @@
-/* Algoritmo da Estrutura de dados linear estática (não dinâmica) genérica de 
- uma pilha (de regra de acesso LIFO) utilizando um array unidimensional (vetor)
- 
-Métodos:
- isEmpty - verificar se a pilha está vazia; 
- isFull - verificar se a pilha está cheia;
- push - inserir elementos no topo da pilha;
- pop - remover elementos do dopo da pilha;
- size - obter o tamanho atual da pilha;
- front - acessar o elemento do topo da pilha sem removê-lo;
- showStack - mostar elementos da pilha (do topo para base).
+/*
+♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
+→ Operações:
+    • isEmpty - verificar se a pilha está vazia;
+    • isFull - verificar se a pilha está cheia;
+    • push - inserir elementos no topo da pilha;
+    • pop - remover elementos do dopo da pilha;
+    • size - obter o tamanho atual da pilha;
+    • front - acessar o elemento do topo da pilha sem removê-lo;
+    • showStack - mostar elementos da pilha (do topo para base).
 */
 
-class Alg03 {
-    constructor(tamanhoMaximo) {
-        this.tamanhoMaximo = tamanhoMaximo;
+class Pilha {
+    constructor(capacidade) {
+        this.capacidade = capacidade;
+        this.elementos = new Array(capacidade);
         this.topo = -1;
-        this.elementos = new Array(tamanhoMaximo);
     }
 
+    // Verificar se a pilha está vazia
     isEmpty() {
         return this.topo === -1;
     }
 
+    // Verificar se a pilha está cheia
     isFull() {
-        return this.topo === this.tamanhoMaximo - 1;
+        return this.topo === this.capacidade - 1;
     }
 
+    // Inserir elementos no topo da pilha
     push(elemento) {
         if (this.isFull()) {
-            console.log("A pilha está cheia. Não é possível empilhar o elemento.");
-            return;
+            throw new Error("A pilha está cheia");
         }
+
         this.topo++;
         this.elementos[this.topo] = elemento;
     }
 
+    // Remover elementos do topo da pilha
     pop() {
         if (this.isEmpty()) {
-            console.log("A pilha está vazia. Não é possível desempilhar um elemento.");
-            return null;
+            throw new Error("A pilha está vazia");
         }
-        const elemento = this.elementos[this.topo];
+
+        const elementoRemovido = this.elementos[this.topo];
+        this.elementos[this.topo] = null;
         this.topo--;
-        return elemento;
+
+        return elementoRemovido;
     }
 
-    front() {
-        if (this.isEmpty()) {
-            console.log("A pilha está vazia. Não há elemento no topo.");
-            return null;
-        }
-        return this.elementos[this.topo];
-    }
-
+    // Obter o tamanho atual da pilha
     size() {
         return this.topo + 1;
     }
 
-    showStack() {
+    // Acessar o elemento do topo da pilha sem removê-lo
+    front() {
         if (this.isEmpty()) {
-            console.log("A pilha está vazia.");
-            return;
+            throw new Error("A pilha está vazia");
         }
-        console.log("Elementos da pilha (do topo para base):");
+
+        return this.elementos[this.topo];
+    }
+
+    // Mostrar elementos da pilha (do topo para base)
+    showStack() {
         for (let i = this.topo; i >= 0; i--) {
             console.log(this.elementos[i]);
         }
     }
 }
 
-const pilha = new Alg03(5);
+const pilha = new Pilha(5);
+pilha.push(1);
+pilha.push(2);
+pilha.push(3);
 
-pilha.push(10);
-pilha.push(20);
-pilha.push(30);
+pilha.showStack();
 
+console.log("Topo da pilha: " + pilha.front());
 console.log("Tamanho da pilha: " + pilha.size());
-console.log("Elemento no topo: " + pilha.front());
 
 pilha.pop();
-
-console.log("Tamanho da pilha: " + pilha.size());
-console.log("Elemento no topo: " + pilha.front());
-
 pilha.showStack();
