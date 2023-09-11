@@ -1,6 +1,5 @@
 '''
- Algoritmo da Estrutura de dados linear de Classificação/Ordenação estática (não dinâmica) de divisão e 
- conquista MergeSort, também conhecida como Ordenação pelo Método (Recursivo) de Mistura/Mesclagem
+♦ Algoritmo 08: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação de Divisão e Conquista Merge Sort (Ordenação pelo Método (Recursivo) de Mistura/Mesclagem).
 '''
 
 def mergeSort(array):
