@@ -1,6 +1,20 @@
+As estruturas de dados podem ser classificadas em dois aspectos: **Linearidade** e **Alocação de memória (Estática ou Dinâmica)**.
+
+- **Linearidade:**
+
+  - **Estruturas de dados lineares:** Os elementos são organizados em uma sequência linear, onde cada elemento tem um antecessor e/ou um sucessor, formando uma linha. *Exemplos incluem arrays, listas ligadas e pilhas.*
+
+  - **Estruturas de dados não lineares:** Os elementos não são organizados em uma sequência linear. *Isso inclui estruturas como árvores e grafos.*
+
+- **Alocação de memória:**
+  - **Estruturas de dados estáticas:** A quantidade máxima de elementos que a estrutura pode conter é definida no momento da criação e não pode ser alterada. Elas são alocadas em tempo de compilação. *Exemplos incluem arrays estáticos.*
+  - **Estruturas de dados dinâmicas:** Elas alocam memória conforme necessário durante a execução do programa. Isso permite que a estrutura cresça ou diminua conforme necessário. *Exemplos incluem listas ligadas e árvores.*
+
+</br><hr></br>
+
 # **Algoritmos de Estruturas de Dados Lineares**
 
-- ## **Estruturas de Dados Estáticas**
+- ## **Estruturas de Dados Lineares Estáticas**
 
   - ### ***Array unidimensional (Vetor)***
     - #### **Algoritmo 01:** 
@@ -856,7 +870,7 @@
   </br></br>
 
 
-  - ### Pesquisa/Busca
+  - ### ***Pesquisa/Busca***
     - #### **Algoritmo 09:**
       Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Pesquisa Sequencial (sem a utilização de variável/sentinela).
 
@@ -877,8 +891,8 @@
   </br></br>
 
 
-- ## Estruturas de Dados Dinâmicas
-  - ### Lista Ligada (ou Encadeada) Simples
+- ## **Estruturas de Dados Lineares Dinâmicas**
+  - ### ***Lista Ligada (ou Encadeada) Simples***
     - #### **Algoritmo 12:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.</br>
       Operações:</br>
@@ -892,7 +906,7 @@
   </br></br>
 
 
-  - ### Lista Duplamente Ligada (ou Duplamente Encadeada)
+  - ### ***Lista Duplamente Ligada (ou Duplamente Encadeada)***
     - #### **Algoritmo 13:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada de tipo de dados genérico.</br>
       Operações:</br>
@@ -906,7 +920,7 @@
   </br></br>
 
 
-  - ### Fila Dinâmica
+  - ### ***Fila Dinâmica***
     - #### **Algoritmo 14:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Fila (regra de acesso FIFO) de tipo de dados genérico.</br>
       Operações:</br>
@@ -922,7 +936,7 @@
   </br></br>
 
 
-  - ### Pilha Dinâmica
+  - ### ***Pilha Dinâmica***
     - #### **Algoritmo 15:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Pilha (regra de acesso LIFO) de tipo de dados genérico.</br>
       Operações:</br>
@@ -938,7 +952,7 @@
   </br></br>
 
 
-  - ### Classificação/Ordenação
+  - ### ***Classificação/Ordenação***
     - #### **Algoritmo 16:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Classificação/Ordenação Insertion Sort (Ordenação por Inserção).
 
@@ -947,7 +961,7 @@
   </br></br>
 
 
-  - ### Classificação/Ordenação em tempo linear
+  - ### ***Classificação/Ordenação em tempo linear***
     - #### **Algoritmo 17:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Classificação/Ordenação em tempo linear Counting Sort (Ordenação por Contagem).
 
@@ -962,7 +976,7 @@
   </br></br>
 
 
-  - ### Pesquisa/Busca:
+  - ### ***Pesquisa/Busca***
     - #### **Algoritmo 19:**
       Estrutura de Dados Linear Dinâmica (não Estática) de Pesquisa/Busca para Algoritmo 12: →[Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico].</br>
       Operações:</br>
@@ -990,5 +1004,126 @@
 </br><hr></br>
 
 
-# Algoritmos de Estruturas de Dados Não Lineares
-</br>
+# **Algoritmos de Estruturas de Dados Não Lineares**
+
+- ## **Estruturas de Dados Não Lineares Estáticas**
+  - ### ***Árvores Binárias***
+    - #### **Algoritmo 21:**
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Busca Binária (Binary Search Tree - BST) de tipo de dados genérico.</br>
+      Operações:</br>
+      • Inserção e Remoção de Elementos;</br>
+      • Busca (pesquisa) de Elementos;</br>
+      • Encontrar o Mínimo e o Máximo;</br>
+      • Travessias (in-order, pre-order, post-order);</br>
+      • Verificar se é uma BST válida.
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 22:**
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Árvore AVL.</br>
+      Operações:</br>
+      • Rotações para Rebalanceamento;</br>
+      • Inserção e Remoção com Rebalanceamento.
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 23:**
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Árvore Rubro-Negra.
+      Operações:</br>
+      • </br>
+      • .
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+  - ### ***Árvores Não-Binárias***
+    - #### **Algoritmo 24:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária - Árvore B.
+      Operações:</br>
+      • Inserção e Remoção de Elementos;</br>
+      • Divisão e Fusão de Nós.
+      
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 25:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária - Árvore B+.
+      Operações:</br>
+      • Inserção e Remoção de Elementos;</br>
+      • Divisão e Fusão de Nós.
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+  - ### ***Grafos***
+    - #### **Algoritmo 26:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Busca em Largura (Breadth-First Search - BFS).
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 27:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Busca em Profundidade (Depth-First Search - DFS).
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 28:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Algoritmo de Dijkstra.
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 29:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Algoritmo de Bellman-Ford.
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 30:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Algoritmo de Kruskal.
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 31:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Algoritmo de Prim.
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 32:** 
+      Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Algoritmo de Floyd-Warshall.
+    
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
+
+- ## **Estruturas de Dados Não Lineares Dinâmicas**
+  - ### ***Nome Geral***
+    - #### **Algoritmo 33:** 
+      Nome Específico.
+      Operações:</br>
+      • ;</br>
+      • .
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+
+    - #### **Algoritmo 34:** 
+      Nome Específico.
+      Operações:</br>
+      • ;</br>
+      • .
+
+      | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|
+  </br></br>
+
