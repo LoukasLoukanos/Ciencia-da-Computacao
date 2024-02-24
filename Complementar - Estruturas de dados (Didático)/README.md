@@ -1032,8 +1032,9 @@ As estruturas de dados podem ser classificadas em dois aspectos: **Linearidade**
     - #### **Algoritmo 23:**
       Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Árvore Rubro-Negra.
       Operações:</br>
-      • </br>
-      • .
+      • inserir e inserirNo;</br>
+      • remover e removerNo;</br>
+      • buscar e buscarNo.
       
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -1044,8 +1045,10 @@ As estruturas de dados podem ser classificadas em dois aspectos: **Linearidade**
     - #### **Algoritmo 24:** 
       Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária - Árvore B.
       Operações:</br>
-      • Inserção e Remoção de Elementos;</br>
-      • Divisão e Fusão de Nós.
+      • Inserção de Elementos;</br>
+      • Remoção de Elementos;</br>
+      • Divisão de Nós;</br>
+      • Fusão de Nós.
       
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -1053,8 +1056,10 @@ As estruturas de dados podem ser classificadas em dois aspectos: **Linearidade**
     - #### **Algoritmo 25:** 
       Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária - Árvore B+.
       Operações:</br>
-      • Inserção e Remoção de Elementos;</br>
-      • Divisão e Fusão de Nós.
+      • Inserção de Elementos;</br>
+      • Remoção de Elementos;</br>
+      • Divisão de Nós;</br>
+      • Fusão de Nós.
 
       | <a href="#">C++</a> | <a href="#">Java</a> | <a href="#">JavaScript</a> | <a href="#">PHP</a> | <a href="#">Python</a> | <a href="#">Ruby</a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|
