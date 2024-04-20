@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 26: Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo - Busca em Largura (Breadth-First Search - BFS).
+♦ Algoritmo 26: Algoritmo de implementação da Estrutura de Dados Não Linear Estática (não Dinâmica) de Grafo: Busca em Largura (Breadth-First Search - BFS).
 */
 
 
