@@ -1,5 +1,5 @@
 =begin
-♦ Algoritmo 08: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação de Divisão e Conquista Merge Sort (Ordenação pelo Método (Recursivo) de Mistura/Mesclagem).
+♦ Algoritmo 08: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Merge Sort (Ordenação por Mistura/Mesclagem).
 =end
 
 def merge_sort(array)
