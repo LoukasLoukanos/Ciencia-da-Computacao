@@ -1,5 +1,5 @@
 '''
-♦ Algoritmo 07: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação de Divisão e Conquista Quick Sort (Ordenação pelo Método (Recursivo) Rápido).
+♦ Algoritmo 07: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Quick Sort (Ordenação Rápida).
 '''
 
 def trocar(array, indice1, indice2):
