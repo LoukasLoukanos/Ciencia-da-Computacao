@@ -1,12 +1,5 @@
 '''
-♦ Algoritmo 14: Estrutura de Dados Linear Dinâmica (não Estática) de Fila (regra de acesso FIFO) de tipo de dados genérico.
-→ Operações:
-    • isEmpty - verificar se a fila está vazia;
-    • enqueue - adicionar elementos;
-    • dequeue - remover o elemento da frente da fila;
-    • size - obter o tamanho atual da fila;
-    • front - acessar o elemento da frente da fila sem removê-lo;
-    • showQueue - mostar elementos da fila.
+♦ Algoritmo 14: Estrutura de Dados Linear Dinâmica (não Estática) de Fila: Queue (Fila).
 '''
 
 from collections import deque
