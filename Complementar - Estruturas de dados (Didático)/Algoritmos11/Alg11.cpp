@@ -1,5 +1,5 @@
 /*
-♦ Algoritmo 11: Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Busca Binária.
+♦ Algoritmo 11: Algoritmo de Pesquisa/Busca para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Busca Binária.
 */
 
 #include <iostream>
