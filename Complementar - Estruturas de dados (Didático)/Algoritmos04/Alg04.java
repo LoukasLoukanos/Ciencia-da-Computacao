@@ -1,5 +1,5 @@
 /*
-♦ Algoritmo 04: Estrutura de Dados Linear Estática (não Dinâmica) de Classificação/Ordenação Bubble Sort (Ordanação pelo Método (Iterativo) de Bolhas).
+♦ Algoritmo 04: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Bubble Sort (Ordanação por Bolhas).
 */
    
 public class Alg04 {
