@@ -1,11 +1,6 @@
 <?php
 /*
-♦ Algoritmo 13: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada de tipo de dados genérico.
-→ Operações:
-    • addList: inserção em uma Lista Duplamente Ligada;
-    • removeList: remoção em uma Lista Duplamente Ligada;
-    • size - obter o tamanho atual da Lista Duplamente Ligada;
-    • showList: exibição dos elementos da Lista Duplamente Ligada.
+♦ Algoritmo 13: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada: Doubly Linked List (Lista Duplamente Ligada).
 */
 
 class Nodo {
