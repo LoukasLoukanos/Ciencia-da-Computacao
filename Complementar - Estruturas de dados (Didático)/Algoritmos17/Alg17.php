@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 17: Estrutura de Dados Linear Dinâmica (não Estática) de Classificação/Ordenação em tempo linear Counting Sort (Ordenação por Contagem).
+♦ Algoritmo 17: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Dinâmicas (não Estáticas): Counting Sort (Ordenação por Contagem).
 */
 
 function countingSort(&$arr) {
