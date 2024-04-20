@@ -1,11 +1,5 @@
 /*
-♦ Algoritmo 20: Estrutura de Dados Linear Dinâmica (não Estática) de Pesquisa/Busca para Algoritmo 13: →[Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada de tipo de dados genérico].
-→ Operações:
-    • Busca de um valor em uma Lista Duplamente Ligada;
-    • Identificar o menor valor em uma Lista Duplamente Ligada;
-    • Identificar o maior valor em uma Lista Duplamente Ligada;
-    • Retornar o sucessor de um valor em uma Lista Duplamente Ligada;
-    • Retornar o predecessor de um valor em uma Lista Duplamente Ligada.
+♦ Algoritmo 20: Algoritmo de Pesquisa/Busca para a Estrutura de Dados Linear Dinâmica (não Estática) Lista Duplamente Ligada (ou Duplamente Encadeada): Busca em Lista Duplamente Ligada.
 */
 
 class Node {
