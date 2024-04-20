@@ -1,11 +1,6 @@
 <?php
 /*
-♦ Algoritmo 24: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária - Árvore B.
-→ Operações:
-    • Inserção de Elementos;
-    • Remoção de Elementos;
-    • Divisão de Nós;
-    • Fusão de Nós.
+♦ Algoritmo 24: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Não-Binária: Árvore B.
 */
 
 
