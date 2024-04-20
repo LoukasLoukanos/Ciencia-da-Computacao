@@ -1,12 +1,5 @@
 '''
-♦ Algoritmo 15: Estrutura de Dados Linear Dinâmica (não Estática) de Pilha (regra de acesso LIFO) de tipo de dados genérico.
-→ Operações:
-    • isEmpty - verificar se a pilha está vazia;
-    • push - inserir elementos no topo da pilha;
-    • pop - remover elementos do dopo da pilha;
-    • size - obter o tamanho atual da pilha;
-    • front - acessar o elemento do topo da pilha sem removê-lo;
-    • showStack - mostar elementos da pilha (do topo para base).
+♦ Algoritmo 15: Estrutura de Dados Linear Dinâmica (não Estática) de Pilha: Stack (Pilha).
 '''
 
 class PilhaDinamica:
