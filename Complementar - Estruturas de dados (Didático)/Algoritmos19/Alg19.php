@@ -1,12 +1,6 @@
 <?php
 /*
-♦ Algoritmo 19: Estrutura de Dados Linear Dinâmica (não Estática) de Pesquisa/Busca para Algoritmo 12: →[Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico].
-→ Operações:
-    • Busca de um valor em uma Lista Ligada Simples;
-    • Identificar o menor valor em uma Lista Ligada Simples;
-    • Identificar o maior valor em uma Lista Ligada Simples;
-    • Retornar o sucessor de um valor em uma Lista Ligada Simples;
-    • Retornar o predecessor de um valor em uma Lista Ligada Simples.
+♦ Algoritmo 19: Algoritmo de Pesquisa/Busca para a Estrutura de Dados Linear Dinâmica (não Estática) Lista Ligada (ou Encadeada) Simples: Busca em Lista Ligada.
 */
 
 class Node {
