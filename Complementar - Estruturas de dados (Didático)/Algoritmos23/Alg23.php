@@ -1,10 +1,6 @@
 <?php
 /*
-♦ Algoritmo 23: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Árvore Rubro-Negra.
-→ Operações:
-    • inserir e inserirNo;
-    • remover e removerNo;
-    • buscar e buscarNo.
+♦ Algoritmo 23: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária: Árvore Rubro-Negra.
 */
 
 
