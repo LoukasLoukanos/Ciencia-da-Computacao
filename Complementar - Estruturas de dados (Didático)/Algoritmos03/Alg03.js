@@ -1,13 +1,5 @@
 /*
-♦ Estrutura de Dados Linear Estática (não Dinâmica) de Pilha (regra de acesso LIFO) de tipo de dados genérico: Algoritmo 03.
-→ Operações:
-    • isEmpty - verificar se a pilha está vazia;
-    • isFull - verificar se a pilha está cheia;
-    • push - inserir elementos no topo da pilha;
-    • pop - remover elementos do dopo da pilha;
-    • size - obter o tamanho atual da pilha;
-    • front - acessar o elemento do topo da pilha sem removê-lo;
-    • showStack - mostar elementos da pilha (do topo para base).
+♦ Algoritmo 03: Estrutura de Dados Linear Estática (não Dinâmica) de Pilha: Stack (Pilha).
 */
 
 class Pilha {
