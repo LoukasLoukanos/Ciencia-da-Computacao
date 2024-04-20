@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 16: Estrutura de Dados Linear Dinâmica (não Estática) de Classificação/Ordenação Insertion Sort (Ordenação por Inserção).
+♦ Algoritmo 16: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Dinâmicas (não Estáticas): Insertion Sort (Ordenação por Inserção).
 */
 
 function insertionSort(&$arr) {
