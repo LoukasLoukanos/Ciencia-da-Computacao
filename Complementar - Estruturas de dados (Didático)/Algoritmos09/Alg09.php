@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 09: Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Pesquisa Sequencial (sem a utilização de variável/sentinela).
+♦ Algoritmo 09: Algoritmo de Pesquisa/Busca para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Busca Sequencial (sem a utilização de variável/sentinela).
 */
 
 function buscaSequencial($array, $valorProcurado) {
