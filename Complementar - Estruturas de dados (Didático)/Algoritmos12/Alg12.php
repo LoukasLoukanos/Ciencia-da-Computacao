@@ -1,11 +1,6 @@
 <?php
 /*
-♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada) de tipo de dados genérico.
-→ Operações:
-    • addList: inserção em uma Lista Ligada Simples;
-    • removeList: remoção em uma Lista Ligada Simples;
-    • size - obter o tamanho atual da Lista Ligada Simples;
-    • showList: exibição dos elementos da Lista Ligada Simples.
+♦ Algoritmo 12: Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada): Linked List (Lista Ligada).
 */
 
 class Nodo {
