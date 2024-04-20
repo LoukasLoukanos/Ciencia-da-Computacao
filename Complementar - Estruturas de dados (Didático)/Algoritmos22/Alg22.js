@@ -1,8 +1,5 @@
 /*
-♦ Algoritmo 22: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Árvore AVL.
-→ Operações:
-    • Rotações para Rebalanceamento;
-    • Inserção e Remoção com Rebalanceamento.
+♦ Algoritmo 22: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária: Árvore AVL.
 */
 
 class Node {
