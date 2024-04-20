@@ -1,11 +1,5 @@
 '''
-♦ Algoritmo 21: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária - Busca Binária (Binary Search Tree - BST) de tipo de dados genérico.
-→ Operações:
-    • Inserção e Remoção de Elementos;
-    • Busca (pesquisa) de Elementos;
-    • Encontrar o Mínimo e o Máximo;
-    • Travessias (in-order, pre-order, post-order);
-    • Verificar se é uma BST válida.
+♦ Algoritmo 21: Estrutura de Dados Não Linear Estática (não Dinâmica) de Árvore Binária: Árvore de Busca Binária (Binary Search Tree - BST).
 '''
 
 class BinarySearchTree:
