@@ -1,5 +1,5 @@
 /*
-♦ Implementação de um array unidimensional (vetor) de tipo genérico (considerando uma estrutura de dados que armazena, a princípio, dados primitivos desde que sejam do mesmo tipo — estrutura homogênea — ): Algoritmo 01.
+♦ Algoritmo 01: Implementação de um array unidimensional (vetor) de tipo genérico para dados primitivos de estrutura homogênea.
 */
 
 class Alg01 {
