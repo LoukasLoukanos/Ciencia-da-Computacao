@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 10: Estrutura de Dados Linear Estática (não Dinâmica) de Pesquisa/Busca Busca Sequencial com Sentinela.
+♦ Algoritmo 10: Algoritmo de Pesquisa/Busca para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Busca Sequencial (com a utilização de variável/sentinela).
 */
 
 function buscaSequencialComSentinela($array, $valorProcurado) {
