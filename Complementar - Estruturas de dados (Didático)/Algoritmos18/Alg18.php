@@ -1,6 +1,6 @@
 <?php
 /*
-♦ Algoritmo 18: Estrutura de Dados Linear Dinâmica (não Estática) de Classificação/Ordenação Bucket Sort (Ordenação por Balde).
+♦ Algoritmo 18: Algoritmo de Classificação/Ordenação para Estruturas de Dados Lineares Dinâmicas (não Estáticas): Bucket Sort (Ordenação por Balde).
 */
 
 function bucketSort(&$arr) {
