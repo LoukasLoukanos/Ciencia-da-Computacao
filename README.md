@@ -13,26 +13,26 @@
 
 ### **Complementar**
 
-#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/><path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/></svg></a>
+#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'></></a>
 *Full-Stack Development.*
 </br></br>
 
-#### Guia **Estruturas de Dados e Complexidade de Algoritmos** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/><path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/></svg></a>
+#### Guia **Estruturas de Dados e Complexidade de Algoritmos** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'></></a>
 *`C++`, `Java`, `JavaScript`, `PHP`, `Python` e `Ruby` – Algoritmos, Explicações e Análises.*
 </br></br>
 
 
-#### Guia **Java** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Java%20Guia%20do%20Programador%20(Did%C3%A1tico)#java-guia-do-programador-4%C2%AA-ed'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/><path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/></svg></a>
+#### Guia **Java** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Java%20Guia%20do%20Programador%20(Did%C3%A1tico)#java-guia-do-programador-4%C2%AA-ed'></></a>
 *`Java` – livro 'Guia do Progradador, Peter Jandl Junior' comentado.*
 </br></br>
 
 
-#### Guia **Python** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/><path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/></svg></a>
+#### Guia **Python** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'></></a>
 *`Python` – livro 'Python Fluente, Luciano Ramalho' comentado.*
 </br></br>
 
 
-#### Guia **DBA (Administrador de Banco de Dados)** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)#linguagens-de-opera%C3%A7%C3%B5es-da-sql'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/><path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/></svg></a>
+#### Guia **DBA (Administrador de Banco de Dados)** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)#linguagens-de-opera%C3%A7%C3%B5es-da-sql'></></a>
 *`SQL` e `PLSQL`.*
 </br></br>
 
