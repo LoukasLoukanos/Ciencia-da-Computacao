@@ -1,5 +1,5 @@
 # **BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO λ**
- | <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech_1.gif" alt="internet" width="111"> | O repositório tem a finalidade de apresentar um conteúdo embasado não apenas no ensino universitário, mas também nos aportes de pesquisas complementares do percurso formativo. Multifacetado intrinsecamente à estrutura curricular, abarca desde materiais didáticos até obras de cunho científico, com uma gama diversificada de recursos cruciais para a compreensão, assimilação e aprofundamento dos conhecimentos pertinentes à área. |
+ | <img src="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/tech_1.gif" alt="internet" width="111"> | Este repositório foi criado para fornecer uma coleção diversificada de recursos complementares que, embora relacionados ao campo da Ciência da Computação, não se limitam estritamente à grade curricular do ensino universitário. Ele inclui materiais que foram explorados ao longo do percurso formativo, abrangendo desde pesquisas acadêmicas até ferramentas práticas, com o objetivo de enriquecer e expandir o entendimento dos tópicos estudados. |
  |:-:|:-:|
 
 <hr>

@@ -52,7 +52,26 @@
 - Projeto Integrador de Competências (PIC).
 
 ### ***6° Semestre:***
+- Computação Gráfica;
+- Linguagens formais e autômatos;
+- Sistemas Cliente/Servidor;
+- Teoria dos Grafos;
+- Programação para dispositivos móveis;
+- Desenvolvimento Ágil;
+- Plano de Acompanhamento de Carreira;
+- Projeto Integrador de Competências (PIC).
 
 ### ***7° Semestre:***
+- Computação Paralela e Distribuída;
+- Compiladores e Interpretadores;
+- Computação em Nuvem;
+- Interface Humano/Computador;
+- Diversidade Étnico Cultural;
+- Projeto Integrador Transdisciplinar (PIT) I/II.
 
 ### ***8° Semestre:***
+- Big Data;
+- Redes Neurais;
+- Qualidade de Software;
+- Ciências de Dados e Aprendizagem de Máquina;
+- Projeto Integrador Transdisciplinar (PIT) II/II.
