@@ -14,7 +14,7 @@
 
 #### ***Aplicação Web: Checklist de Viagem***
   | <a href="https://github.com/LoukasLoukanos/Checklist-de-Viagem">Repositório</a> |
-  | :-: | :-: |
+  | :-: |
 
 #### ***Aplicação Desktop: MaTheo (Software matemático)***
   | <a href="https://github.com/LoukasLoukanos/MaTheo">Repositório</a> |

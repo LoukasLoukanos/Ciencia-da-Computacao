@@ -13,10 +13,6 @@
 
 ### **Complementar**
 
-#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'></></a>
-*Full-Stack Development.*
-</br></br>
-
 #### Guia **Estruturas de Dados e Complexidade de Algoritmos** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'></></a>
 *`C++`, `Java`, `JavaScript`, `PHP`, `Python` e `Ruby` – Algoritmos, Explicações e Análises.*
 </br></br>
@@ -34,6 +30,11 @@
 
 #### Guia **DBA (Administrador de Banco de Dados)** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)#linguagens-de-opera%C3%A7%C3%B5es-da-sql'></></a>
 *`SQL` e `PLSQL`.*
+</br></br>
+
+
+#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'></></a>
+*Full-Stack Development.*
 </br></br>
 
 

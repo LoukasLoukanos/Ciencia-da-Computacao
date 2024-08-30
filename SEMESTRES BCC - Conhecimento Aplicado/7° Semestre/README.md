@@ -22,7 +22,7 @@ Um projeto acadêmico em Ciência da Computação que tem por objetivo demonstra
 - **Mapas conceituais e navegacionais:** Criar mapas para mostrar a arquitetura da informação e o fluxo de navegação do aplicativo.
 - **Protótipo navegacional:** Desenvolver protótipos de média fidelidade, apresentando as telas com detalhes.
 
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/5%C2%B0%20Semestre/PIT%20-%20Ciclo%20de%20Desenvolvimento">Repositório</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/7%C2%B0%20Semestre/PIT%20-%20Ciclo%20de%20Desenvolvimento">Repositório</a> |
 |:-:|
 
 </br>
