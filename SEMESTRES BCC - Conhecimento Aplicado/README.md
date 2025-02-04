@@ -75,3 +75,8 @@
 - Qualidade de Software;
 - Ciências de Dados e Aprendizagem de Máquina;
 - Projeto Integrador Transdisciplinar (PIT) II/II.
+
+</br>
+
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/Plano%20De%20Ensino">Plano De Ensino</a> |
+|:-:|
