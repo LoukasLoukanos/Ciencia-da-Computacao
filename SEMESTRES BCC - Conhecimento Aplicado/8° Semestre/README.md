@@ -23,7 +23,7 @@ O projeto LegalConnect ilustra como soluções low-code permitem o desenvolvimen
 web, com ciclo contínuo de feedback e melhorias. A documentação e os testes com usuários foram fundamentais
 para otimizar a plataforma e atender às necessidades dos usuários de forma eficaz.
 
-| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/8%C2%B0%20Semestre/PIT%20-%20Desenvolvimento%20de%20Aplicacao%20Web">Repositório</a> |
+| <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/SEMESTRES%20BCC%20-%20Conhecimento%20Aplicado/8%C2%B0%20Semestre/PIT%20-%20Desenvolvimento%20de%20Aplicacao%20Web">Diretório</a> |
 |:-:|
 
 </br>
