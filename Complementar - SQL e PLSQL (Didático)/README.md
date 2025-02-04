@@ -1,100 +1,100 @@
 # **LINGUAGENS DE OPERAÇÕES DA SQL** 
   
- ### **DDL - LINGUAGEM DE DEFINIÇÃO DE DADOS** 
+### **DDL - LINGUAGEM DE DEFINIÇÃO DE DADOS** 
   
- ***Comandos:***  
- ```sql 
- CREATE /*Criar tabelas (TABLE):*/ 
-     CONSTRAINTS /*Definir colunas, seus tipos de dados e restrições*/ 
+***Comandos:***  
+```sql 
+CREATE /*Criar tabelas (TABLE):*/ 
+    CONSTRAINTS /*Definir colunas, seus tipos de dados e restrições*/ 
       
- ALTER /*Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabelas:*/ 
-     ADD /*Para incluir*/ 
-     DROP /*Para excluir*/ 
-     MODIFY /*Para modificar*/ 
-     DISABLE /*Para desabilitar*/ 
+ALTER /*Alterar tipo, obrigatoriedade, tamanho e restrições dos dados de tabelas:*/ 
+    ADD /*Para incluir*/ 
+    DROP /*Para excluir*/ 
+    MODIFY /*Para modificar*/ 
+    DISABLE /*Para desabilitar*/ 
   
- DROP /*Excluir tabela (TABLE)*/ 
-     RENAME /*para alterar o nome*/ 
- ``` 
+DROP /*Excluir tabela (TABLE)*/ 
+    RENAME /*para alterar o nome*/ 
+``` 
   
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DDL.sql">Exemplos DDL</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
- ### **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS** 
+### **DML - LINGUAGEM DE MANIPULAÇÃO DE DADOS** 
   
- ***Comandos:*** 
- ```sql 
- INSERT 
-     /*Inserir dados — VALUES —, em uma tabela — INTO —*/ 
+***Comandos:*** 
+```sql 
+INSERT 
+    /*Inserir dados — VALUES —, em uma tabela — INTO —*/ 
   
- UPDATE 
-     /*Atualizar linhas de colunas — SET —*/ 
+UPDATE 
+    /*Atualizar linhas de colunas — SET —*/ 
   
- DELETE 
-     /*Excluir linhas de colunas — FROM —*/ 
- ``` 
+DELETE 
+    /*Excluir linhas de colunas — FROM —*/ 
+``` 
   
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DML.sql">Exemplos DML</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
- ### **DQL - LINGUAGEM DE CONSULTA DE DADOS** 
+### **DQL - LINGUAGEM DE CONSULTA DE DADOS** 
   
- ***Comandos:*** 
- ```sql 
- SELECT  
-   /*1. Visualizar linhas de SUBQUERY/INNERQUERY (sub pesquisa) e QUERYPRINCIPAL/OUTERQUERY (pesquisa principal):*/ 
+***Comandos:*** 
+```sql 
+SELECT  
+    /*1. Visualizar linhas de SUBQUERY/INNERQUERY (sub pesquisa) e QUERYPRINCIPAL/OUTERQUERY (pesquisa principal):*/ 
     WHERE /*Cláusula para condições*/ 
     ORDER BY /*Cláusula para ordenanças*/ 
     DISTINCT /*Cláusula para distinções*/ 
   
-   /*2. Manipular informações:*/ 
-     CREATE TABLE AS SELECT /*Fazer cópias de tabelas*/ 
-     DECODE e CASE /*Expressões para gerar colunas de consultas*/ 
-     GROUP BY /*Cláusula para produzir grupos de dados gerando sumários*/ 
-     HAVING /*Cláusula para estabelecer condições para listar grupos de dados*/ 
- ``` 
+    /*2. Manipular informações:*/ 
+    CREATE TABLE AS SELECT /*Fazer cópias de tabelas*/ 
+    DECODE e CASE /*Expressões para gerar colunas de consultas*/ 
+    GROUP BY /*Cláusula para produzir grupos de dados gerando sumários*/ 
+    HAVING /*Cláusula para estabelecer condições para listar grupos de dados*/ 
+``` 
   
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DQL.sql">Exemplos DQL</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
- ### **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS** 
+### **DTL - LINGUAGEM DE TRANSAÇÃO DE DADOS** 
   
- ***Comandos:*** 
- ```sql 
- BEGIN  
-     /*Iniciar transação de informação*/ 
+***Comandos:*** 
+```sql 
+BEGIN  
+    /*Iniciar transação de informação*/ 
   
- COMMIT  
-     /*Terminar transação gravando as alterações realizadas*/ 
+COMMIT  
+    /*Terminar transação gravando as alterações realizadas*/ 
   
- ROLLBACK  
-     /*Terminar transação revertendo as alterações realizadas*/ 
- ``` 
+ROLLBACK  
+    /*Terminar transação revertendo as alterações realizadas*/ 
+``` 
   
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DTL.sql">Exemplos DTL</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
- ### **DCL - LINGUAGEM DE CONTROLE DE DADOS** 
+### **DCL - LINGUAGEM DE CONTROLE DE DADOS** 
   
- ***Comandos:*** 
- ```sql 
- GRANT 
-     /*Adicionar novas permissões a um usuário ao banco de dados*/ 
+***Comandos:*** 
+```sql 
+GRANT 
+    /*Adicionar novas permissões a um usuário ao banco de dados*/ 
   
- REVOKE 
-     /*Remover o acesso de um usuário ao banco de dados*/ 
+REVOKE 
+    /*Remover o acesso de um usuário ao banco de dados*/ 
   
- DENY 
-     /*Impedir que um usuário receba uma permissão específica*/ 
- ``` 
+DENY 
+    /*Impedir que um usuário receba uma permissão específica*/ 
+``` 
   
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/DCL.sql">Exemplos DCL</a> | 
  |:-:|
@@ -103,13 +103,13 @@
 
 # **PL/SQL (Program Language SQL)**
 *PL/SQL é a linguagem de programação da Oracle que permite efetuar transações, como a DTL, porém com muitas funcionalidades:*
- - Criar variáveis herdando o tipo e tamanho de outras variáveis ou objetos do banco de dados tais como tabelas;
- - Utilizar comandos de repetição e comparação;
- - Tratar operações de erros;
- - Criar cursores para tratamento de resultados de pesquisas e criar registros para armazenar resultados de cursores:
-   (Usa-se um cursor para buscar linhas retornadas por uma consulta, uma por vez:
-    - Cursores Implícitos (IS)    →   declarado e gerenciado pelo oracle
-    - Cursores Explícitos (AS)    →   declarado e gerenciado pelo programador)
+- Criar variáveis herdando o tipo e tamanho de outras variáveis ou objetos do banco de dados tais como tabelas;
+- Utilizar comandos de repetição e comparação;
+- Tratar operações de erros;
+- Criar cursores para tratamento de resultados de pesquisas e criar registros para armazenar resultados de cursores:
+  (Usa-se um cursor para buscar linhas retornadas por uma consulta, uma por vez:
+  - Cursores Implícitos (IS)    →   declarado e gerenciado pelo oracle
+  - Cursores Explícitos (AS)    →   declarado e gerenciado pelo programador)
     
 ### **SINTAXE GERAL**
 ```sql
@@ -129,7 +129,7 @@ END; /* (obrigatório) */
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-SQL.sql">Exemplos PL/SQL</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
 
 ### **CURSOR**
@@ -150,22 +150,20 @@ END; /* (obrigatório) */
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-Cursor.sql">Exemplos CURSOR</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
 
 ### **STORED PROCEDURE**
 *Procedimento armazenado ou Stored Procedure é uma Sub-Rotina do tipo procedimento (sem retorno) que contém uma coleção de comandos em SQL, que podem ser executadas em um Banco de dados de uma só vez. Os Storeds Procedures encapsulam tarefas repetitivas como:*
- - aceitar parâmetros de entrada;
- - aceitar o emprego dos comandos como IF e ELSE, WHILE, LOOP, REPEAT e CASE;
- - poder chamar outros Storeds Procedures;
- - poder imprimir um valor de status.
+- aceitar parâmetros de entrada;
+- aceitar o emprego dos comandos como IF e ELSE, WHILE, LOOP, REPEAT e CASE;
+- poder chamar outros Storeds Procedures;
+- poder imprimir um valor de status.
 
 *Os parâmetros passados para a Sub-Rotina-procedimento (Stored Procedure) ou MODOS podem ser de 3 tipos:*
- - IN: (padrão) passa um valor do escopo principal (fora da Sub-Rotina) para a Sub-Rotina e  esse valor não pode ser alterado dentro da Sub-Rotina.
-
- - OUT: passa um valor da Sub-Rotina para o escopo principal (fora da Sub-Rotina).
-
- - IN OUT: passa um valor do escopo principal(fora da Sub-Rotina) para a Sub-Rotina. Esse valor pode ser alterado dentro da Sub-Rotina e imprimido com o valor atualizado para o escopo principal (fora da Sub-Rotina).
+- IN: (padrão) passa um valor do escopo principal (fora da Sub-Rotina) para a Sub-Rotina e  esse valor não pode ser alterado dentro da Sub-Rotina.
+- OUT: passa um valor da Sub-Rotina para o escopo principal (fora da Sub-Rotina).
+- IN OUT: passa um valor do escopo principal(fora da Sub-Rotina) para a Sub-Rotina. Esse valor pode ser alterado dentro da Sub-Rotina e imprimido com o valor atualizado para o escopo principal (fora da Sub-Rotina).
 
 #### **Sintaxe:**
 ```sql
@@ -190,16 +188,16 @@ END;
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-StoredProcedure.sql">Exemplos STORED PROCEDURE</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
 
 ### **STORED FUNCTION**
 *Função armazenada(também chamada de função do usuário ou função definida pelo usuário) ou Stored Function é uma Sub-Rotina do tipo função, o seja, tem por objetivo retornar algum resultado ou retornar algum valor.*
 
 *Obs: não se usa Stored Function nos seguintes casos:*
- - Em uma cláusula de restrição CHECK de um CREATE TABLE ou ALTER TABLE; 
- - Em uma cláusula DEFAULT de uma instrução CREATE TABLE ou ALTER TABLE.
- - Em uma consulta-DQL ou instrução-DML, a função não pode ter OUT ou IN OUT como parâmetros
+- Em uma cláusula de restrição CHECK de um CREATE TABLE ou ALTER TABLE; 
+- Em uma cláusula DEFAULT de uma instrução CREATE TABLE ou ALTER TABLE.
+- Em uma consulta-DQL ou instrução-DML, a função não pode ter OUT ou IN OUT como parâmetros
 
 #### **Sintaxe:**
 ```sql
@@ -221,10 +219,11 @@ BEGIN
     /*code*/
 END;
 ```
+
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-StoredFunction.sql">Exemplos STORED FUNCTION</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
 
 ### **EXCEPTION**
@@ -284,17 +283,17 @@ END;
  | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)/PL-Exception.sql">Exemplos EXCEPTION</a> | 
  |:-:| 
   
- </br> 
+</br> 
   
 
 ### **TRIGGER**
 *Triggers ou gatilhos são blocos PL/SQL disparados automaticamente e implicitamente sempre que ocorrer um evento associado a uma determinada tabela (DML-UPDATE, INSERT ou DELETE).*
 
 *Um Trigger pode ser utilizado para:*
- - Manutenção de tabelas de auditoria;
- - Manutenção de tabelas duplicadas;
- - Implementação de níveis de segurança mais complexos;
- - Geração de valores de colunas, por exemplo, gerar o valor total da nota fiscal a cada inclusão, exclusão ou alteração de itens da nota.
+- Manutenção de tabelas de auditoria;
+- Manutenção de tabelas duplicadas;
+- Implementação de níveis de segurança mais complexos;
+- Geração de valores de colunas, por exemplo, gerar o valor total da nota fiscal a cada inclusão, exclusão ou alteração de itens da nota.
 
 *Obs: Os  registros  especiais  :NEW  e  :OLD  armazenam  temporariamente  os  valores  do  último registro manipulado pelo SGBD:*
 
