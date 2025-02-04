@@ -13,27 +13,27 @@
 
 ### **Complementar**
 
-#### Guia **Estruturas de Dados e Complexidade de Algoritmos** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'></></a>
+#### Guia **Estruturas de Dados e Complexidade de Algoritmos** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)#algoritmos-de-estruturas-de-dados-lineares'>→ Diretório</a>
 *`C++`, `Java`, `JavaScript`, `PHP`, `Python` e `Ruby` – Algoritmos, Explicações e Análises.*
 </br></br>
 
 
-#### Guia **Java** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Java%20Guia%20do%20Programador%20(Did%C3%A1tico)#java-guia-do-programador-4%C2%AA-ed'></></a>
+#### Guia **Java** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Java%20Guia%20do%20Programador%20(Did%C3%A1tico)#java-guia-do-programador-4%C2%AA-ed'>→ Diretório</a>
 *`Java` – livro 'Guia do Progradador, Peter Jandl Junior' comentado.*
 </br></br>
 
 
-#### Guia **Python** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'></></a>
+#### Guia **Python** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Python%20Fluente%20(Did%C3%A1tico)#python-fluente-1%C2%AA-ed'>→ Diretório</a>
 *`Python` – livro 'Python Fluente, Luciano Ramalho' comentado.*
 </br></br>
 
 
-#### Guia **DBA (Administrador de Banco de Dados)** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)#linguagens-de-opera%C3%A7%C3%B5es-da-sql'></></a>
+#### Guia **DBA (Administrador de Banco de Dados)** <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20SQL%20e%20PLSQL%20(Did%C3%A1tico)#linguagens-de-opera%C3%A7%C3%B5es-da-sql'>→ Diretório</a>
 *`SQL` e `PLSQL`.*
 </br></br>
 
 
-#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'></></a>
+#### Projetos <a href='https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Desenvolvimento%20de%20Software#projetos-pessoais-de-desenvolvimento-de-software'>→ Diretório</a>
 *Full-Stack Development.*
 </br></br>
 
