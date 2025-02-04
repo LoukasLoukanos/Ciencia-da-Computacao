@@ -702,45 +702,128 @@
 
     <details>
     <summary>História:</summary>
-    <!--linha branca-->
-    Texto
-    <!--linha branca-->
+
+    A busca sequencial com sentinela é uma evolução natural da busca sequencial tradicional. Seu desenvolvimento foi motivado pela necessidade de otimizar a performance em listas grandes, reduzindo o número de comparacões necessárias. A técnica é amplamente utilizada por programadores que desejam um algoritmo simples, mas ligeiramente mais eficiente do que a busca sequencial pura.
+
     </br>
     </details>
-  
+
     <details>
     <summary>Definição:</summary>
-    <!--linha branca-->
-    Texto
-    <!--linha branca-->
+
+    A busca sequencial com sentinela é uma variação da busca sequencial que utiliza um elemento extra no array (o sentinela) para evitar verificacoes adicionais durante o loop. O sentinela é configurado com o valor buscado, garantindo que a pesquisa sempre será bem-sucedida, simplificando a lógica interna.
+
+    **Funcionamento do Algoritmo:**
+    - **Configurar Sentinela:** Insere o valor buscado na última posição do array.
+    - **Percorrer o Array:** Itera sequencialmente até encontrar o valor buscado.
+    - **Verificação Simplificada:** Como o sentinela é garantido, não é necessário verificar os limites do array.
+    
     </br>
     </details>
   
     <details>
     <summary>Complexidade:</summary>
-    <!--linha branca-->
-    Texto
-    <!--linha branca-->
+
+    A análise de complexidade temporal da busca sequencial com sentinela é similar à busca sequencial tradicional, com ligeiras otimizações devido à eliminação de comparacões extras: </br></br>
+
+    - **Melhor Caso:** O(1)
+      - Quando o valor procurado está na primeira posição do array.
+    
+    - **Pior Caso:** O(n)
+      - Quando o valor procurado está na última posição do array.
+
+    - **Caso Médio:** O(n)
+      - Para uma distribuição aleatória, o algoritmo percorre, em média, metade do array.
+
+    **Comparação com Outros Algoritmos:**
+    Apesar de mais eficiente que a busca sequencial simples, a busca com sentinela ainda é inferior à busca binária em listas ordenadas.
+
     </br>
     </details>
   
     <details>
     <summary>Computabilidade:</summary>
-    <!--linha branca-->
-    Texto
-    <!--linha branca-->
+
+    A busca sequencial com sentinela apresenta algumas vantagens computacionais devido à simplicidade da implementação: </br></br>
+
+    - **Espaço:** O(1)
+      - Utiliza apenas um espaço adicional para o sentinela, mantendo o uso constante de memória.
+    
+    - **Eficiência:**
+      - A eliminação de comparacões adicionais com os limites do array oferece uma pequena melhoria em relação à busca sequencial tradicional.
+
+    - **Flexibilidade:**
+      - Pode ser aplicado a qualquer tipo de array, independentemente de ordenação.
+    
+    - **Limitações:**
+      - Ainda não é adequado para grandes conjuntos de dados, onde algoritmos como a busca binária ou técnicas de hashing são preferíveis.
+
     </br>
     </details>
 
+    
     - #### **Algoritmo 11:**
     Algoritmo de Pesquisa/Busca para Estruturas de Dados Lineares Estáticas (não Dinâmicas): Busca Binária.
-
-      <!------------------------------------------------------------------------------>
+    
+    <!------------------------------------------------------------------------------>
       
       | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11"><img align="center" alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.php"><img align="center" alt="PHP" width="35" src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.py"><img align="center" alt="Python" width="35" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos11/Alg11.rb"><img align="center" alt="Ruby" width="35" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-
-      <!------------------------------------------------------------------------------>
+    
+    <!------------------------------------------------------------------------------>
+    
+    <details>
+    <summary>História:</summary>
+    A busca binária é um dos algoritmos de busca mais eficientes para listas ordenadas. Ela foi introduzida nos primórdios da computação e se tornou um exemplo clássico de como dividir e conquistar pode melhorar drasticamente o desempenho de algoritmos.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Definição:</summary>
+    A busca binária é um algoritmo que localiza um valor em um array ordenado ao dividir repetidamente o espaço de busca ao meio até encontrar o valor desejado ou determinar que ele não está presente.</br></br>
+    
+    **Funcionamento do Algoritmo:**
+      - **Dividir ao Meio:** O algoritmo começa comparando o elemento central do array com o valor procurado.
+      - **Descartar Metade:** Se o valor procurado for menor que o elemento central, descarta-se a metade superior; caso contrário, descarta-se a metade inferior.
+      - **Repetir:** O processo se repete até que o valor seja encontrado ou o espaço de busca se esgote.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Complexidade:</summary>
+    A busca binária é extremamente eficiente para listas ordenadas:</br></br>
+    
+    - **Melhor Caso:** O(1)
+      - O melhor cenário ocorre quando o valor procurado é o elemento central na primeira comparação.
+    
+    - **Pior Caso:** O(log n)
+      - O pior caso ocorre quando o valor está em uma posição extrema da lista ou não está presente.
+    
+    - **Caso Médio:** O(log n)
+      - Em média, o algoritmo precisa realizar cerca de log n comparações.
+    
+    **Comparação com Outros Algoritmos:**
+    A busca binária é muito mais eficiente que a busca sequencial para listas grandes, mas requer que os dados estejam previamente ordenados.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Computabilidade:</summary>
+    A busca binária é altamente eficiente e amplamente utilizada em ciência da computação:</br></br>
+    
+    - **Espaço:** O(1)
+      - Utiliza uma quantidade constante de espaço adicional.
+    
+    - **Eficiência:**
+      - Divide continuamente o espaço de busca, resultando em um número muito menor de comparações em comparação com a busca sequencial.
+    
+    - **Flexibilidade:**
+      - Requer que os dados estejam ordenados, o que pode ser uma limitação.
+    
+    - **Limitações:**
+      - Não é adequada para listas desordenadas sem um pré-processamento para ordenação.
+    </br>
+    </details>
 
   </br></br>
 
@@ -750,13 +833,75 @@
   - ### *Estrutura de **`Lista Ligada (ou Encadeada) Simples`***
     - #### **Algoritmo 12:**
     Estrutura de Dados Linear Dinâmica (não Estática) de Lista Ligada/Encadeada Simples (não Duplamente Ligada): Linked List (Lista Ligada).
-      
-      <!------------------------------------------------------------------------------>
-      
-      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12"><img align="center" alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.php"><img align="center" alt="PHP" width="35" src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.py"><img align="center" alt="Python" width="35" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12/Alg12.rb"><img align="center" alt="Ruby" width="35" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
-      |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
-      <!------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------>  
+      
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/      Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos12"><img align="center"       alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/      github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/      Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/      Algoritmos12/Alg12.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/      devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/      Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/      Algoritmos12/Alg12.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/      devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/      Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/      Algoritmos12/Alg12.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/devicons/      devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.com/      LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20      (Did%C3%A1tico)/Algoritmos12/Alg12.php"><img align="center" alt="PHP" width="35" src="https://github.com/      devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/      LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20      (Did%C3%A1tico)/Algoritmos12/Alg12.py"><img align="center" alt="Python" width="35" src="https://github.      com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/      LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20      (Did%C3%A1tico)/Algoritmos12/Alg12.rb"><img align="center" alt="Ruby" width="35" src="https://github.com/      devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+      
+    <!------------------------------------------------------------------------------>  
+      
+    <details>
+    <summary>História:</summary>
+    
+    As listas ligadas, também conhecidas como listas encadeadas, surgiram como uma solução eficientepara a       manipulação de conjuntos dinâmicos de dados na memória. Elas foram inicialmentepopularizadas pelo       cientista da computação Alan Perlis. Diferentemente dos arrays, quepossuem tamanho fixo, as listas       ligadas permitem a inserção e remoção de elementos de formaflexível sem a necessidade de       redimensionamento. Sua estrutura é formada por nós que contêmdados e apontadores para o próximo nó na       lista. 
+    
+    </br>
+    </details>
+    
+    <details>
+    <summary>Definição:</summary>
+    
+    Uma lista ligada é uma estrutura de dados linear dinâmica composta por nós. Cada nó contémdois       elementos principais: um valor armazenado e uma referência (ponteiro) para o próximo nóna sequência. </      br></br>
+    
+    **Funcionamento do Algoritmo**
+      - **Criação da Lista**: Inicializa-se uma lista vazia, onde o ponteiro aponta para `null`.
+      - **Inserção**: Novos nós são criados dinamicamente e conectados ao nó anterior.
+      - **Remoção**: Um nó específico é desconectado da lista, ajustando os ponteiros.
+      - **Percorrer a Lista**: Cada nó é acessado sequencialmente através de seus ponteiros.
+    
+    </br>
+    </details>
+    
+    <details>
+    <summary>Complexidade:</summary>
+    
+    A análise da complexidade temporal para operações em listas ligadas é fundamental para avaliarseu       desempenho: </br></br>
+    
+    - **Inserção no Início**: O(1)
+      - A operação de inserir um elemento no início da lista é constante, pois requer apenas aalteração de       um ponteiro.
+    
+    - **Inserção no Final**: O(n)
+      - No pior caso, o algoritmo precisa percorrer todos os nós para inserir um novo elemento nofinal.
+    
+    - **Remoção**: O(n)
+      - Para remover um nó específico, pode ser necessário percorrer a lista para encontrar o nó alvo.
+    
+    - **Busca**: O(n)
+      - A busca por um valor específico na lista envolve acessar cada nó sequencialmente.
+    
+    </br>
+    </details>
+    
+    <details>
+    <summary>Computabilidade:</summary>
+    
+    A computabilidade das listas ligadas é analisada com base em espaço e eficiência das operações: <br></      br>
+    
+    - **Espaço**: O(n)
+      - Cada nó da lista consome memória, sendo proporcional ao número total de nós presentes.
+    
+    - **Eficiência**:
+      - As listas ligadas são eficientes para operações de inserção e remoção em comparação comarrays,       especialmente em cenários que requerem tamanho variável.
+    
+    - **Flexibilidade**:
+      - A estrutura permite a expansão dinâmica sem a necessidade de redimensionamento.
+    
+    - **Limitações**:
+      - A principal desvantagem é a complexidade de acesso, que é sequencial e, portanto, mais lentodo que       o acesso direto dos arrays.
+    
+    </br>
+    </details>
 
   </br></br>
 
@@ -765,12 +910,69 @@
     - #### **Algoritmo 13:**
     Estrutura de Dados Linear Dinâmica (não Estática) de Lista Duplamente Ligada/Encadeada: Doubly Linked List (Lista Duplamente Ligada).
 
-      <!------------------------------------------------------------------------------>
-      
-      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13"><img align="center" alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.php"><img align="center" alt="PHP" width="35" src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.py"><img align="center" alt="Python" width="35" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13/Alg13.rb"><img align="center" alt="Ruby" width="35" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
+    <!------------------------------------------------------------------------------>  
+    
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/    Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos13"><img align="center"     alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/    github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos13/Alg13.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/    devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos13/Alg13.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/    devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos13/Alg13.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/    devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.    com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos13/Alg13.php"><img align="center" alt="PHP" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/    LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos13/Alg13.py"><img align="center" alt="Python" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/    LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos13/Alg13.rb"><img align="center" alt="Ruby" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
       |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-
-      <!------------------------------------------------------------------------------>
+    
+    <!------------------------------------------------------------------------------>
+    
+    <details>
+    <summary>História:</summary>
+    A lista duplamente ligada é uma evolução direta das listas simplesmente ligadas, sendo proposta para     superar algumas limitações dessas últimas. Sua história está ligada ao desenvolvimento de estruturas de     dados mais flexíveis e eficientes, especialmente em aplicações onde inserções e remoções de elementos em     ambas as extremidades de uma lista são comuns. Essa estrutura permite navegação bidirecional, o que     melhora a eficiência em diversas operações.  
+    </br>
+    </details>
+    
+    <details>
+    <summary>Definição:</summary>
+    Uma lista duplamente ligada é uma estrutura de dados dinâmica composta por nós interligados, onde cada     nó possui um apontador para o próximo nó e outro apontador para o nó anterior. Isso permite navegar     tanto para frente quanto para trás na lista. 
+    
+    **Características:**
+    - **Nós**: Cada nó armazena um valor e dois ponteiros (um para o próximo e outro para o anterior).
+    - **Navegação Bidirecional**: Permite percorrer a lista em ambas as direções.
+    - **Operações Flexíveis**: Inserção e remoção de elementos em qualquer posição da lista.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Complexidade:</summary>
+    A análise da complexidade temporal das operações realizadas em listas duplamente ligadas é essencial     para compreender sua eficiência:
+    
+    - **Inserção na Cabeça ou Cauda**: O(1)
+      - A inserção em ambas as extremidades é direta, bastando ajustar os ponteiros.
+    
+    - **Inserção em Posições Arbitrárias**: O(n)
+      - Pode exigir percorrer a lista até a posição desejada.
+    
+    - **Remoção na Cabeça ou Cauda**: O(1)
+      - Exige apenas a atualização dos ponteiros.
+    
+    - **Remoção em Posições Arbitrárias**: O(n)
+      - Pode necessitar a localização do nó a ser removido.
+    
+    - **Busca**: O(n)
+      - O algoritmo de busca é sequencial.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Computabilidade:</summary>
+    A computabilidade da lista duplamente ligada envolve aspectos como eficiência, espaço em memória e     complexidade:
+    
+    - **Espaço**: O(n)
+      - Cada nó exige espaço para armazenar um valor e dois ponteiros (para o próximo e o anterior).
+    
+    - **Eficiência**:
+      - É eficiente para aplicações que exigem remoções e inserções frequentes em ambas as extremidades da     lista.
+    
+    - **Flexibilidade**:
+      - Suporta navegação bidirecional, tornando-a uma boa escolha para cenários onde essa funcionalidade é     necessária.
+    
+    - **Limitações**:
+      - Maior uso de memória devido ao armazenamento de dois ponteiros por nó.
+    </br>
+    </details>
+    
 
   </br></br>
 
@@ -778,13 +980,64 @@
   - ### *Estrutura de **`Fila Dinâmica`***
     - #### **Algoritmo 14:**
     Estrutura de Dados Linear Dinâmica (não Estática) de Fila: Queue (Fila).
-      
-      <!------------------------------------------------------------------------------>
-      
-      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos14"><img align="center" alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.php"><img align="center" alt="PHP" width="35" src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.py"><img align="center" alt="Python" width="35" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos/Alg14.rb"><img align="center" alt="Ruby" width="35" src="https://github.com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
-      |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 
-      <!------------------------------------------------------------------------------>
+    <!------------------------------------------------------------------------------>  
+    
+      | <a href="https://github.com/LoukasLoukanos/Ciencia-da-Computacao/tree/master/    Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/Algoritmos14"><img align="center"     alt="GitHub" width="35" src="https://github.com/devicons/devicon/blob/master/icons/github/    github-original.svg"></a>*&nbsp;Repositórios:* | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos14/Alg14.cpp"><img align="center" alt="C++" width="35" src="https://github.com/devicons/    devicon/blob/master/icons/c/c-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos14/Alg14.java"><img align="center" alt="Java" width="35" src="https://github.com/devicons/    devicon/blob/master/icons/java/java-original.svg"></a> | <a href="https://github.com/LoukasLoukanos/    Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20(Did%C3%A1tico)/    Algoritmos14/Alg14.js"><img align="center" alt="JavaScript" width="35" src="https://github.com/    devicons/devicon/blob/master/icons/javascript/javascript-original.svg"></a> | <a href="https://github.    com/LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos14/Alg14.php"><img align="center" alt="PHP" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/php/php-original.svg"></a> | <a href="https://github.com/    LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos14/Alg14.py"><img align="center" alt="Python" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/python/python-original.svg"></a> | <a href="https://github.com/    LoukasLoukanos/Ciencia-da-Computacao/blob/master/Complementar%20-%20Estruturas%20de%20dados%20    (Did%C3%A1tico)/Algoritmos14/Alg14.rb"><img align="center" alt="Ruby" width="35" src="https://github.    com/devicons/devicon/blob/master/icons/ruby/ruby-original.svg"></a> |
+      |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+    
+    <!------------------------------------------------------------------------------>
+    
+    <details>
+    <summary>História:</summary>
+    A estrutura de dados de fila tem suas origens no conceito de linhas de espera, presentes em diversas     situações do cotidiano, como filas de supermercado ou chamadas telefônicas. Formalmente, foi introduzida     na ciência da computação como uma abstração simples e eficiente para gerenciar sequências de dados que     precisam ser processadas na ordem em que chegam. Sua utilização é crucial em sistemas operacionais,     algoritmos de busca em largura e muitas outras áreas.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Definição:</summary>
+    Uma fila é uma estrutura de dados linear dinâmica que segue a política **FIFO (First In, First Out)**,     onde o primeiro elemento inserido é o primeiro a ser removido. As operações principais realizadas em uma     fila são a inserção (enqueue) e a remoção (dequeue).
+    
+    **Características:**
+    - **Inserção na Cauda:** Novos elementos são sempre adicionados ao final da fila.
+    - **Remoção na Cabeça:** Elementos são removidos a partir do início da fila.
+    - **Acesso Restrito:** Apenas o primeiro elemento pode ser acessado diretamente.
+    - **Operações Simples:** Inserção e remoção eficientes.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Complexidade:</summary>
+    A análise da complexidade temporal das operações realizadas em filas é fundamental para avaliar sua     eficiência:
+    
+    - **Inserção (enqueue):** O(1)
+      - Adicionar um elemento ao final da fila é uma operação constante.
+    
+    - **Remoção (dequeue):** O(1)
+      - Remover um elemento do início da fila também é uma operação constante.
+    
+    - **Acesso:** O(n)
+      - Para acessar um elemento específico, é necessário percorrer a fila.
+    </br>
+    </details>
+    
+    <details>
+    <summary>Computabilidade:</summary>
+    A computabilidade da fila envolve aspectos de eficiência, espaço em memória e complexidade:
+    
+    - **Espaço:** O(n)
+      - Cada elemento armazenado consome um espaço de memória.
+    
+    - **Eficiência:**
+      - É altamente eficiente para cenários onde a ordem de processamento dos dados precisa ser mantida.
+    
+    - **Flexibilidade:**
+      - Pode ser implementada de diversas formas, como filas circulares ou com listas encadeadas.
+    
+    - **Limitações:**
+      - Acesso restrito aos elementos intermediários da fila.
+    </br>
+    </details>
 
   </br></br>
 
